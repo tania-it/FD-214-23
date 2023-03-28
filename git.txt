@@ -1,0 +1,5 @@
+git clone <repository url>
+
+git clone https://github.com/tania-it/FD-214-23.git
+
+https://tania-it.github.io/FD-214-23_BelayaTatyana/ 
