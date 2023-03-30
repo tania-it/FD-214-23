@@ -1,0 +1,17 @@
+body {
+    background-image: url(fon_3.jpg) | none | inherit; /* Путь к фоновому изображению */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    color: #333;
+  }
+h1  {
+    color: #4e4a1e;
+    font-size: 200%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+p  {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;    
+}
