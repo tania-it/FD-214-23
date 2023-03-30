@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  background-color:#dbeed9;
+  color: #333;
+}
+
+h1  {
+  color: #a52a2a;
+  font-size: 24pt;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+p  {
+   text-align: justify;
+   margin-left: 60px;
+   margin-right: 10px;
+   border-left: 4px solid #5f7583;
+   border-bottom: 4px solid #5f7583;
+   padding-left: 10px;
+   padding-bottom: 10px;
+} 
