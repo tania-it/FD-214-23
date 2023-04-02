@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funny colour</title>
+</head>
+<body style="background-color: rgba(128, 255, 213, 0.3);">
+    <p style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">
+     При кодировании цвета в устаревшем теге <span style="font-weight: 500;">FONT</span> можно указывать некоторые забавные значения, например:<br>
+       <span style="font-size: 50px;font-weight: 400;"><font color="BruceWillis">Привет!</font></span> 
+       
+       <span style="font-size: 50px;font-weight: 400; color: #b0e000;">Привет!</span>
+
+       <span style="font-size: 50px;font-weight: 400;"><font color="#CANDY">Hello!</font></span>
+       <span style="font-size: 50px;font-weight: 400;"><font color="#chucknorris">Привет!</font></span>
+    <br> 
+    Разберитесь, что при этом за цвета получаются и почему.   
+    </p>
+    <div style="font-size: 20px;">
+    <p style="font-size: 20px;font-family: 'Times New Roman', Times, serif; font-style: italic;">Давайте разбираться:</p>
+        <ul>
+            <li>
+                Браузер не может понять значение атрибута color и пытается распарсить (интерпретировать)
+                 его в набор шеснадцатиричных элементов от A до F т.е. 'b', 'c', 'e' остаются, а остальные символы заменяются нулём 0.<br>
+            </li>
+            <li>
+                Таким образом 'brucewillis' становится ' b00ce000000'<br>
+            </li>
+            <li>
+                Теперь разбиваем это значение на 3 группы как в RGB (red, green, blue), R: b00c, G: e000, B:0000<br>
+            </li>
+            <li>
+                Зная, что в RGB формате под каждый цвет используется 2 символа R: b0, G: e0, B: 00, то мы отбрасываем
+                2 крайних знака в каждом из цветов R-G-B и получаем такой результат: b0 e0 00, а это и есть цвет,
+                которым отобразится текст <font color="#b0e000">BruceWillis</font>
+            </li>
+        </ul>
+    </div>    
+      Аналогичное преобразование интепретатор браузера выполняет при кодировании цвета CANDY.
+</body>
+</html>
