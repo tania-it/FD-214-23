@@ -21,7 +21,7 @@
        
    }
    div.wrapper {
-     width: 1230px;
+     width: 1250px;
      height: 190px;
      margin-left: 30px;
      margin-bottom: 20px;
@@ -29,7 +29,7 @@
 
    div.left_block {
      float: left;
-     width: 400px;
+     width: 380px;
      margin-right: 5px;
    }
 
@@ -40,9 +40,10 @@
      font-weight: 300;
      background-color: rgb(127, 255, 0, 0.7);
      border: solid 1px rgb(62, 52, 99);
-     width: 800px;
+     width: 850px;
      height: 180px;
      padding: 5px;
+   
    }
 
    h2 {
