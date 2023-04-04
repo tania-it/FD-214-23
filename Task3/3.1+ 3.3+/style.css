@@ -1,8 +1,8 @@
    body {
        /* font-family: Arial, Helvetica, sans-serif;
         font-size: 14pt;*/
-        background-color:#f3edf3;
-        color: #333;
+        background-image: url(images/fon1.jpg); /* Путь к фоновому изображению */
+        background-size: initial;
     }
   
   h1  {
