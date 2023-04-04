@@ -1,0 +1,36 @@
+   body {
+       /* font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt;*/
+        background-color:#f3edf3;
+        color: #333;
+    }
+  
+  h1  {
+    color: #000033;
+    font-size: 24px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  p  {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+    margin-left: 20px;
+        /* margin-right: 10px; */
+  } 
+  div  {
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 20px;
+       font-weight: 300;
+       background-color: rgb(127, 255, 0, 0.7);
+       border: solid 1px rgb(62, 52, 99);
+       width: 800px;
+       height: 180px;
+       padding: 15px;
+       margin-left: 10px;
+       float: right;
+}
