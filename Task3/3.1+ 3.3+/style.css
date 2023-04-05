@@ -3,12 +3,15 @@
      font-size: 20px;*/
      background-image: url(images/fon1.jpg); /* Путь к фоновому изображению */
      background-size: initial;
+     padding-left: 15px;
+     padding-right: 15px;
+
     }
 
    h1 {
      color: #3d0358;
-     font-size: 30px;
-     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 32px;
+     font-family: 'Ubuntu Condensed', sans-serif;
      font-weight: normal;
      text-align: left;
    }
@@ -18,10 +21,11 @@
        font-size: 24px;
        font-weight: 400;
        margin-left: 15px;
+       text-align: justify;
        
    }
    div.wrapper {
-     width: 1250px;
+     width: 1260px;
      height: 190px;
      margin-left: 30px;
      margin-bottom: 20px;
@@ -30,7 +34,7 @@
    div.left_block {
      float: left;
      width: 380px;
-     margin-right: 5px;
+     margin-right: 0;
    }
 
    div.right_block {
@@ -38,18 +42,19 @@
      font-family: 'Times New Roman', Times, serif;
      font-size: 20px;
      font-weight: 300;
+     text-align: justify;
      background-color: rgb(127, 255, 0, 0.7);
      border: solid 1px rgb(62, 52, 99);
      width: 850px;
-     height: 180px;
-     padding: 5px;
-   
+     height: 170px;
+     padding: 10px;
+    
    }
 
    h2 {
      color: #3d0358;
-     font-size: 30px;
-     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 32px;
+     font-family: 'Ubuntu Condensed', sans-serif;
      font-weight: normal;
      text-align: left;
    }
