@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.2+ AREA</title>
+    <style>
+        body {
+          background-image: url("fon_3.jpg");
+          
+          /*background-repeat: no-repeat;*/
+          background-attachment: fixed; 
+          background-size: 100% 100%;
+         
+        }
+        h1   { 
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        color: rgb(48, 2, 85);
+        }
+        P   {font-family: 'Times New Roman', Times, serif;
+             font-size: 24px;
+             font-weight: 400;
+             text-align: justify;
+             padding: 10px;
+        }
+        img {
+            display: block;
+            margin-bottom: 1000;
+            width: 821px;
+            height: 273px;
+            
+          }
+        </style>
+
+</head>
+<body>
+        <h1> Тег &lt;area&gt; и демонстрация его возможностей</h1>
+ <p>Тег <span style="background-color: rgb(255, 255, 0, 0.8)">&lt;<strong>area</strong>&gt;</span> (от англ. area - область)
+    определяет активные области изображения, которые являются <span style="font-weight: 600; ;">ссылками.</span><br>
+    Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. 
+    Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито
+     на невидимые зоны разной формы, где каждая из областей служит ссылкой. 
+     Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку.
+     <span style="font-weight: 600;">&lt;Area&gt;</span> всегда располагается в контейнере <span style="font-weight: 600;"> &lt;map&gt;</span>,
+     который связывает координаты областей с изображением.
+    Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.
+  </p>       
+  <map name="dish_menu">
+    <area shape="rect" coords="0,1,271,269" href="https://food.ru/articles/1223-10-bystryh-zavtrakov-dlja-horoshego-nachala-dnja" 
+    target="_blank" alt="завтрак" title="завтрак">
+    <area shape="rect" coords="271,1,565,262" href="https://food.ru/recipes/pervye-bliuda"
+      target="_blank" alt="обед" title="обед">
+    <area shape="rect" coords="545,1,820,271" href="https://food.ru/recipes/vtorye-bliuda"
+      target="_blank" alt="ужин" title="ужин">
+    
+  </map>
+      <img usemap="#dish_menu" src="mypicture2.png" alt="dish_menu">
+     
+</body>
+</html>
