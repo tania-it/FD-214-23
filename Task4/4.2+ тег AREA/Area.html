@@ -1,63 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4.2+ AREA</title>
-    <style>
-        body {
-          background-image: url("fon_3.jpg");
-          
-          /*background-repeat: no-repeat;*/
-          background-attachment: fixed; 
-          background-size: 100% 100%;
-         
-        }
-        h1   { 
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-style: italic;
-        color: rgb(48, 2, 85);
-        }
-        P   {font-family: 'Times New Roman', Times, serif;
-             font-size: 24px;
-             font-weight: 400;
-             text-align: justify;
-             padding: 10px;
-        }
-        img {
-            display: block;
-            margin-bottom: 1000;
-            width: 821px;
-            height: 273px;
-            
-          }
-        </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.2+ AREA</title>
+  <style>
+    body {
+      background-image: url("textured background.jpg");
+
+      /*background-repeat: no-repeat;*/
+      background-attachment: fixed;
+      background-size: 100% 100%;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-style: italic;
+      color: rgb(107, 7, 7);
+    }
+    P {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: justify;
+      padding: 5px;
+    }
+
+    #picture1 {
+      display: block;
+      margin-bottom: 1000;
+      width: 821px;
+      height: 273px;
+      padding-left: 10px;
+    }
+
+    #picture2 {
+      display: block;
+      width: 746px;
+      height: 741px;
+    }
+  </style>
 
 </head>
+
 <body>
-        <h1> Тег &lt;area&gt; и демонстрация его возможностей</h1>
- <p>Тег <span style="background-color: rgb(255, 255, 0, 0.8)">&lt;<strong>area</strong>&gt;</span> (от англ. area - область)
+  <h1> Тег &lt;area&gt; и демонстрация его возможностей</h1>
+  <p>Тег <span style="background-color: rgba(253, 37, 37, 0.603)">&lt;<strong>area</strong>&gt;</span> (от англ. area -
+    область)
     определяет активные области изображения, которые являются <span style="font-weight: 600; ;">ссылками.</span><br>
-    Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. 
+    Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением.
     Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито
-     на невидимые зоны разной формы, где каждая из областей служит ссылкой. 
-     Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку.
-     <span style="font-weight: 600;">&lt;Area&gt;</span> всегда располагается в контейнере <span style="font-weight: 600;"> &lt;map&gt;</span>,
-     который связывает координаты областей с изображением.
+    на невидимые зоны разной формы, где каждая из областей служит ссылкой.
+    Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать
+    ссылку.<br>
+    <span style="font-weight: 600;">&lt;Area&gt;</span> всегда располагается в контейнере <span
+      style="font-weight: 600;"> &lt;map&gt;</span>,
+    который связывает координаты областей с изображением.
     Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.
-  </p>       
+  </p>
   <map name="dish_menu">
-    <area shape="rect" coords="0,1,271,269" href="https://food.ru/articles/1223-10-bystryh-zavtrakov-dlja-horoshego-nachala-dnja" 
-    target="_blank" alt="завтрак" title="завтрак">
-    <area shape="rect" coords="271,1,565,262" href="https://food.ru/recipes/pervye-bliuda"
-      target="_blank" alt="обед" title="обед">
-    <area shape="rect" coords="545,1,820,271" href="https://food.ru/recipes/vtorye-bliuda"
-      target="_blank" alt="ужин" title="ужин">
-    
+    <area shape="rect" coords="0,1,271,269"
+      href="https://food.ru/articles/1223-10-bystryh-zavtrakov-dlja-horoshego-nachala-dnja" target="_blank"
+      alt="завтрак" title="завтрак">
+    <area shape="rect" coords="271,1,565,262" href="https://food.ru/recipes/pervye-bliuda" target="_blank" alt="обед"
+      title="обед">
+    <area shape="rect" coords="545,1,820,271" href="https://food.ru/recipes/vtorye-bliuda" target="_blank" alt="ужин"
+      title="ужин">
   </map>
-      <img usemap="#dish_menu" src="mypicture2.png" alt="dish_menu">
-     
+  <img id="picture1" usemap="#dish_menu" src="mypicture2.png" alt="dish_menu">
+
+   <div style="font-family: 'Courier New', Courier, monospace; font-weight: 200; font-size: 20px; margin: auto;">
+   <p>
+      Мы должны фотографии сказать, что бы она при отображении воспользовалась картой.
+      При этом строчка с изображением может быть как после карты, так и перед нею.</p>
+    <p>В самой карте мы можем рисовать фигуры и используем для этого тег area.
+      Нам доступны три типа фигур: окружность, квадрат и полигон. Тип фигур мы прописываем с атрибутом shape.
+      Урл ссылки мы вставляем в атрибут href.</p>
+    <p>Мы указываем точную координату центра окружности и её радиус для круга.
+      Для квадрата мы указываем две координаты левого верхнего и правого нижнего угла.
+      Для полигона мы указываем все точки с координатами X и Y.</p>
+    <p>Отсчёт ведётся из левого верхнего угла, то есть мы можем говорить о четвёртом квадранте, где и X, и Y считаются
+      положительными.</p>
+  </div>
+  <p>Нажмите на один из элементов логотипа, чтобы посмотреть его ближе:</p>
+  <map name="learning-logo-education">
+    <area shape="poly" coords="20,365,124,120,370,18,370,366" href="https://ftf.grsu.by/" target="_blank" alt="physiсs"
+      title="физика">
+    <area shape="poly" coords="378,18,625,120,727,366,378,366" href="https://www.bsuir.by" target="_blank"
+      alt="informatics" title="информатика">
+    <area shape="poly" coords="378,376,727,376,625,622,378,724" href="https://fpmi.bsu.by/" target="_blank"
+      alt="mathematics" title="математика">
+    <area shape="poly" coords="20,376,370,376,370,724,124,622" href="https://bntu.by/" target="_blank" alt="tech"
+      title="инженерия">
+
+  </map>
+  <img id="picture2" usemap="#learning-logo-education" src="learning-logo-education.png" alt="learning-logo-education">
+
+
 </body>
+
 </html>

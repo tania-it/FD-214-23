@@ -1,21 +1,55 @@
+</html>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <title>AREA</title>
-  <style>
-    img {
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.2+ AREA</title>
+    <style>
+        body {
+          background-image: url("pngtree-light-paper-texture-textured-background-picture-image_1043204.jpg");
+          /*background-repeat: no-repeat;*/
+          background-attachment: fixed; 
+          background-size: 100% 100%;
+        }
+        h1   { 
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        color: rgb(48, 2, 85);
+        }
+        P   {font-family: 'Times New Roman', Times, serif;
+             font-size: 24px;
+             font-weight: 400;
+             text-align: justify;
+             padding: 10px;
+        }
+       img {
       display: block;
       margin: 0 auto;
       width: 700px;
       height: 700px;
-    }
+       }
+       
   </style>
 </head>
 
 <body>
+    <h1> Тег &lt;area&gt; и демонстрация его возможностей</h1>
+<p>Тег <span style="background-color: rgb(255, 255, 0, 0.8)">&lt;<strong>area</strong>&gt;</span> (от англ. area - область)
+определяет активные области изображения, которые являются <span style="font-weight: 600; ;">ссылками.</span><br>
+Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. 
+Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито
+ на невидимые зоны разной формы, где каждая из областей служит ссылкой. 
+ Элемент &lt;area&gt; задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку.<br>
+ <span style="font-weight: 600;">&lt;Area&gt;</span> всегда располагается в контейнере <span style="font-weight: 600;"> &lt;map&gt;</span>,
+ который связывает координаты областей с изображением.
+Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.
+
+<p>Нажмите на логотип или на один из элементов логотипа, чтобы посмотреть его ближе:</p>
+
+
   <map name="infographic">
     <area shape="poly" coords="61,1101,370,361,1111,54,1112,1101" href="https://developer.mozilla.org/docs/Web/HTTP" target="_blank"
       alt="physis">
@@ -31,4 +65,10 @@
 
 </body>
 
+</body>
 </html>
+ 
+
+
+
+
