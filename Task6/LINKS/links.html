@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .main {
+      width: 1000px;
+      height: 500px;
+      margin: 0 auto 0 auto;
+    }
+  
+    div.first_menu {
+      width: 700px;
+      height: 50px;
+      float: left;
+      text-align: center;
+      margin-top: 50px;
+    }
+  
+    div.first_menu a {
+      font-size: 18px;
+      padding: 5px;
+      border-right-style: solid;
+      border-color: red;
+      text-align: center;
+    }
+  
+    #lastlink {
+      border: none;
+    }
+  
+    div.second_menu {
+      width: 1000px;
+      height: 50px;
+      float: left;
+      margin-top: 20px;
+      margin-left: 29px;
+      padding: 0px;
+    }
+  
+    div.second_menu li {
+      margin: 30px 0px 30px 0px;
+      list-style-type: none;
+      display: inline;
+      font-size: 18px;
+      padding: 5px;
+      border-right-style: solid;
+      border-color: red;
+      text-align: center;
+    }
+  
+    #lastlink {
+      border: none;
+    }
+  
+    a {
+      color: green;
+    }
+  
+    a:hover {
+      color: firebrick;
+      text-decoration: underline;
+    }
+  
+    .my_link:hover {
+      color: deeppink;
+    }
+  
+    div.third_menu {
+      margin: 20px 0px 30px 28px;
+      width: 700px;
+      height: 50px;
+      float: left;
+      text-align: center;
+  
+    }
+  
+    div.third_menu table tr {
+      display: block;
+      font-size: 18px;
+      padding: 0px;
+    }
+  
+    div.third_menu table tr td {
+      border-right-style: solid;
+      border-color: red;
+      text-align: center;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="first_menu">
+      <a href="http://skating.by/" title="Первая ссылка" target="_blank">первая ссылка</a>
+      <a href="https://biathlon.by/" title="Вторая ссылка" target="_blank">вторая ссылка</a>
+      <a class="my_link" href="https://www.ivi.ru/" title="Третья ссылка" target="_blank">третья ссылка</a>
+      <a href="http://www.archery.by/" title="Четвертая ссылка" target="_blank">четвёртая ссылка</a>
+      <a class="first_menu" id="lastlink" href="https://blrswimming.by/" title="Пятая ссылка" target="_blank">пятая ссылка</a>
+    </div>
+    <div class="second_menu">
+      <ul id="second_menu li">
+        <li><a href="http://skating.by/">первая ссылка</a></li>
+        <li><a href="https://biathlon.by/">вторая ссылка</a></li>
+        <li><a href="https://www.ivi.ru/">третья ссылка</a></li>
+        <li><a href="http://www.archery.by/">четвёртая ссылка</a></li>
+        <li id="lastlink"><a href="https://blrswimming.by/" title="Пятая ссылка" target="_blank">пятая ссылка</a></li>
+      </ul>
+    </div>
+    <div class="third_menu">
+      <table>
+        <tr>
+          <td><a href="http://skating.by/" title="Первая ссылка" target="_blank">первая ссылка</a></td>
+          <td><a href="https://biathlon.by/" title="Вторая ссылка" target="_blank">вторая ссылка</a></td>
+          <td><a href="https://www.ivi.ru/" title="Третья ссылка" target="_blank">третья ссылка</a></td>
+          <td><a href="http://www.archery.by/" title="Четвертая ссылка" target="_blank">четвёртая ссылка</a></td>
+          <td id="lastlink"><a href="https://blrswimming.by/" title="Пятая ссылка" target="_blank">пятая ссылка</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+<!--DIV.SECOND_MENU. Горизонтальное меню можно создать путем стилизации обычного списка.
+    Свойству display для элементов <li> нужно присвоить значение inline,
+    чтобы пункты списка располагались друг за другом. Для размещения пунктов меню по горизонтали,
+    сначала создали маркированный список со ссылками.
+    Напишем для нашего списка несколько правил, сбрасывающих стиль используемый для списков по умолчанию,
+    и переопределим пункты списка с блочных на строчные.-->
+<!--DIV.THIRD_MENU. Вывели в браузере таблицу со ссылками.
+   Одна строка и пять ячеек. Строке указали тип как блочный (например, как <div>), т.е. 
+   это даёт нам возможность применения свойств для блочных элементов. Каждой ячеейке задали правую границу красного цвета.
+   Для крайней ссылки прописали селектор по идентификатору, чтобы убрать красный вертикальный разделитель в самом конце.
+   Ссылки стилизовали используя псевдо-класс a:hover, который при поднесении мыши текст ссылок отображал красным цветом.-->
+<!--Div.FIRST_MENU делали, прописав в контейнере соответствующие ссылки по образцу из методички-->
+<!--На большее количество способов не хватило ни времени, ни умственных ресурсов-->
+</html>
