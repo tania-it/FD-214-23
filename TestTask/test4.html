@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Эффект перекатывания</title>
+  <style>
+   a.rollover {
+    background: url('sun1.png') repeat-x ;  /* Путь к файлу с исходным рисунком  */
+    display: block; /*  Рисунок как блочный элемент */
+    width: 1000px; /* Ширина рисунка */
+    height: 183px; /*  Высота рисунка */
+   }
+   a.rollover:hover {
+    background: url('sun2.png'); /* Путь к файлу с заменяемым рисунком  */
+   }
+  </style>
+ </head>
+ <body>
+  <p><a href="#" class="rollover"> </a></p>
+  </body>
+</html>
