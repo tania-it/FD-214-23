@@ -48,34 +48,29 @@
             color: blue;
             margin: 0px 0px 15px 0px;
         }
-
+        
         a.external[target="_blank"] {
             font-family: 'Times New Roman', Times, serif;
             font-size: 16px;
             display: block;
             font-weight: 100;
             color: blue;
-            background: url('../CSS_CHESS/images/external_ref.png') no-repeat 0 0;
-            /* Параметры фонового рисунка */
-            padding-left: 15px;
-            padding-bottom: 10px;
-            /* Смещаем текст вправо */
-            width: 100px;
+            width: 125px;
             text-align: center;
             margin: 0px;
+                                            
         }
-
-        div.main {
-            margin: 0px 3px;
-            background-image: url('../CSS_CHESS/images/fon_paper.png');
-            /* Путь к картинке */
-            background-size: cover;
-            /* Растягиваем картинку  по ширине */
-            background-repeat: no-repeat;
-            /* Картинка фона без повторения */
-            background-position: center;
-            /* Позиция фона по центру */
-        }
+        a.external[target="_blank"]::before {  display: block;
+                                               content: url(images/external.png);
+                                               width: 23px;
+                                               height: 0px;
+                                            }
+        div.main {  margin: 0 auto 0 auto;
+                    background-image: url('../CSS_CHESS/images/fon_svetlyj.png'); /* Путь к картинке */
+                    background-size: cover; /* Растягиваем картинку  по ширине */
+                    background-repeat: no-repeat; /* Картинка фона без повторения */
+                    background-position: center; /* Позиция фона по центру */
+                 }
     </style>
 </head>
 
@@ -89,7 +84,7 @@
         <p style="margin: 3px 0px 10px 0px;">
             <a href="https://chesspro.ru/statistic/botvinnik.shtml" class="external" target="_blank">Информация</a>
         </p>
-
+        
         <p class="content">С 1930-х гг. Ботвинник — лидер советских шахматистов: победы в чемпионате СССР (1939),
             в матче с В.Рагозиным (1940), в матч-турнире за звание абсолютного чемпиона СССР (1941).<br><br>
             В годы Великой Отечественной войны Ботвинник работал в Перми инженером-электриком.
@@ -174,3 +169,4 @@
     </div>
 </body>
 </html>
+
