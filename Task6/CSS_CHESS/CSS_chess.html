@@ -13,24 +13,21 @@
     height: 50px;
     border: solid gray 1px;
   }
-   .body { background-color: #eeeeee; }
-   .box { text-align: center; background-color: #eeeeee; }
-   .centered { display: inline-block; margin: 0; }
-    table.CHESS { border-spacing: 0; border-collapse: collapse; }
-    table.CHESS tr td {
-    border: 1px solid; width: 5em; height: 5em; text-align: center; vertical-align: middle; 
-    background: #ffffff;
-   }
-    table.CHESS tr:nth-child(odd) td:nth-child(even) {
-    background: #000000;
-   }
-   table.CHESS tr:nth-child(even) td:nth-child(odd) {
-    background: black;
-   }
+  table.CHESS 
+    tr:nth-child(even) td:nth-child(odd) {background-color: black;}
+    tr:nth-child(odd) td:nth-child(even) {background-color: black;}
+  
+  table.CHESS
+    tr:first-child, tr:last-child {background-color: lightgreen;}
+    td:first-child, td:last-child {background-color: lightgreen;}
 
+   
+
+ 
 </style>
-
-<table class='CHESS'>
+  
+  
+<table class='CHESS' >
 <tr>
   <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
@@ -64,3 +61,27 @@
 </table>
 
 </body></html>
+
+
+
+
+<!--tr:nth-child(odd) td:nth-child(odd) 
+    {background-color: black;}
+    tr:nth-child(even) td:nth-child(even)
+    {background-color: black;}
+
+
+    table.CHESS 
+    tr:first-of-type, tr:last-of-type {background-color: lightgreen;}
+    td:first-of-type, td:last-of-type {background-color: lightgreen;}
+
+    table.CHESS 
+    tr:nth-child(even) td:nth-child(odd) {background-color: black;}
+    tr:nth-child(odd) td:nth-child(even) {background-color: black;}-->
+    
+    <!--table.CHESS 
+    tr:first-child, td:nth-child(odd)
+    tr:first-child, td:nth-child(even)
+     {background-color: lightgreen;}-->
+  
+
