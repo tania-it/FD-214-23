@@ -17,17 +17,55 @@
     tr:nth-child(even) td:nth-child(odd) {background-color: black;}
     tr:nth-child(odd) td:nth-child(even) {background-color: black;}
   
-  table.CHESS
-    tr:first-child, tr:last-child {background-color: lightgreen;}
-    td:first-child, td:last-child {background-color: lightgreen;}
+  /*table.CHESS tr:first-child > td {background-color: lightgreen;}*/
+              
+ /* table.CHESS tr:last-child > td {background-color: lightgreen;}*/
+   /* td:first-child td:last-child {background-color: lightgreen;}*/
 
+   #greenBorder tr:first-child > td {
+    background-color: lightgreen; 
+    width: 20px;
+    height: 20px;
+  }
+   #greenBorder tr:last-child > td {
+    background-color: lightgreen;
+    width: 20px;
+    height: 20px;
+  }
+   #greenBorder td:first-of-type {
+    background-color: lightgreen;
+    width: 20px;
+    height: 20px;
+  }
+   #greenBorder td:last-of-type {
+    background-color: lightgreen;
+    width: 20px;
+    height: 20px;
+  }
+
+
+   /** not working examples **/
+   /*
+   #greenBorder
+   tr:first-child > td,
+   tr:last-child > td,
+   td:first-of-type,
+   td:last-of-type {background-color: lightgreen;}*/
+
+
+   /*
+   .CHESS tr:first-child > td {background-color: lightgreen;}
+   .CHESS tr:last-child > td {background-color: lightgreen;}
+   .CHESS td:first-of-type {background-color: lightgreen;}
+   .CHESS td:last-of-type  {background-color: lightgreen;}
+*/
    
 
  
 </style>
   
   
-<table class='CHESS' >
+<table class='CHESS' id="greenBorder">
 <tr>
   <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
