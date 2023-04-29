@@ -16,60 +16,158 @@
     <title>Figma_maket</title>
     <style>
         div.header {
-
             background-color: #313131;
-
         }
 
         div.container {
             margin: 0 auto;
             width: 1140px;
-            padding-top: 10px;
-            padding-bottom: 12px;
-
-
+            padding-top: 0px;
+            padding-bottom: 0px;
         }
 
-        .header ul li {
+        .menu1 ul li {
             display: inline-block;
             font-family: 'Roboto';
             font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
+            font-weight: 500;
+            font-size: 16px;
             line-height: 16px;
             color: #FFFFFF;
+            padding: 0px 30px 0px 0px;
         }
 
         .contacts {
             float: right;
-
-
+            display: block;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            padding-top: 10px;
+            color: #FFFFFF;
         }
-        .header ul {
+
+        div.header ul {
             float: left;
-            
         }
-        .clearfix
-         
+
+        div.clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        a {
+            color: #FFFFFF;
+        }
+
+        /******Горизонтальное меню с сайта http://zornet.ru/load/prostoe_gorizontalnoe_menju_css_dlja_sajta/84-1-0-8081******/
+        .menu2 {
+            background: white;
+            border: 1px solid whitesmoke;
+            width: 1140px;
+            height: 70px;
+            margin: 0 auto 0 auto;
+        }
+
+        .menu2 ul li {
+            display: inline-block;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            color: #FFFFFF;
+            padding: 0px 30px 0px 0px;
+        }
+
+        .menu2 li a {
+            display: block;
+            color: #313131;
+            line-height: 57px;
+            padding: 0 24px;
+            transition: box-shadow 0.4s, color 0.4s;
+            position: relative;
+        }
+
+        .menu2 li a:hover {
+            box-shadow: inset 0 -4px 0 #7babf7;
+            color: #80aef5;
+        }
+
+        #searchform {
+            display: inline-block;
+            margin-top: -2px;
+            
+        
+        }
+
+        #searchform input[type=text] {
+            display: inline-block;
+            background: url(http://zornet.ru/Aben/ABGEA/Rin/retunga/search-icon.png) no-repeat 11px;
+            padding-left: 32px;
+            border: 1px solid #575656;
+            height: 60px;
+            border-radius: 3px;
+            width: 600px;
+            padding: 0 11px 0 43px;
+            color: #999;
+            font-size: 16px;
+            transition: border 0.4s;
+        }
+
+        #searchform input[type=text]:focus {
+
+            border: 1px solid #b9d4ff;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <div class="container">
-            <ul>
-                <li>Главная</li>
-                <li>О нас</li>
-                <li>Контакты</li>
-            </ul>
-            <div class="contacts">телефон
+        <div class="container clearfix">
+            <div class="menu1">
+                <ul>
+                    <li>Главная</li>
+                    <li>О нас</li>
+                    <li>Контакты</li>
+                </ul>
+            </div>
+
+            <div class="contacts">
                 <a href="#">
-                    <img src="phone.png" alt="phone">8 (964) 89 99 119
+                    <img src="phone.png" alt="phone" style="padding-right:10px;">8 (964) 89 99 119
                 </a>
-                <span><img src="delivery-icon.png" alt="phone">Доставка</span>
+                <span style="padding-left: 20px;"><img src="delivery-icon.png" style="padding-right: 10px;"
+                        alt="phone">Доставка</span>
             </div>
         </div>
-
+    </div>
+    <div style="width: 1140px; height: 60px; border: 3px solid red; margin: 0 auto;">
+        <div style="float: left; width: 200px;">logo</div>
+        <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="get" action="/search/">
+            <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
+                onfocus="if(this.value=='Поиск..')this.value=''" />
+            <input type="hidden" name="sfSbm" />
+        </form>
+        <div style="float: right; width: 280px">icons</div>
+        <div style='clear: both'></div>  
+    </div>
+    <div class="menu2">
+        <ul>
+            <li><a href="/kitchen/">Кухни</a></li>
+            <li><a href="/forum/">Спальни</a></li>
+            <li><a href="/load/">Гостиные</a></li>
+            <li><a href="/publ/">Прихожие</a></li>
+            <li><a href="http://zornet.ru/load/0-0-0-0-1">Офисная мебель</a></li>
+            <li><a href="http://zornet.ru/load/0-0-0-0-1">Акция</a></li>
+            <li><a title="Обратная связь" href="/index/0-3">...</a></li>
+        </ul>
+        <div style="background-image: url('Loft-Mebel.png'); width: 1140px; height: 452px;"></div>
+    </div>
+    
 </body>
 
 </html>
