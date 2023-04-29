@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+           
+           div.main {
+                     width: 1500px;
+                     height: 500px;
+                     margin: 0 auto 0 auto;
+                    }
+           
+           div.box {display: block;
+                    float: left;
+                    width: 250px;
+                    height: 246px;
+                    background-image: url('red_star-mini.png');    
+                }
+           p.redstar {
+                        display: inline-block; 
+                        width: 250px;
+                        height: 246px;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                        
+                      }
+          p.redstar:hover {
+                    background: url('red_star-minifull.png'); /* Путь к файлу с заменяемым рисунком  */
+                       } 
+
+          div.box ~ p.redstar  {background-color: red;}           s  
+                       
+    </style>
+    <title>STARS</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box"><p class="redstar"></p></div> 
+        <div class="box"><p class="redstar"></p></div>
+        <div class="box"><p class="redstar"></p></div>
+        <div class="box"><p class="redstar"></p></div>
+        <div class="box"><p class="redstar"></p></div>
+        
+    </div>
+</body>
+</html>
+
+
+<!--margin-top: 30px;-->
