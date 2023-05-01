@@ -49,9 +49,9 @@
     }
 
     div.second_menu li {
-      margin: 30px 0px 30px 0px;
+      margin: 0px 0px 30px 0px;
       list-style-type: none;
-      display: inline;
+      display: inline-block;
       font-size: 18px;
       padding: 5px;
       border-right-style: solid;
@@ -77,7 +77,7 @@
     }
 
     div.third_menu {
-      margin: 20px 0px 30px 28px;
+      margin: 20px 0px 20px 28px;
       width: 700px;
       height: 50px;
       float: left;
@@ -97,8 +97,30 @@
       text-align: center;
       padding: 5px;
     }
+    div.fourth_menu {
+      margin: 0px;
+      width: 700px;
+      height: 50px;
+      float: left;
+      text-align: center;
+    }
+
+    div.fourth_menu li {
+      margin: 0px;
+      list-style-type: none;
+      display: inline-block;
+      font-size: 18px;
+      text-align: center; 
+    }
+    div.fourth_menu li + li::before {                                           
+      content: '|';  /* Разделитель ссылок */
+      color: red;
+      padding: 0px 5px; /* Расстояние вокруг разделителя */
+      font-size: 20px;
+    }
   </style>
 </head>
+
 <body>
   <div class="main">
     <div class="first_menu">
@@ -131,22 +153,36 @@
         </tr>
       </table>
     </div>
-  </div>
+    <div class="fourth_menu">
+      <ul id="fourth_menu li">
+        <li><a href="http://skating.by/">первая ссылка</a></li>
+        <li><a href="https://biathlon.by/">вторая ссылка</a></li>
+        <li><a href="https://www.ivi.ru/">третья ссылка</a></li>
+        <li><a href="http://www.archery.by/">четвёртая ссылка</a></li>
+        <li id="lastlink"><a href="https://blrswimming.by/" title="Пятая ссылка" target="_blank">пятая ссылка</a></li>
+      </ul>   
+    </div>
+  </div>  
 </body>
 
 </html>
 
+<!--Div.FIRST_MENU делали, прописав в контейнере соответствующие ссылки по образцу из методички-->
 
 <!--DIV.SECOND_MENU. Горизонтальное меню можно создать путем стилизации обычного списка.
-    Свойству display для элементов <li> нужно присвоить значение inline,
+    Свойству display для элементов <li> нужно присвоить значение inline-block,
     чтобы пункты списка располагались друг за другом. Для размещения пунктов меню по горизонтали,
     сначала создали маркированный список со ссылками.
     Напишем для нашего списка несколько правил, сбрасывающих стиль используемый для списков по умолчанию,
     и переопределим пункты списка с блочных на строчные.-->
+    
 <!--DIV.THIRD_MENU. Вывели в браузере таблицу со ссылками.
    Одна строка и пять ячеек. Строке указали тип как блочный (например, как <div>), т.е. 
    это даёт нам возможность применения свойств для блочных элементов. Каждой ячеейке задали правую границу красного цвета.
    Для крайней ссылки прописали селектор по идентификатору, чтобы убрать красный вертикальный разделитель в самом конце.
    Ссылки стилизовали используя псевдо-класс a:hover, который при поднесении мыши текст ссылок отображал красным цветом.-->
-<!--Div.FIRST_MENU делали, прописав в контейнере соответствующие ссылки по образцу из методички-->
-<!--На большее количество способов не хватило ни времени, ни умственных ресурсов-->
+
+<!--Div.fourth_menu создали также путём стилизации маркированного списка. 
+Чтобы отделить ссылки друг от друга, между ними вставили разделитель, в качестве него использовали вертикальную черту.
+Разделитель добавляем через свойство content и селектор li + li::before, он выберет все элементы <li> кроме первого
+-->
