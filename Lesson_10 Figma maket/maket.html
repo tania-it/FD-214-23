@@ -19,14 +19,20 @@
             background-color: #313131;
         }
 
-        div.container {
-            margin: 0 auto;
+        #content {
             width: 1140px;
+            margin: 0 auto;
+        }
+
+        div.container {
+            /*margin: 0 auto;
+            width: 1140px;*/
+            width: 100%;
             padding-top: 0px;
             padding-bottom: 0px;
         }
 
-        .menu1 ul li {
+        .menu_top ul li {
             display: inline-block;
             font-family: 'Roboto';
             font-style: normal;
@@ -64,7 +70,7 @@
         }
 
         /******Горизонтальное меню с сайта http://zornet.ru/load/prostoe_gorizontalnoe_menju_css_dlja_sajta/84-1-0-8081******/
-        .menu2 {
+        .menu_main {
             background: white;
             border: 1px solid whitesmoke;
             width: 1140px;
@@ -72,7 +78,7 @@
             margin: 0 auto 0 auto;
         }
 
-        .menu2 ul li {
+        .menu_main ul li {
             display: inline-block;
             list-style-type: none;
             font-family: 'Roboto';
@@ -84,7 +90,7 @@
             padding: 0px 10px 0px 0px;
         }
 
-        .menu2 li a {
+        .menu_main li a {
             display: block;
             color: #313131;
             line-height: 57px;
@@ -93,7 +99,7 @@
             position: relative;
         }
 
-        /*.menu2 li a:hover {
+        /*.menu_main li a:hover {
                                                                         box-shadow: inset 0 -4px 0 #7babf7;
                                                                         color: #80aef5;
                                                                     }*/
@@ -129,7 +135,7 @@
             background-image: url('images/Loft_Mebel.png');
             width: 1140px;
             height: 452px;
-
+            position: absolute;
         }
     </style>
 </head>
@@ -137,7 +143,7 @@
 <body>
     <div class="header">
         <div class="container clearfix">
-            <div class="menu1">
+            <div class="menu_top">
                 <ul>
                     <li>Главная</li>
                     <li>О нас</li>
@@ -149,44 +155,51 @@
                 <a href="#">
                     <img src="images/phone.png" alt="phone" style="padding-right:10px;">8 (964) 89 99 119
                 </a>
-                <span style="padding-left: 20px;"><img src="images/delivery-icon.png" style="padding-right: 10px;"
-                        alt="phone">Доставка</span>
+                <a href="#" style="padding-left: 20px;">
+                    <img src="images/delivery-icon.png" style="padding-right: 10px;" alt="delivery">Доставка
+                </a>
             </div>
         </div>
     </div>
-    <div style="width: 1140px; height: 60px; border: 3px solid red; margin: 0 auto;">
-        <div style="display: block;
-                     float: left;
-                     width: 200px;
-                     height: 60px; 
-                     background-image: url('LOGO.png');">
+
+    <div id="content">
+        <div id="search-bar" style="width: 1140px; height: 60px; border: 3px solid red; margin: 0 auto;">
+            <div style="display: block;
+                         float: left;
+                         width: 200px;
+                         height: 60px; 
+                         background: url('images/LOGO.png') no-repeat center center;">             
+            </div>
+            <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="GET" action="/search/">
+                <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
+                    onfocus="if(this.value=='Поиск..')this.value=''" />
+                <input type="hidden" name="sfSbm" />
+            </form>
+            <div style="float: right; width: 150px">
+                <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 37px;" alt="like">
+                <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
+                <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
+            </div>
+            <div style='clear: both'></div>
         </div>
-        <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="get" action="/search/">
-            <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
-                onfocus="if(this.value=='Поиск..')this.value=''" />
-            <input type="hidden" name="sfSbm" />
-        </form>
-        <div style="float: right; width: 150px">
-            <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 37px;" alt="like">
-            <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
-            <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
+        <div class="menu_main">
+            <ul>
+                <li><a href="kitchen"><img src="img_menu/kitchen-icon.png">Кухни</a></li>
+                <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png">Спальни</a></li>
+                <li><a href="living rooms"><img src="img_menu/livingroom-icon.png">Гостиные</a></li>
+                <li><a href="halls"><img src="img_menu/closet-icon.png">Прихожие</a></li>
+                <li><a href="Office furniture"><img src="img_menu/office-icon.png">Офисная мебель</a></li>
+                <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png">Детская</a></li>
+                <li><a href="promotion" style="color: red;">Акция</a></li>
+                <li><a href="Feedback">...</a></li>
+            </ul>
         </div>
-        <div style='clear: both'></div>
+        <div class="banner1">
+            <p style="position: relative; top: 50px; left: 100px;">BANNER TEXT</p>
+        </div>
     </div>
-    <div class="menu2">
-        <ul>
-            <li><a href="kitchen"><img src="img_menu/kitchen-icon.png">Кухни</a></li>
-            <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png">Спальни</a></li>
-            <li><a href="living rooms"><img src="img_menu/livingroom-icon.png">Гостиные</a></li>
-            <li><a href="halls"><img src="img_menu/closet-icon.png">Прихожие</a></li>
-            <li><a href="Office furniture"><img src="img_menu/office-icon.png">Офисная мебель</a></li>
-            <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png">Детская</a></li>
-            <li><a href="promotion" style="color: red;">Акция</a></li>
-            <li><a href="Feedback">...</a></li>
-        </ul>
-    </div>
-    <div class="banner1">
-    </div>
+
+    
 </body>
 
 </html>
