@@ -15,6 +15,13 @@
   <link rel="stylesheet" href="style.css">
   <title>Figma_maket</title>
   <style>
+    html,
+    body,
+    div.wrapper {
+      height: 100%;
+      border: 1px solid blueviolet;
+    }
+
     div.header {
       background-color: #313131;
     }
@@ -101,7 +108,6 @@
       display: inline-block;
       margin-top: -2px;
 
-
     }
 
     #searchform input[type=text] {
@@ -177,111 +183,213 @@
     a.product:hover .product-photo img {
       transform: scale(1.05);
     }
+
+    #content {
+      width: 1140px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+
+    #product-area {
+      width: 100%;
+      border: 1px solid green;
+    }
+
+    
+    /*FOOTER MENU  FOOTER MENU  FOOTER MENU  FOOTER MENU  FOOTER MENU*/
+
+    #footer {
+      display: block;
+      width: 1140px;
+      height: 80px;
+      margin: 0px auto;
+      border: 1px solid red;
+    }
+
+    #footer a {
+      color: black;
+    }
+
+    #left-navigation {
+      border: 1px solid fuchsia;
+    }
+
+    .column {
+      width: 11%;
+      ;
+      float: left;
+      border: 1px solid red;
+    }
+
+    .column a {
+      display: block;
+    }
+
+    #phone-insta-email {
+      margin: 30px 0px;
+      padding: 20px;
+      padding-left: 0px;
+      border: 1px solid blue;
+    }
+
+    #phone-insta-email a {
+      display: inline-block;
+    }
+
+    #phone-insta-email .pull-left {
+      margin-right: 30px;
+      float: left;
+    }
+
+    #phone-insta-email .pull-right {
+      margin-right: 30px;
+      float: right;
+    }
   </style>
 </head>
 
 <body>
-  <div class="header">
-    <div class="container clearfix">
-      <div class="menu_top">
-        <ul>
-          <li>Главная</li>
-          <li>О нас</li>
-          <li>Контакты</li>
-        </ul>
-      </div>
+  <div class="wrapper">
+    <div class="header">
+      <div class="container clearfix">
+        <div class="menu_top">
+          <ul>
+            <li>Главная</li>
+            <li>О нас</li>
+            <li>Контакты</li>
+          </ul>
+        </div>
 
-      <div class="contacts">
-        <a href="#">
-          <img src="images/phone.png" alt="phone" style="padding-right:10px;">8 (964) 89 99 119
-        </a>
-        <a href="#" style="padding-left: 20px;">
-          <img src="images/delivery-icon.png" style="padding-right: 10px;" alt="delivery">Доставка
-        </a>
-      </div>
+        <div class="contacts">
+          <a href="#">
+            <img src="images/phone.png" alt="phone" style="padding-right:10px;">8 (964) 89 99 119
+          </a>
+          <a href="#" style="padding-left: 20px;">
+            <img src="images/delivery-icon.png" style="padding-right: 10px;" alt="delivery">Доставка
+          </a>
+        </div>
 
+      </div>
     </div>
-  </div>
-  <div id="content">
-    <div id="search-bar" style="width: 1140px; height: 60px; margin: 0 auto;">
-      <div style="display: block;
+    <div id="content">
+      <div id="search-bar" style="width: 1140px; height: 60px; margin: 0 auto;">
+        <div style="display: block;
                          float: left;
                          width: 200px;
                          height: 60px; 
                          background: url('images/LOGO.png') no-repeat center center;">
+        </div>
+        <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="get" action="/search/">
+          <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
+            onfocus="if(this.value=='Поиск..')this.value=''" />
+          <input type="hidden" name="sfSbm" />
+        </form>
+        <div style="float: right; width: 150px">
+          <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 37px;" alt="like">
+          <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
+          <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
+        </div>
+        <div style='clear: both'></div>
       </div>
-      <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="get" action="/search/">
-        <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
-          onfocus="if(this.value=='Поиск..')this.value=''" />
-        <input type="hidden" name="sfSbm" />
-      </form>
-      <div style="float: right; width: 150px">
-        <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 37px;" alt="like">
-        <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
-        <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
+      <div class="menu_main">
+        <ul>
+          <li><a href="kitchen"><img src="img_menu/kitchen-icon.png">Кухни</a></li>
+          <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png">Спальни</a></li>
+          <li><a href="living rooms"><img src="img_menu/livingroom-icon.png">Гостиные</a></li>
+          <li><a href="halls"><img src="img_menu/closet-icon.png">Прихожие</a></li>
+          <li><a href="Office furniture"><img src="img_menu/office-icon.png">Офисная мебель</a></li>
+          <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png">Детская</a></li>
+          <li><a href="promotion" style="color: red;">Акция</a></li>
+          <li><a href="Feedback">...</a></li>
+        </ul>
       </div>
-      <div style='clear: both'></div>
+      <div class="advertising">
+      </div>
+      <div>
+        <ul class="products clearfix">
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Sheron Barhat Grey.png" alt="Двухспальные кровати"></a>
+            <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты"></a>
+            <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
+            <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Tiffany Woodline Cream.png" alt="Письменные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
+            <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
+            <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige bar.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige stellage.png" alt="Барные стулья"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты>"></a>
+            <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
+            <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
+            <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
+            <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Стеллажи"></a>
+            <a href="#" class="product"><img src="img_furniture/Laytsi Velvet Emerald.png"
+                alt="Двухспальные кровати"></a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <div>
+          <h3>Навигация</h3>
+          <div id="left-navigation">
+            <div class="column">
+              <a href="#">Кухни</a>
+              <a href="#">Спальни</a>
+              <a href="#">Гостиные</a>
+            </div>
+            <div class="column" style="width: 160px">
+              <a href="#">Прихожие</a>
+              <a href="#">Офисная мебель</a>
+              <a href="#">Детская</a>
+            </div>
+            <div class="column">
+              <a href="#">Шкафы</a>
+              <a href="#">Матрасы</a>
+              <a href="#">Мягкая мебель</a>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div id="phone-insta-email">
+          <a href="#" class="pull-left"><span style="color:red">Акция</span></a>
+          <a href="#" class="pull-left">Новинки</a>
+          <a href="#" class="pull-right">8(964)89 99 119</a>
+          <a href="#" class="pull-right">INSTAGRAM</a>
+          <a href="#" class="pull-right">mebel_loft_anapa@mail.ru</a>
+        </div>
+      </div>
     </div>
-    <div class="menu_main">
-      <ul>
-        <li><a href="kitchen"><img src="img_menu/kitchen-icon.png">Кухни</a></li>
-        <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png">Спальни</a></li>
-        <li><a href="living rooms"><img src="img_menu/livingroom-icon.png">Гостиные</a></li>
-        <li><a href="halls"><img src="img_menu/closet-icon.png">Прихожие</a></li>
-        <li><a href="Office furniture"><img src="img_menu/office-icon.png">Офисная мебель</a></li>
-        <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png">Детская</a></li>
-        <li><a href="promotion" style="color: red;">Акция</a></li>
-        <li><a href="Feedback">...</a></li>
-      </ul>
-    </div>
-    <div class="advertising">
-    </div>
-    <ul class="products clearfix">
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья"></a>
-        <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
-        <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
-        <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Sheron Barhat Grey.png" alt="Двухспальные кровати"></a>
-        <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты"></a>
-        <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
-        <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
-        <a href="#" class="product"><img src="img_furniture/Tiffany Woodline Cream.png" alt="Письменные столы"></a>
-        <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
-        <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
-        <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
-        <a href="#" class="product"><img src="img_furniture/Valencia Beige bar.png" alt="Барные стулья"></a>
-        <a href="#" class="product"><img src="img_furniture/Valencia Beige stellage.png" alt="Барные стулья"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Барные стулья"></a>
-        <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты>"></a>
-        <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
-        <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
-        <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
-        <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
-        <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
-      </li>
-      <li class="product-wrapper">
-        <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
-        <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
-        <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Стеллажи"></a>
-        <a href="#" class="product"><img src="img_furniture/Laytsi Velvet Emerald.png" alt="Двухспальные кровати"></a>
-      </li>
-    </ul>
+</body>
 
-    <!-- Вёрстка блоков с фотографиями единиц мебели
+</html>
+
+
+<!-- Вёрстка блоков с фотографиями единиц мебели
     <div class="product-photo">
       <img src="images/Valencia Beige.png" alt="Барные стулья">
     </div>
@@ -294,9 +402,3 @@
     <div class="product-photo">
       <img src="images/Kusken Navy Blue.png" alt="Диваны">
     </div> -->
-
-
-  </div>
-</body>
-
-</html>
