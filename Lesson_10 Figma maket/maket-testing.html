@@ -15,13 +15,12 @@
   <link rel="stylesheet" href="style.css">
   <title>Figma_maket</title>
   <style>
-    /*html,
-    body,
     div.wrapper {
       height: 100%;
       overflow: auto;
-      border: 1px solid blueviolet;
-    }*/
+      border: 5px solid lightblue;
+      padding-bottom: 20px;
+    }
 
     div.header {
       background-color: #313131;
@@ -75,9 +74,9 @@
     .menu_main {
       background: white;
       border: 1px solid whitesmoke;
-      width: 1140px;
+      width: 1138px;
       height: 70px;
-      margin: 0 auto 0 auto;
+      margin: 0 auto;
     }
 
     .menu_main ul li {
@@ -107,6 +106,7 @@
 
     #searchform {
       display: inline-block;
+      width: 790px;
       margin-top: -2px;
 
     }
@@ -118,8 +118,8 @@
       border: 1px solid #575656;
       height: 40px;
       border-radius: 3px;
-      width: 720px;
-      padding: 0 11px 0 43px;
+      width: 750px;
+      padding-left: 40px;
       color: #999;
       font-size: 16px;
       transition: border 0.4s;
@@ -157,7 +157,7 @@
       color: #474747;
       z-index: 0;
       float: left;
-      width: 260px;
+      width: 250px;
       height: 400px;
       text-align: center;
       padding-top: 80px;
@@ -249,7 +249,9 @@
 
     /** fix */
     ul {
+
       overflow: auto;
+      text-align: center;
     }
   </style>
 </head>
@@ -291,7 +293,7 @@
           <input type="hidden" name="sfSbm" />
         </form>
         <div style="float: right; width: 150px">
-          <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 37px;" alt="like">
+          <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 35px;" alt="like">
           <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
           <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
         </div>
@@ -299,30 +301,77 @@
       </div>
       <div class="menu_main">
         <ul>
-          <li><a href="kitchen"><img src="img_menu/kitchen-icon.png">Кухни</a></li>
-          <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png">Спальни</a></li>
-          <li><a href="living rooms"><img src="img_menu/livingroom-icon.png">Гостиные</a></li>
-          <li><a href="halls"><img src="img_menu/closet-icon.png">Прихожие</a></li>
-          <li><a href="Office furniture"><img src="img_menu/office-icon.png">Офисная мебель</a></li>
-          <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png">Детская</a></li>
+          <li><a href="kitchen"><img src="img_menu/kitchen-icon.png" style="padding-right:10px;">Кухни</a></li>
+          <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png" style="padding-right:10px;">Спальни</a></li>
+          <li><a href="living rooms"><img src="img_menu/livingroom-icon.png" style="padding-right:10px;">Гостиные</a>
+          </li>
+          <li><a href="halls"><img src="img_menu/closet-icon.png" style="padding-right:10px;">Прихожие</a></li>
+          <li><a href="Office furniture"><img src="img_menu/office-icon.png" style="padding-right:10px;">Офисная
+              мебель</a></li>
+          <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png"
+                style="padding-right:10px;">Детская</a></li>
           <li><a href="promotion" style="color: red;">Акция</a></li>
           <li><a href="Feedback">...</a></li>
         </ul>
       </div>
       <div class="banner1">
         <H1 style="display: inline-block;
-                   position: relative;
-                   top: 100px;
-                   left: 150px">LOFT<br>МЕБЕЛЬ
+                    position: relative;
+                    width: 216px;
+                    height: 106px;
+                    top: 100px;
+                    left: 150px;
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 105.3%;
+                    /* or 53px */
+                                                                  
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: #3C3C3C;
+                    margin-bottom: 15px;">loft мебель
         </H1>
-        <h4 style="display:block;
-                   position: relative;
-                   top: 100px;
-                   left: 150px">Современная и удобная мебель в Анапе</h4>
-        <span style="position: relative;
-                     top: 100px;
-                     left: 150px">Смотреть каталог</span> 
+        <div style="display:block;
+                      position: relative;
+                      width: 280px;
+                      height: 23px;
+                      left: 150px;
+                      top: 100px;
+                      font-family: 'Roboto Condensed';
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 16px;
+                      line-height: 140.8%;
+                      /* identical to box height, or 23px */
+                      
+                      letter-spacing: 0.02em;
+                      color: #343434;
+                      margin: 0px;">Современная и удобная мебель в Анапе
+        </div>
+        <div style="position: absolute;
+                    width: 163px;
+                    height: 45px;
+                    left: 371px;
+                    top: 474px;
+                    background: #FFFFFF;
+                    /* menu-shadow */
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+                    font-family: 'Roboto Condensed';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 140.8%;
+                    /* identical to box height, or 17px */
+                    letter-spacing: 0.04em;
+                    /* text-color */
+                    color: #414141;">Смотреть каталог
+        </div>
 
+                                                                              <!--<span style="position: relative;
+                                                                                          top: 100px;
+                                                                                          left: 150px">Смотреть каталог</span>-->
       </div>
       <div id="product-area">
         <ul class="products clearfix">
