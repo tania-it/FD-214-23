@@ -59,7 +59,7 @@
 
     div.header ul {
       float: left;
-     /* overflow: auto; */
+      /* overflow: auto; */
       text-align: center;
       padding-left: 60px;
       padding-top: 15px;
@@ -163,9 +163,9 @@
       z-index: 0;
       float: left;
       width: 250px;
-      height: 350px;
+      height: 300px;
       text-align: center;
-      padding-top: 80px;
+      padding-top: 50px;
     }
 
     div.product-photo {
@@ -208,7 +208,7 @@
     #footer {
       display: block;
       width: 1140px;
-      height: 200px;
+      height: 170px;
       margin: 0px auto;
       border: 1px solid red;
     }
@@ -259,7 +259,7 @@
       text-align: center;
       padding-left: 0;
     }
-    
+
     a.product h2 {
       padding-top: 20px;
       padding-bottom: 10px;
@@ -272,8 +272,9 @@
       color: #414141;
       text-align: left;
     }
+
     a.product p {
-      
+
       padding-top: 10 px;
       padding-left: 15px;
       font-family: 'Roboto';
@@ -286,7 +287,7 @@
     }
 
     a.product h3 {
-      
+
       padding-top: 10px;
       padding-left: 15px;
       font-family: 'Roboto';
@@ -297,8 +298,12 @@
       color: #414141;
       text-align: left;
     }
+
+    ul.products {
+      overflow: auto;
+    }
   </style>
-  
+
 </head>
 
 <body>
@@ -356,7 +361,10 @@
           <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png"
                 style="padding-right:10px;">Детская</a></li>
           <li><a href="promotion" style="color: red;">Акция</a></li>
-          <li><a href="Feedback">...</a></li>
+          <li><a href="Feedback"><img src="img_menu/kebab-menu.png" style="padding-top: 15px;
+                                                                           vertical-align: top;">
+            </a>
+          </li>
         </ul>
       </div>
       <div class="banner1">
@@ -398,8 +406,8 @@
         <div style="position: absolute;
                     width: 163px;
                     height: 45px;
-                    left: 530px;
-                    top: 430px;
+                    left: 372px;
+                    top: 440px;
                     background: #FFFFFF;
                     /* menu-shadow */
                     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
@@ -411,26 +419,39 @@
                     /* identical to box height, or 17px */
                     letter-spacing: 0.04em;
                     /* text-color */
-                    color: #414141;"><p style="text-align: center;
+                    color: #414141;">
+          <p style="text-align: center;
                                                  padding-top: 8px;">Смотреть каталог</p>
         </div>
 
-                                                                              <!--<span style="position: relative;
+        <!--<span style="position: relative;
                                                                                           top: 100px;
                                                                                           left: 150px">Смотреть каталог</span>-->
       </div>
+      <p style="font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                padding-left: 14px;
+                margin: 15px 0px;">Хиты продаж</p>
       <div id="product-area">
         <ul class="products clearfix">
           <li class="product-wrapper">
-            <a href="https://www.onliner.by/"class="product"><img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья">
-              <div class="text" >
-              <h2>Валенсия Beige</h2>
-              <p>Барные стулья</p>
-              <h3>2 300&#8381;</h3>
+            <a href="https://www.onliner.by/" class="product"><img src="img_furniture/Valencia Beige chair.png"
+                alt="Барные стулья">
+              <div class="text">
+                <h2>Валенсия Beige</h2>
+                <p>Барные стулья</p>
+                <h3>2 300&#8381;</h3>
               </div>
             </a>
-
-            <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья">
+              <div class="text">
+                <h2>Tolix-2 White Gloss</h2>
+                <p>Барные стулья</p>
+                <h3>4 690&#8381;</h3>
+              </div>
+            </a>
             <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
             <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
           </li>
