@@ -132,7 +132,6 @@
     }
 
     #searchform input[type=text]:focus {
-
       border: 1px solid #b9d4ff;
     }
 
@@ -153,28 +152,32 @@
       /*transition: width .2s;*/
     }
 
+    .product-card {
+        border: 1px solid red;
+        float: left;
+        width: 267px;
+        height: 350px; 
+        margin: 0 20px 20px 0;
+    }
+
     a.product {
       display: block;
       border: 1px solid #b5e9a7;
-      /*border-radius: 3px;*/
-      /*position: relative;*/
       background: #ffff;
-      margin: 0 20px 20px 0;
       text-decoration: none;
       color: #474747;
-      /*z-index: 0;*/
-      float: left;
-      width: 267px;
-      height: 300px;
       text-align: center;
       padding-top: 50px;
     }
 
-    .product:nth-child(4) {
+    .product-card:nth-child(4n) {
       margin-right: 0;
     }
+    /*.product-card:last-child {
+      margin-right: 0;
+    }*/
 
-    div.product-photo {
+    /*div.product-photo {
       position: relative;
       padding-bottom: 100%;
       overflow: hidden;
@@ -190,9 +193,13 @@
       max-height: 100%;
       margin: auto;
       transition: transform .4s ease-out;
-    }
+    }*/
 
-    a.product:hover .product-photo img {
+    /*a.product:hover .product-photo img {
+      transform: scale(1.05);
+    }*/
+
+    a.product:hover > img {
       transform: scale(1.05);
     }
 
@@ -225,69 +232,24 @@
       color: black;
     }
 
-    #footer h2 {
-      color: black;
-      font-size: 24px;
-      font-variant-caps: all-petite-caps;
-    }
-
     #left-navigation {
       border: 1px solid fuchsia;
-      float: left;
     }
 
     .column {
-      width: 130px;
+      width: 11%;
       float: left;
       border: 1px solid red;
     }
 
     .column a {
       display: block;
-      font-size: 18px;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      text-align: left;
-      color: #414141;
-    }
-
-    #right-navigation {
-      border: 3px solid darkslateblue;
-      float: right;
-      margin-top: -28px;
-    }
-
-    .abbr {
-      width: 200px;
-      height: 50px;
-      left: 1222px;
-      top: 3579px;
-      text-align: right;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 900;
-      font-size: 42px;
-      color: #000000;
-    }
-
-    .addr {
-      width: 200px;
-      height: 40px;
-      left: 1111px;
-      top: 3648px;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      text-align: right;
-      color: #414141;
     }
 
     #phone-insta-email {
-      height: 30px;
-      margin: 90px 0px 0px 0px;
+      margin: 30px 0px;
+      padding: 20px;
+      padding-left: 0px;
       border: 1px solid blue;
     }
 
@@ -296,30 +258,16 @@
     }
 
     #phone-insta-email .pull-left {
-      margin-right: 20px;
+      margin-right: 30px;
       float: left;
     }
 
     #phone-insta-email .pull-right {
-      margin-right: 20px;
+      margin-right: 30px;
       float: right;
     }
 
-    #phone-insta-email a:nth-child(3) {
-      /*press the e-mail to the right border*/
-      margin-right: 3px;
-    }
-
-    /*fix */
-    ul {
-
-      /*overflow: auto;*/
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    a.product h2 {
+    .product-card .text h2 {
       padding-top: 20px;
       padding-bottom: 10px;
       padding-left: 14px;
@@ -332,8 +280,7 @@
       text-align: left;
     }
 
-    a.product p {
-
+    .product-card .text p {
       padding-top: 10 px;
       padding-left: 15px;
       font-family: 'Roboto';
@@ -345,8 +292,7 @@
       text-align: left;
     }
 
-    a.product h3 {
-
+    .product-card .text h3 {
       padding-top: 10px;
       padding-left: 15px;
       font-family: 'Roboto';
@@ -371,9 +317,9 @@
       <div class="container clearfix">
         <div class="menu_top">
           <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li>Главная</li>
+            <li>О нас</li>
+            <li>Контакты</li>
           </ul>
         </div>
 
@@ -482,12 +428,12 @@
                     letter-spacing: 0.04em;
                     /* text-color */
                     color: #414141;">
-          <p style="text-align: center; padding-top: 8px;"><a href="#" style="color: #414141; ;">Смотреть каталог</a>
-          </p>
+          <p style="text-align: center; padding-top: 8px;">Смотреть каталог</p>
         </div>
+
         <!--<span style="position: relative;
-                                   top: 100px;
-                                   left: 150px">Смотреть каталог</span>-->
+                                                                                          top: 100px;
+                                                                                          left: 150px">Смотреть каталог</span>-->
       </div>
       <p style="font-family: 'Roboto';
                 font-style: normal;
@@ -496,27 +442,122 @@
                 padding-left: 14px;
                 margin: 15px 0px;">Хиты продаж</p>
       <div id="product-area">
+
         <ul class="products clearfix">
-          <li class="product-wrapper">
-            <a href="https://www.onliner.by/" class="product"><img src="img_furniture/Valencia Beige chair.png"
-                alt="Барные стулья">
-              <div class="text">
-                <h2>Валенсия Beige</h2>
-                <p>Барные стулья</p>
-                <h3>2 300&#8381;</h3>
-              </div>
-            </a>
-            <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья">
-              <div class="text">
-                <h2>Tolix-2 White Gloss</h2>
-                <p>Барные стулья</p>
-                <h3>4 690&#8381;</h3>
-              </div>
-            </a>
-            <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
-            <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+            <li class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+        <!--</ul>
+
+        <ul class="products clearfix">-->
+            <li class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+        </ul>
+
+        <!-- <ul class="products clearfix">
+           <li class="product-wrapper">
+            <div class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </div>
           </li>
-          <li class="product-wrapper">
+          <!-- <li class="product-wrapper">
             <a href="#" class="product"><img src="img_furniture/Sheron Barhat Grey.png" alt="Двухспальные кровати"></a>
             <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты"></a>
             <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
@@ -553,11 +594,11 @@
             <a href="#" class="product"><img src="img_furniture/Laytsi Velvet Emerald.png"
                 alt="Двухспальные кровати"></a>
           </li>
-        </ul>
+        </ul> -->
       </div>
       <div id="footer">
         <div>
-          <h2>Навигация</h2>
+          <h3>Навигация</h3>
           <div id="left-navigation">
             <div class="column">
               <a href="#">Кухни</a>
@@ -569,35 +610,48 @@
               <a href="#">Офисная мебель</a>
               <a href="#">Детская</a>
             </div>
-            <div class="column" style="width: 130px">
+            <div class="column">
               <a href="#">Шкафы</a>
               <a href="#">Матрасы</a>
               <a href="#">Мягкая мебель</a>
             </div>
           </div>
-          <div id="right-navigation">
-            <p class="abbr">LM
-            </p>
-            <p class="addr"> г. Анапа, Анапское шоссе, 30 Ж/К Чёрное море
-            </p>
-
-            <div class="clearfix"></div>
-          </div>
-          <div id="phone-insta-email">
-            <a href="#" class="pull-left"><span style="color:red">Акция</span></a>
-            <a href="#" class="pull-left">Новинки</a>
-            <a href="#" class="pull-right">
-              <img src="images/mail.png" alt="e-mail-footer" style="padding-right:10px;">mebel_loft_anapa@mail.ru
-            </a>
-            <a href="#" class="pull-right">
-              <img src="images/inst.png" alt="inst-footer" style="padding-right:10px;">INSTAGRAM
-            </a>
-            <a href="#" class="pull-right">
-              <img src="images/phone-footer.png" alt="phone-footer" style="padding-right:10px;">8 (964) 89 99 1198
-            </a>
-          </div>
+          <p style="float: right;
+                    width: 171px;
+                    height: 54px;
+                    left: 1111px;
+                    top: 3648px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-align: right;
+                    color: #414141;">г. Анапа, Анапское шоссе,
+            30 Ж/К Черное море
+          </p>
+          <p style="float: right;
+          width: 60px;
+          height: 49px;
+          
+          left: 1222px;
+          top: 3579px;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 900;
+          font-size: 42px;
+          color: #000000;">LM
+          </p>
+          <div class="clearfix"></div>
+        </div>
+        <div id="phone-insta-email">
+          <a href="#" class="pull-left"><span style="color:red">Акция</span></a>
+          <a href="#" class="pull-left">Новинки</a>
+          <a href="#" class="pull-right">8(964)89 99 119</a>
+          <a href="#" class="pull-right">INSTAGRAM</a>
+          <a href="#" class="pull-right">mebel_loft_anapa@mail.ru</a>
         </div>
       </div>
+    </div>
 </body>
 
 </html>
@@ -616,26 +670,3 @@
     <div class="product-photo">
       <img src="images/Kusken Navy Blue.png" alt="Диваны">
     </div> -->
-
-
-<!--       <p style="width: 60px;
-              height: 57px;
-              left: 1222px;
-              top: 3579px;
-              font-family: 'Roboto';
-              font-style: normal;
-              font-weight: 900;
-              font-size: 42px;
-              color: #000000;">LM
-            </p>
-            <p style="width: 183px;
-                      height: 30px;
-                      left: 1111px;
-                      top: 3648px;
-                      font-family: 'Roboto';
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      text-align: right;
-                      color: #414141;">г. Анапа, Анапское шоссе, 30 Ж/К Чёрное море
-            </p>-->
