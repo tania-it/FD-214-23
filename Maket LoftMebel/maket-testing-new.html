@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Figma_maket</title>
+  <style>
+    div.wrapper {
+      height: 100%;
+      overflow: auto;
+      border: 5px solid lightblue;
+      padding-bottom: 20px;
+    }
+
+    div.header {
+      background-color: #313131;
+    }
+
+    div.container {
+      margin: 0 auto;
+      width: 1140px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .menu_top ul li {
+      display: inline-block;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #FFFFFF;
+      padding: 0px 30px 0px 0px;
+    }
+
+    .contacts {
+      float: right;
+      display: block;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: #FFFFFF;
+    }
+
+    div.header ul {
+      float: left;
+      /* overflow: auto; */
+      text-align: center;
+      padding-left: 60px;
+      padding-top: 15px;
+    }
+
+    div.clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    a {
+      color: #FFFFFF;
+    }
+
+    /******Горизонтальное меню с сайта http://zornet.ru/load/prostoe_gorizontalnoe_menju_css_dlja_sajta/84-1-0-8081******/
+    .menu_main {
+      background: white;
+      border: 1px solid whitesmoke;
+      width: 1138px;
+      height: 70px;
+      margin: 0 auto;
+    }
+
+    .menu_main ul li {
+      display: inline-block;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #FFFFFF;
+      padding: 0px 10px 0px 0px;
+    }
+
+    .menu_main li a {
+      display: block;
+      color: #313131;
+      line-height: 57px;
+      padding: 0 15px;
+      transition: box-shadow 0.4s, color 0.4s;
+      position: relative;
+    }
+
+    /*.menu_main li a:hover {
+                                                                        box-shadow: inset 0 -4px 0 #7babf7;
+                                                                        color: #80aef5;
+                                                                    }*/
+
+    #searchform {
+      display: inline-block;
+      width: 790px;
+      margin-top: -2px;
+
+    }
+
+    #searchform input[type=text] {
+      display: inline-block;
+      background: url(http://zornet.ru/Aben/ABGEA/Rin/retunga/search-icon.png) no-repeat 11px;
+      padding-left: 32px;
+      border: 1px solid #575656;
+      height: 40px;
+      border-radius: 3px;
+      width: 750px;
+      padding-left: 40px;
+      color: #999;
+      font-size: 16px;
+      transition: border 0.4s;
+      margin: 10px 0px 10px 0px;
+    }
+
+    #searchform input[type=text]:focus {
+      border: 1px solid #b9d4ff;
+    }
+
+    div.banner1 {
+      background-image: url('images/Loft_Mebel.png');
+      width: 1140px;
+      height: 452px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    li.product-wrapper {
+      display: block;
+      width: 1140px;
+      margin: 0 auto;
+      padding: 0;
+      /*float: left;*/
+      /*transition: width .2s;*/
+    }
+
+    .product-card {
+        border: 1px solid red;
+        float: left;
+        width: 267px;
+        height: 350px; 
+        margin: 0 20px 20px 0;
+    }
+
+    a.product {
+      display: block;
+      border: 1px solid #b5e9a7;
+      background: #ffff;
+      text-decoration: none;
+      color: #474747;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .product-card:nth-child(4n) {
+      margin-right: 0;
+    }
+    /*.product-card:last-child {
+      margin-right: 0;
+    }*/
+
+    /*div.product-photo {
+      position: relative;
+      padding-bottom: 100%;
+      overflow: hidden;
+    }
+
+    .product-photo img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      transition: transform .4s ease-out;
+    }*/
+
+    /*a.product:hover .product-photo img {
+      transform: scale(1.05);
+    }*/
+
+    a.product:hover > img {
+      transform: scale(1.05);
+    }
+
+    #content {
+      width: 1140px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+
+    #product-area {
+      width: 100%;
+      border: 1px solid green;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /*FOOTER MENU  FOOTER MENU  FOOTER MENU  FOOTER MENU  FOOTER MENU*/
+
+    #footer {
+      display: block;
+      width: 1140px;
+      height: 170px;
+      margin: 0px auto;
+      border: 1px solid red;
+    }
+
+    #footer a {
+      color: black;
+    }
+
+    #left-navigation {
+      border: 1px solid fuchsia;
+    }
+
+    .column {
+      width: 11%;
+      float: left;
+      border: 1px solid red;
+    }
+
+    .column a {
+      display: block;
+    }
+
+    #phone-insta-email {
+      margin: 30px 0px;
+      padding: 20px;
+      padding-left: 0px;
+      border: 1px solid blue;
+    }
+
+    #phone-insta-email a {
+      display: inline-block;
+    }
+
+    #phone-insta-email .pull-left {
+      margin-right: 30px;
+      float: left;
+    }
+
+    #phone-insta-email .pull-right {
+      margin-right: 30px;
+      float: right;
+    }
+
+    .product-card .text h2 {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 14px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 19px;
+      color: #414141;
+      text-align: left;
+    }
+
+    .product-card .text p {
+      padding-top: 10 px;
+      padding-left: 15px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 13px;
+      color: #414141;
+      text-align: left;
+    }
+
+    .product-card .text h3 {
+      padding-top: 10px;
+      padding-left: 15px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #414141;
+      text-align: left;
+    }
+
+    ul.products {
+      overflow: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="container clearfix">
+        <div class="menu_top">
+          <ul>
+            <li>Главная</li>
+            <li>О нас</li>
+            <li>Контакты</li>
+          </ul>
+        </div>
+
+        <div class="contacts">
+          <a href="#">
+            <img src="images/phone.png" alt="phone" style="padding-right:10px;">8 (964) 89 99 119
+          </a>
+          <a href="#" style="padding-left: 20px;">
+            <img src="images/delivery-icon.png" style="padding-right: 10px;" alt="delivery">Доставка
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div id="content">
+      <div id="search-bar" style="width: 1140px; height: 60px; margin: 0 auto;">
+        <div style="display: block;
+                         float: left;
+                         width: 200px;
+                         height: 60px; 
+                         background: url('images/LOGO.png') no-repeat center center;">
+        </div>
+        <form id="searchform" onsubmit="this.sfSbm.disabled=true" method="get" action="/search/">
+          <input type="text" name="q" value="Поиск.." onblur="if(this.value=='')this.value='Поиск..'"
+            onfocus="if(this.value=='Поиск..')this.value=''" />
+          <input type="hidden" name="sfSbm" />
+        </form>
+        <div style="float: right; width: 150px">
+          <img src="images/wishlist-icon.png" style="padding: 20px 0px 0px 35px;" alt="like">
+          <img src="images/bag.png" style="padding: 20px 0px 0px 25px;" alt="bag">
+          <img src="images/profile-icon.png" style="padding: 20px 0px 0px 25px;" alt="profile-icon">
+        </div>
+        <div style='clear: both'></div>
+      </div>
+      <div class="menu_main">
+        <ul>
+          <li><a href="kitchen"><img src="img_menu/kitchen-icon.png" style="padding-right:10px;">Кухни</a></li>
+          <li><a href="bedrooms"><img src="img_menu/bedroom-icon.png" style="padding-right:10px;">Спальни</a></li>
+          <li><a href="living rooms"><img src="img_menu/livingroom-icon.png" style="padding-right:10px;">Гостиные</a>
+          </li>
+          <li><a href="halls"><img src="img_menu/closet-icon.png" style="padding-right:10px;">Прихожие</a></li>
+          <li><a href="Office furniture"><img src="img_menu/office-icon.png" style="padding-right:10px;">Офисная
+              мебель</a></li>
+          <li><a href="children's furniture"><img src="img_menu/childrensroom-icon.png"
+                style="padding-right:10px;">Детская</a></li>
+          <li><a href="promotion" style="color: red;">Акция</a></li>
+          <li><a href="Feedback"><img src="img_menu/kebab-menu.png" style="padding-top: 15px;
+                                                                           vertical-align: top;">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="banner1">
+        <div class="banner-inner">
+
+        </div>
+        <h1 style="display: inline-block;
+                    /*position: relative;*/
+                    position: absolute;
+                    width: 216px;
+                    height: 106px;
+                    top: 100px;
+                    left: 150px;
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 105.3%;
+                    /* or 53px */
+                                                                  
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: #3C3C3C;
+                    margin-bottom: 15px;">loft мебель
+        </h1>
+        <div style="position: absolute;
+                      width: 400px;
+                      height: 23px;
+                      left: 150px;
+                      top: 215px;
+                      font-family: 'Roboto Condensed';
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 16px;
+                      line-height: 140.8%;
+                      /* identical to box height, or 23px */
+                      
+                      letter-spacing: 0.02em;
+                      color: #343434;
+                      margin: 0px;">Современная и удобная мебель в Анапе
+        </div>
+        <div style="position: absolute;
+                    width: 163px;
+                    height: 45px;
+                    left: 150px;
+                    top: 260px;
+                    background: #FFFFFF;
+                    /* menu-shadow */
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+                    font-family: 'Roboto Condensed';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 140.8%;
+                    /* identical to box height, or 17px */
+                    letter-spacing: 0.04em;
+                    /* text-color */
+                    color: #414141;">
+          <p style="text-align: center; padding-top: 8px;">Смотреть каталог</p>
+        </div>
+
+        <!--<span style="position: relative;
+                                                                                          top: 100px;
+                                                                                          left: 150px">Смотреть каталог</span>-->
+      </div>
+      <p style="font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                padding-left: 14px;
+                margin: 15px 0px;">Хиты продаж</p>
+      <div id="product-area">
+
+        <ul class="products clearfix">
+            <li class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+        <!--</ul>
+
+        <ul class="products clearfix">-->
+            <li class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+            <li class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </li>
+        </ul>
+
+        <!-- <ul class="products clearfix">
+           <li class="product-wrapper">
+            <div class="product-card">
+                <a href="https://www.onliner.by/" class="product">
+                    <img src="img_furniture/Valencia Beige chair.png" alt="Барные стулья" class="image-photo">
+                </a>
+                <div class="text">
+                    <h2>Валенсия Beige</h2>
+                    <p>Барные стулья</p>
+                    <h3>2 300&#8381;</h3>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Tolix-2 White Gloss.png" alt="Барные стулья"></a>
+                <div class="text">
+                    <h2>Tolix-2 White Gloss</h2>
+                    <p>Барные стулья</p>
+                    <h3>4 690&#8381;</h3>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Dins Velvet Yellow.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+                <div class="text">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                    <h3>0 00&#8381;</h3>
+                </div>
+            </div>
+          </li>
+          <!-- <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Sheron Barhat Grey.png" alt="Двухспальные кровати"></a>
+            <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты"></a>
+            <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
+            <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Tiffany Woodline Cream.png" alt="Письменные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
+            <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
+            <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige bar.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige stellage.png" alt="Барные стулья"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Барные стулья"></a>
+            <a href="#" class="product"><img src="img_furniture/Avignon-1.png" alt="Буфеты>"></a>
+            <a href="#" class="product"><img src="img_furniture/Stella Oak Sonoma.png" alt="Комоды"></a>
+            <a href="#" class="product"><img src="img_furniture/Ravenna-1 Light.png" alt="Комоды"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Benflit Grey.png" alt="Журнальные столы"></a>
+            <a href="#" class="product"><img src="img_furniture/Kusken Navy Blue.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Valencia Beige closet.png" alt="Шкафы"></a>
+            <a href="#" class="product"><img src="img_furniture/Light-3-170-240 White.png" alt="Шкафы"></a>
+          </li>
+          <li class="product-wrapper">
+            <a href="#" class="product"><img src="img_furniture/Willy Pink.png" alt="Детский диван"></a>
+            <a href="#" class="product"><img src="img_furniture/San-Paulo_Velvet Brown sofa.png" alt="Диваны"></a>
+            <a href="#" class="product"><img src="img_furniture/Amberson Ocean stellage.png" alt="Стеллажи"></a>
+            <a href="#" class="product"><img src="img_furniture/Laytsi Velvet Emerald.png"
+                alt="Двухспальные кровати"></a>
+          </li>
+        </ul> -->
+      </div>
+      <div id="footer">
+        <div>
+          <h3>Навигация</h3>
+          <div id="left-navigation">
+            <div class="column">
+              <a href="#">Кухни</a>
+              <a href="#">Спальни</a>
+              <a href="#">Гостиные</a>
+            </div>
+            <div class="column" style="width: 160px">
+              <a href="#">Прихожие</a>
+              <a href="#">Офисная мебель</a>
+              <a href="#">Детская</a>
+            </div>
+            <div class="column">
+              <a href="#">Шкафы</a>
+              <a href="#">Матрасы</a>
+              <a href="#">Мягкая мебель</a>
+            </div>
+          </div>
+          <p style="float: right;
+                    width: 171px;
+                    height: 54px;
+                    left: 1111px;
+                    top: 3648px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-align: right;
+                    color: #414141;">г. Анапа, Анапское шоссе,
+            30 Ж/К Черное море
+          </p>
+          <p style="float: right;
+          width: 60px;
+          height: 49px;
+          
+          left: 1222px;
+          top: 3579px;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 900;
+          font-size: 42px;
+          color: #000000;">LM
+          </p>
+          <div class="clearfix"></div>
+        </div>
+        <div id="phone-insta-email">
+          <a href="#" class="pull-left"><span style="color:red">Акция</span></a>
+          <a href="#" class="pull-left">Новинки</a>
+          <a href="#" class="pull-right">8(964)89 99 119</a>
+          <a href="#" class="pull-right">INSTAGRAM</a>
+          <a href="#" class="pull-right">mebel_loft_anapa@mail.ru</a>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- Вёрстка блоков с фотографиями единиц мебели
+    <div class="product-photo">
+      <img src="images/Valencia Beige.png" alt="Барные стулья">
+    </div>
+    <div class="product-photo">
+      <img src="images/Toliks-2 White Gloss.png" alt="Барные стулья">
+    </div>
+    <div class="product-photo">
+      <img src="images/Dins Velvet Yellow.png" alt="Диваны">
+    </div>
+    <div class="product-photo">
+      <img src="images/Kusken Navy Blue.png" alt="Диваны">
+    </div> -->
