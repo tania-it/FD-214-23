@@ -1,0 +1,62 @@
+        p.name {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            font-weight: 800;
+            font-style: normal;
+            text-align: left;
+            margin: 0px 0px 10px 0px;
+
+        }
+
+        p.b-day {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            font-weight: 200;
+            text-align: left;
+            color: green;
+            margin: 0px 0px 10px 0px;
+        }
+
+        p.champ {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        /*p.link {font-family: 'Times New Roman', Times, serif; 
+                                             border: 1px solid red;
+                                             font-size: 16px;
+                                             font-weight: 100;
+                                             color: blue;}*/
+
+        p.content {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            font-style: italic;
+            color: blue;
+            margin: 0px 0px 15px 0px;
+        }
+        
+        a.external[target="_blank"] {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            display: block;
+            font-weight: 100;
+            color: blue;
+            width: 125px;
+            text-align: center;
+            margin-bottom: 10px;                                    
+        }
+        a.external[target="_blank"]::before {  display: block;
+                                               content: url(images/external.png);
+                                               width: 23px;
+                                               height: 0px;
+                                            }
+        div.main {  margin: 0 auto 0 auto;
+                    background-image: url('../CSS_CHESS/images/fon_svetlyj.png'); /* Путь к картинке */
+                    background-size: cover; /* Растягиваем картинку  по ширине */
+                    background-repeat: no-repeat; /* Картинка фона без повторения */
+                    background-position: center; /* Позиция фона по центру */
+                 }

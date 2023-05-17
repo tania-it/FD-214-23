@@ -1,0 +1,13 @@
+@media print {
+    body {
+        color: #000;
+        background: #fff;
+    }
+    a.external[target="_blank"]::after {  
+        display: inline-block;
+        content: '(' attr(href) ')';
+        width: 23px;
+        height: 0px;
+     }
+
+}
