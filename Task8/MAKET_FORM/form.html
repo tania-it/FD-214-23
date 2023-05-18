@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>form</title>
+</head>
+
+<body>
+    <div class="wrapper">
+    <h2 class="h2">Уважаемые пользователи!</h2><br>
+    <p>Для публикации вашей статьи, заполните, пожалуйста, следующую форму:</p> <br>
+
+    <Form method="post" action="http://fe.it-academy.by/TestForm.php" style="margin-bottom: -10px">
+        <p style float="left"> Название статьи: </p>
+        <input type="text" size="60" style="width: 1500px;"> <br>
+
+        <p style="padding-left: 3px">Рубрика:</p> 
+        <select type="text" name="rubric">
+                    <option value="1">компьютерная техника</option>
+                    <option value="2">графика и дизайн</option>
+                    <option value="3" selected> программирование</option>
+                    <option value="4"> робототехника</option>
+        </select> <br>                       
+    <p style="padding: 2px 0 2px 0">Публикация:</p> 
+        <input type="radio" name="publicate" value="1" checked><span>на сайте</span>     
+        <input type="radio" name="publicate" value="2"><span>в журнале</span>            
+        <input type="radio" name="publicate" value="3"><span>на сайте и в журнале</span><br>
+    <p style="padding: 2px 0 3px 3px"> Разрешить комментарии:</p>
+        <input type="checkbox" name="comments" checked="" style="position: relative; top: 3px"><br>
+    <p>Текст статьи:</p><br>  
+      <textarea name="article" style="width: 1500px;">
+      </textarea> 
+     <br>
+     <input type="submit" name="send" value="Опубликовать">   
+    </Form>
+</div>
+</body>
+
+</html>
+
