@@ -1,13 +1,42 @@
 @media print {
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         color: #000;
         background: #fff;
     }
-    a.external[target="_blank"]::after {  
+
+    /*  a.external[target="_blank"]::after {  
         display: inline-block;
-        content: '(ссылка на' attr(href) ')';
+        content: '(ссылка на' attr(href) ')';             not displaying correctly 
         width: 100%;
         height: 0px;
-     }
+     }*/
 
+    /* На веб-странице вы можете щелкнуть по ссылке.
+       На бумаге такой возможности нет.
+       Необходимо показать пользователю, что определенная часть текста является ссылкой.
+       Поэтому, покажем ссылку при печати на принтере */ 
+    /* Show URL */ 
+    a.external:link, a.external:visited {
+        background: transparent;
+        color: #333;
+        text-decoration: none;
+    }
+    a.external:link[href^="https://"]:after, a.external[href^="https://"]:visited:after {
+        content: " (ссылка Информация на  " attr(href) ") ";
+        font-size: 14px;
+    }
+    a.external[href^="https://"] {
+        color: #000;
+    }
+    #top {
+        background: transparent;
+        color: #333;
+        text-decoration: none;
+    }
 }

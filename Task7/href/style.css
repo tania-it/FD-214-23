@@ -4,7 +4,7 @@
             font-weight: 800;
             font-style: normal;
             text-align: left;
-            margin: 0px 0px 10px 0px;
+            margin: 0px 0px 5px 0px;
 
         }
 
@@ -14,7 +14,7 @@
             font-weight: 200;
             text-align: left;
             color: green;
-            margin: 0px 0px 10px 0px;
+            margin: 0px 0px 5px 0px;
         }
 
         p.champ {
@@ -22,7 +22,7 @@
             font-size: 16px;
             font-weight: 600;
             color: red;
-            margin-bottom: 10px;
+            margin: 0px 0px 15px 0px;
         }
 
         /*p.link {font-family: 'Times New Roman', Times, serif; 
@@ -55,7 +55,7 @@
                                                height: 0px;
                                             }
         div.main {  margin: 0 auto 0 auto;
-                    background-image: url('../CSS_CHESS/images/fon_svetlyj.png'); /* Путь к картинке */
+                    background-image: url('../href/images/fon_svetlyj.png'); /* Путь к картинке */
                     background-size: cover; /* Растягиваем картинку  по ширине */
                     background-repeat: no-repeat; /* Картинка фона без повторения */
                     background-position: center; /* Позиция фона по центру */
