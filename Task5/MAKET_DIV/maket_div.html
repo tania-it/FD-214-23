@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>maket_div</title>
 </head>
-
+<!--Ширина и высота не должны быть фиксированные!!!-->
 <body>
-    <div id="main" style="width: 1000px; margin: 0 auto; padding: 0;">
+    <div id="main" style="width: 100%; margin: 0 auto; padding: 0;">
         <div class="header" style="text-align: center;
                padding: 20px;
                background-color: lightblue;
@@ -19,13 +19,14 @@
 
         <div class="wrapper" style= "padding: 0;">
             <div class="left-menu"
-                style="width: 20%; float: left; background-color: khaki;  height: 400px;">
+                style="width: 20%; float: left; min-width:250px; background-color: khaki;">
                 <h2 style="text-align: center; 
                        padding: 5px 15px 15px 10px;
                        color: black; 
                        font-weight: 600;">Виды спорта</h2>
                 <ul type="disc"
-                    style="color: blue; font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: left;">
+                    style="color: blue; font-size: 20px; line-height: 30px;
+                           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: left;">
                     <li><a href="http://skating.by/" title="Белорусский союз конькобежцев" target="_blank">конькобежный
                             спорт</a></li>
                     <li><a href="https://biathlon.by/" title="Белорусская федерация биатлона"
@@ -48,20 +49,23 @@
                 </ul>
             </div>
             <div class="content" style="margin-left: 20%; 
-                margin-right: 0; 
-                background-color:white; 
-                height: 400px; 
-                width: 80%;
-                background-image: url('images/ball_small.png'); background-repeat: repeat-y; background-position: top right;">
+                                        margin-right: 0; 
+                                        background-color:white; 
+                                        width: 80%;
+                                        background-image: url('images/ball_small.png'); background-repeat: repeat-y; background-position: top right;">
                 <h2 style="text-align: center;
-                       color: black;
-                       font-size: 30px; 
-                       font-weight: 700;
-                       margin: 0px;
-                       padding-top: 20px;">ФУТБОЛ</h2>
-                <img src="images/football_picture.png" style="float: left; margin: 20px 20px 20px 30px; width: 200px;">
-                <p
-                    style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; padding-left: 30px;">
+                           color: black;
+                           font-size: 30px; 
+                           font-weight: 700;
+                           margin: 0px;
+                           padding-top: 20px;">ФУТБОЛ</h2> 
+                <img src="images/football_picture.png" style="float: left; margin: 20px 20px 20px 30px; width: 300px;">
+                <p style="font-size: 20px;
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-weight: 400;
+                          padding-left: 30px;
+                          text-align: justify;
+                          margin-bottom: 0px;">
                     Футбол (от англ. foot — ступня, ball — мяч) — командный вид спорта, в котором целью является забить
                     мяч
                     в ворота соперника ногами или другими частями тела (кроме рук) большее количество раз, чем команда
@@ -73,13 +77,11 @@
                     как юниоры, взрослые, женщины и люди с ограниченными физическими возмож­ностями.
                     Зако­ны очень часто фор­мули­ровались в общих чертах, кото­рые позволяют упростить их приме­нения в
                     зависимости от харак­тера игры.
-                    Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих
-                    прин­ципов.
-                    Эти правила пред­наз­на­чены для применения на всех уровнях футбола, хотя есть неко­торые изме­нения
-                    для таких групп,
-                    как юниоры, взрослые, женщины и люди с ограниченными физическими возмож­ностями.
-                    Зако­ны очень часто фор­мули­ровались в общих чертах, кото­рые позволяют упростить их приме­нения в
-                    зависимости от харак­тера игры.
+                    Правила игры публикуются в ФИФА, но поддерживаются Международным советом футбольных ассоциаций (IFAB).
+                    Отдельная футбольная игра называется матч, который в свою очередь состоит из двух таймов по 45 минут.
+                    Пауза между первым и вторым таймами составляет 15 минут, в течение которой команды отдыхают, а по её окончании меняются воротами.
+                    Цель игры — забить мяч в ворота противника, сделать это как можно большее количество раз и постараться не допустить гола в свои ворота.
+                    Матч выигрывает команда, забившая большее количество голов.
                 </p>
             </div>
             <div style="clear: both;"></div>  <!--распорка-->
@@ -94,5 +96,10 @@
         margin-top: auto;">ГЛАВНОЕ НЕ ПОБЕДА, А УЧАСТИЕ</div>
     </div>
 </body>
-
 </html>
+
+ <!-- в div class="content" style="height: 400px;-->
+
+ <!-- в <div class="wrapper" style= "padding: 0;">
+            <div class="left-menu"
+                style="width: 20%; float: left; background-color: khaki;  height: 400px;">-->

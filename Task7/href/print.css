@@ -5,8 +5,8 @@
     }
     a.external[target="_blank"]::after {  
         display: inline-block;
-        content: '(' attr(href) ')';
-        width: 23px;
+        content: '(ссылка на' attr(href) ')';
+        width: 100%;
         height: 0px;
      }
 
