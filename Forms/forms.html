@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="https://fe.it-academy.by/TestForm.php" method="GET">
-        <input type="text" name="first_name"> <br>
-        <input type="text" name="last_name"> <br><br>
+       Фамилия: <input type="text" name="first_name"> <br>
+       Имя:     <input type="text" name="last_name"> <br><br>
         <input type="submit" value="Отправить"><br><br>
     Какую книгу ищете: <br>    
     <input type="text" name="bookkind"><br>
@@ -19,11 +19,24 @@
 Проголосуйте за понравившуюся книгу: <br>
 <input type="radio" name="answer" value="1">понравилась<br>
 <input type="radio" name="answer" value="2"> не понравилась<br>
-<input type="radio" name="answer" value="3">затрудняюсь ответить<br>
-Имя: <input type="text" name="myname" value="Толик"> <br>
+<input type="radio" name="answer" value="3">затрудняюсь ответить<br><br>
 
-</form>
- 
+Вы зарегистрированы в нашей библиотеке?
+<input type="checkbox"  value="ДА"><br> 
+Оставьте отзыв об обслуживании : <br>
+<textarea name="mytext"> дата: </textarea></br>
+<input type="submit" value="Отправить"> </br></br>
+Что за книгу вы ищете?: <br>
+<select name="bookkind" size="3">
+    <option value="1">научная</option>
+    <option value="2">художественная</option>
+    <option value="3">фантастика</option>
+    <option value="4" selected>детская</option>
+    <option value="5">историческая</option>
+</select><br>
+<input type="submit" value="Найти!">
+</form>    
+
 
 </body>
 </html>
