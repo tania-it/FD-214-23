@@ -16,33 +16,35 @@
 <body>
     <div class="wrapper">
     <h2 class="h2">Уважаемые пользователи!</h2><br>
-    <p>Для публикации вашей статьи, заполните, пожалуйста, следующую форму:</p> <br>
+    <p style="margin-bottom: 5px; padding-left: 15px;">Для публикации вашей статьи, заполните, пожалуйста, следующую форму:</p> <br>
 
     <Form method="post" action="http://fe.it-academy.by/TestForm.php" style="margin-bottom: -10px">
-        <p style float="left"> Название статьи: </p>
-        <input type="text" size="60" style="width: 1500px;"> <br>
 
-        <p style="padding-left: 3px">Рубрика:</p> 
+        <p style="padding-left: 15px; padding-right: 83px; margin: 5px 0px;" float="left" > Название статьи:</p>  
+        <input type="text" name="title" size="60" style="width: 1200px;"> <br>
+         
+        <p style="padding-left: 15px; padding-right: 160px; margin: 5px 0px;"> Рубрика:</p> 
         <select type="text" name="rubric">
                     <option value="1">компьютерная техника</option>
                     <option value="2">графика и дизайн</option>
                     <option value="3" selected> программирование</option>
-                    <option value="4"> робототехника</option>
+                    <option value="4">робототехника</option>
         </select> <br>                       
-    <p style="padding: 2px 0 2px 0">Публикация:</p> 
+    <p style="padding-left: 15px; padding-right: 120px; margin: 5px 0px;">Публикация:</p> 
         <input type="radio" name="publicate" value="1" checked><span>на сайте</span>     
         <input type="radio" name="publicate" value="2"><span>в журнале</span>            
         <input type="radio" name="publicate" value="3"><span>на сайте и в журнале</span><br>
-    <p style="padding: 2px 0 3px 3px"> Разрешить комментарии:</p>
+
+    <p style="padding-left: 15px; padding-right: 6px; margin: 5px 0px;"> Разрешить комментарии:</p>
         <input type="checkbox" name="comments" checked="" style="position: relative; top: 3px"><br>
-    <p>Текст статьи:</p><br>  
-      <textarea name="article" style="width: 1500px;">
+
+    <p style="padding-left: 15px; padding-right: 10px; margin: 5px 0px;">Текст статьи:</p><br>  
+      <textarea name="article" style="width: 1500px; height: 40px; margin-left: 15px;">
       </textarea> 
-     <br>
-     <input type="submit" name="send" value="Опубликовать">   
+     <br> 
+     <input type="submit" name="send" value="Опубликовать" style="margin-left: 15px; margin-top: 10px; font-size: 16px;">   
     </Form>
 </div>
 </body>
-
 </html>
 
