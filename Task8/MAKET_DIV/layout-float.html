@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  #container3 {
+      float:left;
+      width:100%;
+      background:green;
+      overflow:hidden;
+      position:relative;
+      border: 5px solid magenta;
+  }
+  #container2 {
+      float:left;
+      width:100%;
+      background:yellow;
+      position:relative;
+      right:30%;
+      border: 5px solid black;
+  }
+  #container1 {
+      float:left;
+      width:100%;
+      background:red;
+      position:relative;
+      right:40%;
+      border: 1px solid black;
+  }
+  #col1 {
+      float:left;
+      width:26%;
+      position:relative;
+      left:72%;
+      overflow:hidden;
+      border: 1px solid black;
+  }
+  #col2 {
+      float:left;
+      width:36%;
+      position:relative;
+      left:76%;
+      overflow:hidden;
+  }
+  #col3 {
+      float:left;
+      width:26%;
+      position:relative;
+      left:80%;
+      overflow:hidden;
+      border: 3px solid yellow;
+  }
+</style>
+</head>
+<body>
+
+  <div id="container3"> <!-- added -->
+      <div id="container2"> <!-- added -->
+          <div id="container1">
+              <div id="col1">
+                <p>Column 1</p>
+                <p>Column 1</p>
+                <p>Column 1</p>
+                <p>Column 1</p>
+                <p>Column 1</p>
+              </div>
+              <div id="col2">
+                <p>Column 2</p>
+                <p>Column 2</p>
+                <p>Column 2</p>
+              </div>
+              <div id="col3">Column 3</div>
+          </div>
+      </div> <!-- added -->
+  </div> <!-- added -->
+
+</body>
+</html>
