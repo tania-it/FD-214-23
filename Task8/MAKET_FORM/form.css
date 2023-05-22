@@ -1,3 +1,5 @@
+@media screen and (min-width: 769px) {
+
 html {
     margin: 0;
     padding: 0;
@@ -6,16 +8,83 @@ html {
 body{ background-color: #1dff0063;}
 
 .h2 {margin-top: 40px;
-    padding-left: 20px;  
+     margin-bottom: 10px;
+     padding-left: 20px;  
 }
 
 div.wrapper {
-    width: auto;
+    width: 100%;
     font-family: 'Montserrat Alternates', sans-serif;
 }
+div.name_article {width: 260px;
+                  height: auto;
+                  display: inline-block;}
+
+div.rubric {width: 260px;
+            height: auto;
+            display: inline-block;}
+
+div.publicate { width: 260px;
+                height: auto;
+                display: inline-block;}
+ 
+div.comments {width: 260px;
+              height: auto;
+              display: inline-block;}
+              
+div.text {width: 260px;
+          height: auto;
+          display: inline-block;}
+
+div.name_article p {padding-left: 15px;
+                    padding-right: 83px; 
+                    margin: 5px 0px; 
+                    float: left;
+                }
+
+#name_art { width: 80%;
+            position: absolute;
+            top: -4px;;
+            left: 270px;
+            margin: 5px 0px;
+            font-size: 20px;
+            color: blue;}
+
+div.rubric p {padding-left: 15px;
+              padding-right: 160px;
+              margin: 5px 0px;}     
+              
+div.publicate p  {padding-left: 15px;
+                  padding-right: 120px;
+                  margin: 5px 0px;}
+
+div.comments p { padding-left: 15px;
+                 padding-right: 6px; 
+                 margin: 5px 0px;}
+
+div.text p { padding-left: 15px;
+             padding-right: 10px;
+             margin: 5px 0px;
+            }
+
+select {
+    position: absolute;
+    top: 45px;
+    left: 270px;
+}
+
+.radio-publicate {
+    display: inline-block;
+    border: 1px solid red;
+}
+
+/*
+
 p { display: inline-block;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     
+}*/
+
 }

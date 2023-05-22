@@ -1,0 +1,69 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    @font-face {
+        font-family: "Skellyman";
+        src: url("../MAKET_FORM/ofont.ru_Skellyman.ttf");
+      }
+      body{ background-color: lavender;}
+      
+   
+   div.wrapper {
+       width: 100%;
+       font-family: 'Montserrat Alternates', sans-serif;
+   }
+   div.name_article {width: 260px;
+                     height: auto;
+                     display: block;
+                    border: 1px solid red;
+                    }
+   
+   div.rubric {width: 260px;
+               height: auto;
+               display: block;}
+   
+   div.publicate { width: 260px;
+                   height: auto;
+                   display: block;}
+    
+   div.comments {width: 260px;
+                 height: auto;
+                 display: inline-block;}
+                 
+   div.text {width: 260px;
+             height: auto;
+             display: inline-block;}
+    
+    div.name_article p {
+        padding-left: 15px;
+        padding-right: 83px; 
+        margin: 5px 0px; 
+        float: none;
+    }
+   
+   #name_art { width: 80%;
+    position: static;
+               /*position: absolute;
+               top: -4px;;
+               left: 270px;*/
+               margin: 5px 0px;
+               font-size: 20px;
+               color: blue;}
+   
+   div.rubric p {padding-left: 15px;
+                 padding-right: 160px;
+                 margin: 5px 0px;}     
+                 
+   div.publicate p  {padding-left: 15px;
+                     padding-right: 120px;
+                     margin: 5px 0px;}
+   
+   div.comments p { padding-left: 15px;
+                    padding-right: 6px; 
+                    margin: 5px 0px;}
+   
+   div.text p { padding-left: 15px;
+                padding-right: 10px;
+                margin: 5px 0px;}
+                 
+   
+     
+}

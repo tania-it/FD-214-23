@@ -5,46 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <link href="media_600.css" rel="stylesheet" type="text/css">
 
     <title>form</title>
+
 </head>
 
 <body>
     <div class="wrapper">
-    <h2 class="h2">Уважаемые пользователи!</h2><br>
-    <p style="margin-bottom: 5px; padding-left: 15px;">Для публикации вашей статьи, заполните, пожалуйста, следующую форму:</p> <br>
+        <h2 class="h2">Уважаемые пользователи!</h2>
+        <p style="margin-bottom: 5px;
+                  padding-left: 15px;">Для публикации вашей статьи, заполните, пожалуйста, следующую форму:
+        </p> <br>
 
-    <Form method="post" action="http://fe.it-academy.by/TestForm.php" style="margin-bottom: -10px">
+        <Form method="post" action="http://fe.it-academy.by/TestForm.php" style="margin-bottom: -10px; position: relative;">
 
-        <p style="padding-left: 15px; padding-right: 83px; margin: 5px 0px;" float="left" > Название статьи:</p>  
-        <input type="text" name="title" size="60" style="width: 1200px;"> <br>
-         
-        <p style="padding-left: 15px; padding-right: 160px; margin: 5px 0px;"> Рубрика:</p> 
-        <select type="text" name="rubric">
-                    <option value="1">компьютерная техника</option>
-                    <option value="2">графика и дизайн</option>
-                    <option value="3" selected> программирование</option>
-                    <option value="4">робототехника</option>
-        </select> <br>                       
-    <p style="padding-left: 15px; padding-right: 120px; margin: 5px 0px;">Публикация:</p> 
-        <input type="radio" name="publicate" value="1" checked><span>на сайте</span>     
-        <input type="radio" name="publicate" value="2"><span>в журнале</span>            
-        <input type="radio" name="publicate" value="3"><span>на сайте и в журнале</span><br>
+            <div class="name_article">
+                <p>Название статьи:</p>
+           </div>
+           <input id="name_art" type="text" name="title" size="60"> <br>
 
-    <p style="padding-left: 15px; padding-right: 6px; margin: 5px 0px;"> Разрешить комментарии:</p>
-        <input type="checkbox" name="comments" checked="" style="position: relative; top: 3px"><br>
+            <div class="rubric">
+                <p>Рубрика:</p>
+            </div>    
+            <select type="text" name="rubric">
+                <option value="1">компьютерная техника</option>
+                <option value="2">графика и дизайн</option>
+                <option value="3" selected> программирование</option>
+                <option value="4">робототехника</option>
+            </select> <br>
 
-    <p style="padding-left: 15px; padding-right: 10px; margin: 5px 0px;">Текст статьи:</p><br>  
-      <textarea name="article" style="width: 1500px; height: 40px; margin-left: 15px;">
-      </textarea> 
-     <br> 
-     <input type="submit" name="send" value="Опубликовать" style="margin-left: 15px; margin-top: 10px; font-size: 16px;">   
-    </Form>
-</div>
+            <div class="publicate">
+                <p>Публикация:</p>
+            </div>
+            <div class="radio-publicate">
+                <input type="radio" name="publicate" value="1" checked><span>на сайте</span>
+            </div>
+            <div class="radio-publicate">
+                <input type="radio" name="publicate" value="2"><span>в журнале</span>
+            </div>
+            <div class="radio-publicate">
+                <input type="radio" name="publicate" value="3"><span>на сайте и в журнале</span><br>
+            </div>
+        
+            <div>
+                <div class="comments">
+                    <p>Разрешить комментарии:</p>
+                </div>    
+                <input type="checkbox" name="comments" checked="" style="position: relative; top: 3px">
+            </div>
+
+            <div class="text">
+                <p>Текст статьи:</p>
+            </div><br>
+            <textarea name="article" style="width: 95%; height: 40px; margin-left: 15px;">
+            </textarea><br>
+
+            <input type="submit" name="send" value="Опубликовать" style="margin-left: 15px;
+                                                                         margin-top: 10px;
+                                                                         font-size: 16px;">
+        </Form>
+    </div>
 </body>
+
 </html>
 
+<!--style="width: 80%;
+    position: absolute;
+    top: 5px;
+    left: 270px;
+    margin: 5px 0px;"-->
