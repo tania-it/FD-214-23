@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -23,7 +26,7 @@
         }
 
         div.banner {
-            background-image: url('image/picture_example.jpg');
+            background-image: url('image/picture_example_1.jpg');
             float: left;
             width: 840px;
             height: 330px;
@@ -37,7 +40,12 @@
             color: #610b38;
         }
 
-        .h3,
+        h3 {
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            font-style: normal;
+        }
+
         .h4 {
             font-family: verdana, helvetica, arial, sans-serif;
             color: #610b4b;
@@ -67,11 +75,13 @@
                                 float: left;
                                 text-align: center;
                                 padding: 60px 40px;">
-            <h1 class="h1">HTML <strong>&lt;picture&gt;</strong> tag адаптирует картинки под разные устройства и
-                поддерживаемые форматы</h1>
-            <p>
+        <!-- <h1 class="h1">HTML <strong>&lt;picture&gt;</strong> tag адаптирует картинки под разные устройства и
+                поддерживаемые форматы</h1>-->          
+            <h1 style="font-family: Skellyman;
+                      src: url('../6.1+/ofont.ru_Skellyman.ttf');">
                 Тег <strong>&lt;picture&gt;</strong> используется, когда для разных устройств или вариантов отображения
-                нам нужны разные картинки.</p>
+                нам нужны разные картинки.
+        </h1>
         </div>
         <hr>
         <div class="content" style="clear:both">
@@ -84,11 +94,10 @@
                 Но если изображение контентное, вставлено в HTML при помощи тега &lt;img&gt;, то CSS нам уже не поможет.
                 Мы должны использовать теги &lt;picture&gt; и &lt;source&gt;.
             </p>
-            <h3 class="h3">Как пишется</h3>
+            <h1 class="h1">Как пишется</h1>
             <p>
-                Внутри тега &lt;picture&gt; обязательно должен находиться тег <img>, и опционально — теги
+                Внутри тега &lt;picture&gt; обязательно должен находиться тег &lt;img&gt;, и опционально — теги
                 &lt;source&gt;.
-                <br>
             <h3>
                 &lt; picture &gt; <br>
                 &lt; source srcset=" " media=" "&gt; <br>
@@ -96,16 +105,9 @@
                 &lt; /picture &gt; <br>
             </h3>
             </p>
-            <h3 class="h3">Пример</h3>
-            <p>
-                &lt; picture &gt; <br>
-                &lt; source srcset="320.jpg" media="(max-width: 800px)" &gt; <br>
-                &lt; img src="640.jpg" alt="Абстрактное изображение" &gt; <br>
-                &lt; /picture &gt; <br>
 
-            </p>
             <div class="left_block" style="float:left">
-                <img src="image/example_1_edited.jpg" title="пример тега picture" alt="пример тега picture" width="705"
+                <img src="image/example_1_edited.jpg" title="запись тега picture" alt="запись тега picture" width="705"
                     height="150">
             </div>
             <p style="float: left;
@@ -121,91 +123,34 @@
                 или ни один из тегов &lt;source&gt; не подходит под условия, то отображается картинка из тега
                 &lt;img&gt;.
             </p>
-            <div style="clear: both; text-align: center;">
-                <img src="image/example_2.png" title="example_2" alt="Picture_tag" width="750" height="274">
+
+            <div style="clear:both">
+              
+                <p>В этом примере при помощи атрибута media в теге
+                    &lt;source&gt; мы задаём условие по аналогии с медиавыражением @media в CSS.
+                    Если условие определяется как ложное, то элемент &lt;source&gt; пропускается.
+                    Разница становится видна, если менять размер окна браузера.
+                </p>
             </div>
-            <p><a class="link" href="#" target="_blank" title="Подгрузка новых картинок"> Открыть пример в новой
-                    вкладке</a>
-            </p>
-            <p>В этом примере при помощи атрибута media в теге
-                &lt;source&gt; мы задаём условие по аналогии с медиавыражением @media в CSS.
-                Если условие определяется как ложное, то элемент &lt;source&gt; пропускается.
-                Разница становится видна, если менять размер окна браузера.
-            </p>
-            <h2>The picture Element</h2>
+            <h3> Пример тега picture </h3>
 
             <picture>
-                <source media="(min-width: 650px)" srcset="image/img_food.jpg">
-                <source media="(min-width: 465px)" srcset="image/img_car.jpg">
-                <img src="img_girl.jpg" style="width: auto;">
+                <source media="(min-width: 1200px)" srcset="image/img_food.jpg">
+                <source media="(min-width: 768px)" srcset="image/img_car.jpg"> 
+                <img src="image/img_girl_1.png" style="width: auto;">
             </picture>
 
         </div>
 
     </div>
-
-
-
-
-    <!--     <div class="wrapper">
-            <div class="left_block">
-                <img src="images/imagenodith.gif" title="Без дизеринга" alt="Без дизеринга" width="178" height="175">
-                <img src="images/imagedithering.gif" title="C дизерингом" alt="С дизерингом" width="178" height="175">
-            </div>
-            <div class="right_block">
-                Чтобы выйти из этого положения, нужно использовать только те цвета, которые отображаются
-                одинаково «чисто» (без дизеринга) на всех мониторах, поддерживающих 256 цветов и более.
-                Вот эти цвета и называются безопасными (web-safety).
-                Все цвета задаются в цветовой модели RGB и в цветовом пространстве sRGB (standart RGB).
-                А принцип их формирования простой: каждый цветовой канал должен содержать ТОЛЬКО следующие компоненты:
-                <span style="font-size: 24;font-variant: small-caps;">00, 33, 66, 99,CC, FF</span>
-                <br>
-                То есть цвета <strong>#003366, #6699cc, #cc00cc, #33ff00</strong> будут безопасными.<br>
-                А цвета <strong>#036666, #606060, #699669</strong> — не будут. Всего цветов 216 (6<sup>3</sup>=216)
-    
-            </div>
-        </div>
-        <h2>
-            Когда необходимо использовать «безопасные» цвета?
-        </h2>
-        <p>
-            Если ваш веб-сайт имеет какой-либо цветной фон, то лучше всего для этой цели использовать именно Web Safe цвета.
-            Таким образом, это гарантирует вам, что цвет не будет смущать пользователя при отображении на разных
-            компьютерных платформах.
-            Не стоит забывать и о том, что даже старые компьютеры, которых еще сохранилось достаточно большое количество
-            и все еще активно используются, будут представлять ресурс точно, без колебаний и различий в цветах.
-        </p>
-        <p>
-            К сожалению, точной инструкции по подбору правильной цветовой палитры, которая бы привлекала,
-            а не отталкивала пользователя, нет. Это субъективное понятие.
-            Однако обратившись к основной «безопасной» палитре вы сможете не сомневаться в том,
-            что каждый точно воспринимает представленный на сайте цвет.
-        </p>
-        <p>
-            Предлагаем вам ознакомиться с перечнем цветов HTML, который содержит в себе всю «безопасную» палитру и
-            из которого вы сможете выбрать свои варианты оттенков для оформления дизайна.
-            <span style="vertical-align: text-top;"><img src="images/finger down.png" width="26" height="39" alt="смотри вниз" title="смотри вниз">
-            </span>
-            <span style="vertical-align: text-top;"><img src="images/finger down.png" width="26" height="39" alt="смотри вниз" title="смотри вниз">
-            </span>        
-        </p>    
-            <iframe src="images/about-web-safe-colors-.jpg" width="690" height="300"></iframe>
-        </p>    
-        <br><br> 
-    
-        
-        <h1 class="h1">HTML <strong>&lt;picture&gt;</strong> tag адаптирует картинки под разные устройства и
-                поддерживаемые форматы</h1>
-            <p>
-                Тег <strong>&lt;picture&gt;</strong> используется, когда для разных устройств или вариантов отображения
-                нам нужны разные картинки.
-            </p>
-    
-    -->
-
-
-
-
 </body>
 
 </html>
+
+<!--<p>
+                &lt; picture &gt; <br>
+                &lt; source srcset="320.jpg" media="(max-width: 800px)" &gt; <br>
+                &lt; img src="640.jpg" alt="Абстрактное изображение" &gt; <br>
+                &lt; /picture &gt; <br>
+
+</p>-->
