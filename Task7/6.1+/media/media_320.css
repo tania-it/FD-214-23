@@ -1,0 +1,55 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    div.wrapper {
+        background: url('image/fon-saint-petersburg.png') no-repeat;
+        width: 100%;
+        /* Путь к фоновому изображению */
+        background-size: cover;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    div.banner {
+        background-image: url('image/picture_example_mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 20%; 
+        max-height: max-content;
+        margin: 15px;
+    }
+    #header {width: 25%;
+            height: auto;
+            text-align: center;
+            padding: 60px 40px;}
+
+
+    .h3,.h4 {
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+        font-style: normal;
+    }
+
+    div.left_block {display:block;
+                    float:none;}
+
+    div.right_block {
+                      display:block;
+                      float: left;
+                      width: 400px;
+                      padding-left: 20px;
+                      font-size: 20px;
+                      text-align: justify;
+                      line-height: 25px;
+                      /* margin-top: auto; */
+                      }        
+    p {
+        font-family: 'Graphik', sans-serif;
+        font-weight: 500;
+        letter-spacing: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    div.pict { 
+                max-width: 100%;
+                margin: 15px;}
+}
