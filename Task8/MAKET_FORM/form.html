@@ -22,22 +22,29 @@
                   padding-left: 15px;">Для публикации вашей статьи, заполните, пожалуйста, следующую форму:
         </p> <br>
 
-        <Form method="post" action="http://fe.it-academy.by/TestForm.php" style="margin-bottom: -10px; position: relative;">
+        <Form method="post" action="http://fe.it-academy.by/TestForm.php"
+            style="margin-bottom: -10px; position: relative;">
 
             <div class="name_article">
                 <p>Название статьи:</p>
-           </div>
-           <input id="name_art" type="text" name="title" size="60"> <br>
+            </div>
+
+            <div class="name_art">
+                <input id="name_art" type="text" name="title" size="60">
+            </div>
 
             <div class="rubric">
                 <p>Рубрика:</p>
-            </div>    
-            <select type="text" name="rubric">
-                <option value="1">компьютерная техника</option>
-                <option value="2">графика и дизайн</option>
-                <option value="3" selected> программирование</option>
-                <option value="4">робототехника</option>
-            </select> <br>
+            </div>
+
+            <div class="select_rubric">
+                <select type="text" name="rubric">
+                    <option value="1">компьютерная техника</option>
+                    <option value="2">графика и дизайн</option>
+                    <option value="3" selected> программирование</option>
+                    <option value="4">робототехника</option>
+                </select>
+            </div>
 
             <div class="publicate">
                 <p>Публикация:</p>
@@ -51,11 +58,11 @@
             <div class="radio-publicate">
                 <input type="radio" name="publicate" value="3"><span>на сайте и в журнале</span><br>
             </div>
-        
+
             <div>
                 <div class="comments">
                     <p>Разрешить комментарии:</p>
-                </div>    
+                </div>
                 <input type="checkbox" name="comments" checked="" style="position: relative; top: 3px">
             </div>
 

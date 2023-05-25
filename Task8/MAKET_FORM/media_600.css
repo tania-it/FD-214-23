@@ -10,27 +10,31 @@
        width: 100%;
        font-family: 'Montserrat Alternates', sans-serif;
    }
-   div.name_article {width: 260px;
+   div.name_article {width: 350px;
                      height: auto;
                      display: block;
-                    border: 1px solid red;
+                     font-size: 20px;
                     }
    
-   div.rubric {width: 260px;
+   div.rubric {width: 350px;
                height: auto;
-               display: block;}
+               display: block;
+               font-size: 20px;}
    
-   div.publicate { width: 260px;
+   div.publicate { width: 350px;
                    height: auto;
-                   display: block;}
+                   display: block;
+                   font-size: 20px;}
     
-   div.comments {width: 260px;
+   div.comments {width: 350px;
                  height: auto;
-                 display: inline-block;}
-                 
-   div.text {width: 260px;
+                 display: inline-block;
+                 font-size: 20px;
+                }        
+   div.text {width: 350px;
              height: auto;
-             display: inline-block;}
+             display: inline-block;
+             font-size: 20px;}
     
     div.name_article p {
         padding-left: 15px;
@@ -39,8 +43,8 @@
         float: none;
     }
    
-   #name_art { width: 80%;
-    position: static;
+   #name_art { width: 90%;
+               position: static;
                /*position: absolute;
                top: -4px;;
                left: 270px;*/
@@ -63,7 +67,8 @@
    div.text p { padding-left: 15px;
                 padding-right: 10px;
                 margin: 5px 0px;}
-                 
-   
-     
+
+    div.radio-publicate {padding-left: 20px;}             
+    div.select_rubric {padding-left: 20px;}
+    div.name_art {padding-left: 20px;}
 }

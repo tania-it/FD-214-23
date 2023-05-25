@@ -16,7 +16,7 @@ div.wrapper {
     width: 100%;
     font-family: 'Montserrat Alternates', sans-serif;
 }
-div.name_article {width: 260px;
+div.name_article {width: 300px;
                   height: auto;
                   display: inline-block;}
 
@@ -69,13 +69,12 @@ div.text p { padding-left: 15px;
 
 select {
     position: absolute;
-    top: 45px;
+    top: 35px;
     left: 270px;
 }
 
 .radio-publicate {
     display: inline-block;
-    border: 1px solid red;
 }
 
 /*
