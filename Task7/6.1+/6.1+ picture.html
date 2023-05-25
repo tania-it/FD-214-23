@@ -10,77 +10,101 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="reset.css">
-   <!--<link rel="stylesheet" href="style.css">--> 
+    <!--<link rel="stylesheet" href="style.css">-->
     <link href="media/media_320.css" rel="stylesheet" type="text/css">
-                                                                            
+    <link href="media/media_1200.css" rel="stylesheet" type="text/css">
 
     <title>Picture_tag</title>
     <style>
-      html {margin: 0;
-            padding: 0;
-            box-sizing: border-box;}
+        @media screen and (min-width: 1600px) and (max-width: 1920px) {
+            html {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        div.wrapper {
-            background: url('image/fon-saint-petersburg.png') no-repeat;
-            width: 100%;
-            /* Путь к фоновому изображению */
-            background-size: cover;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
+            div.wrapper {
+                background: url('image/fon-saint-petersburg.png') no-repeat;
+                width: 100%;
+                /* Путь к фоновому изображению */
+                background-size: cover;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
 
-        div.banner {
-            background-image: url('image/picture_example.jpg');
-            float: left;
-            width: 840px;
-            height: 330px;
-            margin: 15px;
-        }
-        #header {width: 600px;
-                 float: left;
-                 text-align: center;
-                 padding: 60px 40px;}
+            div.banner {
+                background-image: url('image/picture_example.jpg');
+                float: left;
+                width: 840px;
+                height: 330px;
+                margin-right: 0px;
 
-        .h1 {
-            font-family: verdana, helvetica, arial, sans-serif;
-            font-size: 24px;
-            color: #610b38;
-        }
+            }
+            #header {
+                width: 39%;
+                float: left;
+                text-align: center;
+                padding: 60px 40px;
+            }
 
-        .h3 {
-            font-family: 'Caveat', cursive;
-            font-size: 30px;
-            font-style: normal;
-        }
+            .h1 {
+                font-family: Skellyman;
+                font-size: 34px;
+                src: url('../6.1+/ofont.ru_Skellyman.ttf');
+                color: #610b38;
+            }
 
-        .h4 {
-            font-family: verdana, helvetica, arial, sans-serif;
-            color: #610b4b;
-            font-size: 21px;
-        }
-        div.left_block {float:left;}
+            .h3 {
+                font-family: 'Caveat', cursive;
+                font-size: 36px;
+                font-style: normal;
+                margin: 0px;
 
-        div.right_block { float: left;
-                          width: 700px;
-                          padding-left: 20px;
-                          font-size: 20px;
-                          text-align: justify;
-                          line-height: 25px;
-                          margin-top: auto;}        
-        p {
-            font-family: 'Graphik', sans-serif;
-            font-weight: 500;
-            letter-spacing: normal;
-            font-size: 16px;
-            line-height: 20px;
+            }
+
+            .h4 {
+                font-family: verdana, helvetica, arial, sans-serif;
+                color: #610b4b;
+                font-size: 21px;
+            }
+
+            div.left_block {
+                float: left;
+                width: 45%;
+                margin-top: 20px;
+                padding-left: 5px;
+            }
+
+            div.right_block {
+                float: left;
+                width: 53%;
+                padding-left: 20px;
+                text-align: justify;
+                margin: 0;
+            }
+
+            div.bottom_block {
+                position: relative;
+            }
+
+            p {
+                font-family: 'Graphik', sans-serif;
+                font-weight: 500;
+                letter-spacing: normal;
+                font-size: 20px;
+                line-height: 30px;
+
+            }
+            div.pict {
+                max-width: 100%;
+                margin: 15px;
+            }
+
+            /* .link a {
+                                                                    display: inline;
+                                                                    text-align: center;
+                                                                        }*/
         }
-        div.pict { 
-                    max-width: 100%;
-                    margin: 15px;}
-                                                                                                    /* .link a {
-                                                                                                    display: inline;
-                                                                                                    text-align: center;
-                                                                                                }*/
     </style>
 </head>
 
@@ -89,10 +113,9 @@
         <div class="banner">
         </div>
         <div id="header">
-        <!-- <h1 class="h1">HTML <strong>&lt;picture&gt;</strong> tag адаптирует картинки под разные устройства и
-                поддерживаемые форматы</h1>-->          
-            <h1 style="font-family: Skellyman;
-                      src: url('../6.1+/ofont.ru_Skellyman.ttf');">
+            <!-- <h1 class="h1">HTML <strong>&lt;picture&gt;</strong> tag адаптирует картинки под разные устройства и
+                поддерживаемые форматы</h1>-->
+            <h1 class="h1">
                 Тег <strong>&lt;picture&gt;</strong> используется, когда для разных устройств или вариантов отображения
                 нам нужны разные картинки.
             </h1>
@@ -112,49 +135,58 @@
             <p>
                 Внутри тега &lt;picture&gt; обязательно должен находиться тег &lt;img&gt;, и опционально — теги
                 &lt;source&gt;.
-            <h3 class="h3">
-                &lt; picture &gt; <br>
-                &lt; source srcset=" " media=" "&gt; <br>
-                &lt; img src=" " &gt; <br>
-                &lt; /picture &gt; <br>
-            </h3>
             </p>
-        </div>
-            <div class="left_block">
-                <img src="image/example_1_edited.jpg" title="запись тега picture" alt="запись тега picture" width="705"
-                    height="150">
+            <div  style="padding-left: 20px;">
+                <h3 class="h3">
+                    &lt; picture &gt; <br>
+                    &lt; source srcset=" " media=" "&gt; <br>
+                    &lt; img src=" " &gt; <br>
+                    &lt; /picture &gt; <br>
+                </h3>
             </div>
-        <div class="right_block">    
-            <p>
-                Браузер анализирует каждый тег &lt;source&gt; по порядку, останавливается на первом подходящем под
-                текущие условия и отображает картинку из атрибута srcset.<br>
-                Другие теги &lt;source&gt; не анализируются. Если тег &lt;picture&gt; не поддерживается браузером
-                или ни один из тегов &lt;source&gt; не подходит под условия, то отображается картинка из тега
-                &lt;img&gt;.
-            </p>
-        </div>    
-            <div style="clear:both">
-                <p>В этом примере при помощи атрибута media в теге
-                    &lt;source&gt; мы задаём условие по аналогии с медиавыражением @media в CSS.
-                    Если условие определяется как ложное, то элемент &lt;source&gt; пропускается.
-                    Разница становится видна, если менять размер окна браузера.
+            <div class="left_block">
+                <img src="image/example_1_edited.jpg" title="запись тега picture" alt="запись тега picture"
+                 width="705" height="150">
+            </div>
+            <div class="right_block">
+                <p>
+                    Браузер анализирует каждый тег &lt;source&gt; по порядку, останавливается на первом подходящем под
+                    текущие условия и отображает картинку из атрибута srcset.<br>
+                    Другие теги &lt;source&gt; не анализируются. Если тег &lt;picture&gt; не поддерживается браузером
+                    или ни один из тегов &lt;source&gt; не подходит под условия, то отображается картинка из тега
+                    &lt;img&gt;.
+                </p>
+
+            </div>
+            <div style="clear:both"></div>
+            <div class="bottom_block">
+                <p style="margin: 0;">
+                    В следующем примере при помощи атрибута <strong>media</strong> в теге
+                    <strong>&lt;source&gt;</strong> мы задаём условие по аналогии
+                    с медиавыражением <strong>@media</strong> в CSS.
+                    Если условие определяется как ложное, то элемент <strong>&lt;source&gt;</strong> пропускается.
+                    Разница становится видна, если менять размер окна браузера. Давайте это сделаем:
+                    <img src="image/strelka.png" style="display:inline-block;
+                                                        padding-top: 10px;
+                                                        width: 50px; 
+                                                        height: 40px;">
                 </p>
             </div>
-        <div class="pict">    
-            <h3> Пример тега picture </h3>
-            <picture>
-                <source media="(min-width: 1200px)" srcset="image/nature.jpg">
-                <source media="(min-width: 768px)" srcset="image/GAZ_M20_Pobeda.jpg">
-                <source media="(min-width: 320px)" srcset="image/img_girl_1.png">
-                <img src="image/pink-rose.jpg" alt="default image" style="width: auto;">
-            </picture>
+            <div class="pict"> 
+                <h3 class="h3"> Пример тега picture </h3>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="image/nature.jpg">
+                    <source media="(min-width: 768px)" srcset="image/GAZ_M20_Pobeda.jpg">
+                    <source media="(min-width: 320px)" srcset="image/img_girl_1.png">
+                    <img src="image/pink-rose.jpg" alt="default image" style="width: 98%;">
+                </picture>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
 
-      
+
 
 
 <!--<p>

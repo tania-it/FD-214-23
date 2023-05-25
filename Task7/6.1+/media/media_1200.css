@@ -1,5 +1,12 @@
-@media screen and (min-width: 320px) and (max-width: 768px) {
-
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+    @font-face {
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserratalternates/v17/mFTvWacfw6zH4dthXcyms1lPpC8I_b0juU0576fQOJ0.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
     div.wrapper {
         background: url('../image/fon-saint-petersburg.png') no-repeat;
         width: 100%;
@@ -8,30 +15,29 @@
         padding-left: 10px;
         padding-right: 10px;
     }
-
-    div.banner {
-        background-image: url('../image/picture_example_mobile.jpg');
-        background-repeat: no-repeat;
-        background-position: top center;
-        width: 100%;
-        /*max-height: max-content;*/
-        height: 150px;
-        margin: 15px;
-    }
-
     #header {
-        width: 100%;
+        width: 20%;
         height: auto;
         text-align: center;
-        padding: 0;
-        font-size: 16px;
-    }
-    .h1 {
-        font-family: Skellyman;
+        margin: 20px 0px 0px 20px;
+        float: none;
         font-size: 20px;
-        src: url('../6.1+/ofont.ru_Skellyman.ttf');
-        color: #610b38;
     }
+    div.banner {
+        background-image: url('../image/picture_example.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 837px;
+        /*max-height: max-content;*/
+        height: 330px;
+        margin: 0px 0px 0px 20px;
+        float: none;
+
+    }
+    .h1 {font-family: Skellyman;
+         src: url('../6.1+/ofont.ru_Skellyman.ttf');
+         font-size: 20px;
+        }
     .h3, .h4 {
         font-family: 'Caveat', cursive;
         font-size: 30px;
@@ -49,14 +55,11 @@
 
     div.right_block {
         display: block;
-        float: left;
+        float: none;
         width: 98%;
         padding: 10px;
         margin: 0;
         
-    }
-    div.bottom_block {
-        position: relative;
     }
     div.right_block p {
         font-family: 'Graphik', sans-serif;
