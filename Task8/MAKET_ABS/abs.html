@@ -8,8 +8,111 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>abs</title>
+    <style>
+
+        html {  margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+      div.text {display: inline-block;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                border: 1px solid blueviolet;
+                }
+
+    div.picture {   position: relative;
+                    border: 1px solid red;
+                    width: 35%;
+                    height: 430px;
+                    margin: 0 auto;
+                }
+    img.biohaz {position: absolute;
+                    top: 40px;
+                    left: 65px;
+                    height: 223px;
+                    border: 1px solid green;
+                }             
+    img.man-woman { position: absolute;
+                    top: 40px;
+                    left: 300px;
+                    border: 1px solid darkslateblue;
+                    }
+    img.yin_yang  {position: absolute;
+                    top: 6px;
+                    left: 0px;
+                  } 
+    
+    div.yin_and_yang {position: absolute;
+                      top: 230px;
+                      left: 183px;
+                      border: 1px solid darkslategray;
+                    }
+    div.no_smoking {position: absolute;
+                    top: 85px;
+                    left: 140px;
+                    border: 1px solid darkturquoise;
+                    } 
+    div.biohazard:hover>img.biohaz {
+                    position: relative;
+                    top: 40px;
+                    left: 65px;
+                    z-index: 1;
+                    border: 1px solid green;
+                    transition-duration: .8s;}
+
+    div.man_and_woman:hover > img.man-woman { position: relative;
+                                            top: 40px;
+                                            left: 300px;
+                                            z-index: 1;
+                                            transition-duration: .8s; 
+                                            }
+    div.yin_and_yang:hover > img.yin_yang { position: relative;
+                                             top: 6px;
+                                             left: 0px;
+                                             z-index: 1;
+                                             transition-duration: .8s; 
+                                          }                                      
+
+    </style>  
 </head>
 <body>
-    <div>
+     
+        <div class="wrapper">
+           <div class="text"> 
+            <p>
+                Я к вам пишу – чего же боле?
+                Что я могу еще сказать?
+                Теперь, я знаю, в вашей воле
+                Меня презреньем наказать.
+                Но вы, к моей несчастной доле
+                Хоть каплю жалости храня,
+                Вы не оставите меня.
+                Сначала я молчать хотела;
+                Поверьте: моего стыда Вы не узнали б никогда,
+                Когда б надежду я имела
+                Хоть редко, хоть в неделю раз
+                В деревне нашей видеть вас,
+                Чтоб только слышать ваши речи,
+                Вам слово молвить, и потом
+                Все думать, думать об одном
+                И день и ночь до новой встречи.
+            </p>
+           </div>
+        <div class="picture">
+             <div class="biohazard">
+                <img src="images/biohazard.png" class="biohaz" title="biohazard" alt="biohazard" width="200" height="200">
+             </div>
+             <div class="man_and_woman">
+                <img src="images/Man-and-woman.png" class="man-woman" title="man_and_woman" alt="man_and_woman" width="200" height="223">
+            </div>
+            <div class="yin_and_yang">
+                <img src="images/Yin_and_Yang.png" class="yin_yang" title="yin_and_yang" alt="yin_and_yang" width="200" height="200">
+            </div>
+            <div class="no_smoking">
+                <img src="images/No_smoking.png" class="no_smoking" title="no_smoking" alt="no_smoking" width="256" height="256">    
+           </div>
+        </div>   
 </body>
 </html>

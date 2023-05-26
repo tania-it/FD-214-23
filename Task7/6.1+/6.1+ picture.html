@@ -8,104 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="reset.css">
-    <!--<link rel="stylesheet" href="style.css">-->
-    <link href="media/media_320.css" rel="stylesheet" type="text/css">
+    <!--<link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="reset.css">-->
+    <link href="media/media_1920.css" rel="stylesheet" type="text/css">
     <link href="media/media_1200.css" rel="stylesheet" type="text/css">
+    <link href="media/media_768.css" rel="stylesheet" type="text/css">
 
     <title>Picture_tag</title>
-    <style>
-        @media screen and (min-width: 1600px) and (max-width: 1920px) {
-            html {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            div.wrapper {
-                background: url('image/fon-saint-petersburg.png') no-repeat;
-                width: 100%;
-                /* Путь к фоновому изображению */
-                background-size: cover;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-
-            div.banner {
-                background-image: url('image/picture_example.jpg');
-                float: left;
-                width: 840px;
-                height: 330px;
-                margin-right: 0px;
-
-            }
-            #header {
-                width: 39%;
-                float: left;
-                text-align: center;
-                padding: 60px 40px;
-            }
-
-            .h1 {
-                font-family: Skellyman;
-                font-size: 34px;
-                src: url('../6.1+/ofont.ru_Skellyman.ttf');
-                color: #610b38;
-            }
-
-            .h3 {
-                font-family: 'Caveat', cursive;
-                font-size: 36px;
-                font-style: normal;
-                margin: 0px;
-
-            }
-
-            .h4 {
-                font-family: verdana, helvetica, arial, sans-serif;
-                color: #610b4b;
-                font-size: 21px;
-            }
-
-            div.left_block {
-                float: left;
-                width: 45%;
-                margin-top: 20px;
-                padding-left: 5px;
-            }
-
-            div.right_block {
-                float: left;
-                width: 53%;
-                padding-left: 20px;
-                text-align: justify;
-                margin: 0;
-            }
-
-            div.bottom_block {
-                position: relative;
-            }
-
-            p {
-                font-family: 'Graphik', sans-serif;
-                font-weight: 500;
-                letter-spacing: normal;
-                font-size: 20px;
-                line-height: 30px;
-
-            }
-            div.pict {
-                max-width: 100%;
-                margin: 15px;
-            }
-
-            /* .link a {
-                                                                    display: inline;
-                                                                    text-align: center;
-                                                                        }*/
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -120,8 +30,9 @@
                 нам нужны разные картинки.
             </h1>
         </div>
+        <div style="clear:both"></div>
         <hr>
-        <div class="content" style="clear:both">
+        <div class="content">
             <h1 class="h1">Как понять</h1>
             <p>
                 Одна и та же страница может быть открыта на разных устройствах и в браузерных окнах разной ширины.
@@ -145,8 +56,7 @@
                 </h3>
             </div>
             <div class="left_block">
-                <img src="image/example_1_edited.jpg" title="запись тега picture" alt="запись тега picture"
-                 width="705" height="150">
+                <img src="image/example_1_edited.jpg" title="запись тега picture" alt="запись тега picture">
             </div>
             <div class="right_block">
                 <p>
@@ -160,16 +70,11 @@
             </div>
             <div style="clear:both"></div>
             <div class="bottom_block">
-                <p style="margin: 0;">
-                    В следующем примере при помощи атрибута <strong>media</strong> в теге
-                    <strong>&lt;source&gt;</strong> мы задаём условие по аналогии
-                    с медиавыражением <strong>@media</strong> в CSS.
-                    Если условие определяется как ложное, то элемент <strong>&lt;source&gt;</strong> пропускается.
+                <p style="margin: 0px;">
+                    В следующем примере при помощи атрибута <strong>media</strong> в теге<strong>&lt;source&gt;</strong> мы задаём условие по аналогии
+                    с медиавыражением <strong>@media</strong> в CSS. Если условие определяется как ложное, то элемент <strong>&lt;source&gt;</strong> пропускается.
                     Разница становится видна, если менять размер окна браузера. Давайте это сделаем:
-                    <img src="image/strelka.png" style="display:inline-block;
-                                                        padding-top: 10px;
-                                                        width: 50px; 
-                                                        height: 40px;">
+                    <img src="image/strelka.png" class="arrow">
                 </p>
             </div>
             <div class="pict"> 
@@ -183,7 +88,6 @@
             </div>
         </div>
 </body>
-
 </html>
 
 

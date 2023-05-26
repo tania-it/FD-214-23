@@ -1,0 +1,99 @@
+@media screen and (max-width: 1920px) {
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div.wrapper {
+        background: url('../image/fon-saint-petersburg.png') no-repeat;
+        width: 100%;
+        /* Путь к фоновому изображению */
+        background-size: cover;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    div.banner {
+        float: left;
+        background-image: url('../image/picture_example.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        width: 60%;
+        height: 330px;
+        margin-top: 50px;
+        border: 1px solid red;
+
+    }
+    #header {
+        width: 30%;
+        float: left;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid blue;
+    }
+
+    .h1 {
+        font-family: Skellyman;
+        font-size: 34px;
+        src: url('../../6.1+/ofont.ru_Skellyman.ttf');
+        color: #610b38;
+    }
+
+    .h3 {
+        font-family: 'Caveat', cursive;
+        font-size: 36px;
+        font-style: normal;
+        margin: 0px;
+
+    }
+
+    .h4 {
+        font-family: verdana, helvetica, arial, sans-serif;
+        color: #610b4b;
+        font-size: 21px;
+    }
+
+    div.left_block {
+        float: left;
+        width: 47%;
+        margin-top: 20px;
+        padding-left: 5px;
+        border: 1px solid blueviolet;
+    }
+
+    div.right_block {
+        float: left;
+        width: 50%;
+        text-align: justify;
+        padding-left: 10px;
+        margin: 0;
+        border: 1px solid red;
+
+    }
+
+    div.bottom_block {
+        position: relative;
+    }
+
+    p {
+        font-family: 'Graphik', sans-serif;
+        font-weight: 500;
+        letter-spacing: normal;
+        font-size: 20px;
+        line-height: 25px;
+
+    }
+    div.pict {
+        max-width: 100%;
+        margin: 15px;
+    }
+    .arrow { display:inline-block;
+             padding-top: 10px;
+             width: 50px; 
+             height: 40px;
+             position: relative;
+             top: 50px;
+    }
+}
