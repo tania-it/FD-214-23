@@ -1,10 +1,13 @@
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #d6aded);
 }
-/*Styling Radio Input*/
 
+/*Styling Radio Input*/
+/*Прежде всего, мы превращаем курсор метки в указатель, чтобы указать, что он активен,
+  а затем вставляется в другие декоративные стили.*/
 label {
   display: inline-block;
   cursor: pointer;
@@ -14,42 +17,138 @@ label {
   font-size: 16px;
 }
 
+/*Затем мы скроем тип входного радио.*/
 input[type=radio] {
-    display: none;
-  }
-label:before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 1px;
-    background-color: #aaa;
-    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
-  }
-  .radio label:before {
-    border-radius: 8px;
-  }
-  input[type=radio]:checked + label:before {
-    content: "\2022";
-    color: #f3f3f3;
-    font-size: 30px;
-    text-align: center;
-    line-height: 18px;
+  display: none;
 }
+
+/*И мы заменяем скрытый тип входного радио на псевдоэлемент :before.*/
+label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #aaa;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+/*Приведенные выше стили на самом деле также применимы к типу ввода флажка. 
+    Единственное отличие состоит в том, что тип радиовхода — круг.
+    Для достижения эффекта мы добавляем border-radius с радиусом, равным половине высоты и ширины.*/
+
+.radio label:before {
+  border-radius: 8px;
+}
+
+/*Теперь мы добавляем маленький круг внутри. 
+  Мы будем использовать псевдокласс CSS3 :checked вместе с HTML-символом Bullet (•).
+  Этот маркер будет доставлен через свойство содержимого,
+  поэтому нам нужно преобразовать этот HTML-символ в CSS с помощью инструмента преобразования сущностей.*/
+
+input[type=radio]:checked+label:before {
+  content: "\2022";
+  color: #f3f3f3;
+  font-size: 30px;
+  text-align: center;
+  line-height: 18px;
+}
+
+/*Таким образом, когда входное радио (которое скрыто) отмечено или выбрано,
+  появится кружок меньшего размера*/
+
+/*Теперь мы добавляем стили к типу ввода флажка.
+  И мы также скрываем элемент ввода.*/
 input[type=checkbox] {
-    display: none;
-  }
+  display: none;
+}
+
+/*Поскольку ранее мы заменили ввод псевдоэлементом :before, теперь мы просто добавляем радиус границы.*/
 .checkbox label:before {
-    border-radius: 3px;
-  }
-  input[type=checkbox]:checked + label:before {
-    content: "\2713";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    font-size: 15px;
-    color: #f3f3f3;
-    text-align: center;
-      line-height: 15px;
-  }
+  border-radius: 3px;
+}
+
+/*Далее мы добавим отмеченный знак так же, как мы сделали с типом радио входа.
+  На этот раз мы используем HTML-символ Check Mark (✓).*/
+input[type=checkbox]:checked+label:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 15px;
+}
+
+h1 {
+  font-family: Skellyman;
+  font-size: 34px;
+  src: url('../../6.1+/ofont.ru_Skellyman.ttf');
+  color: #610b38;
+}
+
+p.demo {
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-start;*/
+  font-family: 'Graphik', sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-size: 20px;
+  line-height: 25px;
+  align-items: flex-start;
+}
+
+div.wrapper {
+  display: inline-block;
+  width: 65%;
+  /* border: 2px solid darkgray;
+              border-radius: 50px 10px;
+              border-style: outset; */
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+div.radio {
+  text-align: center;
+}
+
+div.checkbox {
+  text-align: center;
+}
+
+legend.legend {
+  font-family: Skellyman;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: darkblue;
+}
+
+fieldset.fieldset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+a.external {display: flex;}
+a.external::before {
+                    display: flex;
+                    content: url(image/external_ref.png);
+                    width: 23px;
+                    height: 0px;
+                    flex-direction: row-reverse;
+                    flex-wrap: nowrap;
+                    align-content: space-around;
+                    justify-content: space-evenly;
+                    align-items: baseline;
+                    }

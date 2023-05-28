@@ -1,35 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="checkbox_style.css">
-    <title>simple_checkbox</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="checkbox_style.css">
+  <title>simple Checkbox and Radio input with CSS3</title>
 </head>
+
 <body>
+  <div class="header">
+    <h1>Простой пример Checkbox и Радио-кнопки</h1>
+    <p class="demo">
+      Рассмотрим пример того, как мы можем настроить внешний вид флажка и переключателя с помощью CSS3:
+    </p>
+  </div>
+
+  <div class="wrapper">
+    <h2>Simple Radio-button</h2>
     <!--Radio Input-->
+    <!--We are going to customize the look of checkbox and radio input-->
 
-<div class="radio">
-  <input id="male" type="radio" name="gender" value="male">
-  <label for="male">Юноша</label>
+    <div class="radio">
+      <input id="male" type="radio" name="gender" value="male">
+      <label for="male">Юноша</label>
 
-  <input id="female" type="radio" name="gender" value="female">
-  <label for="female">Девушка</label>
-</div>
-<br><br>
+      <input id="female" type="radio" name="gender" value="female">
+      <label for="female">Девушка</label>
+    </div>
+    <br>
 
-<!--Checkbox Input-->
-
-<div class="checkbox">
-  <input id="check1" type="checkbox" name="check" value="check1">
-  <label for="check1">Checkbox No. 1</label>
-  <br>
-  <input id="check2" type="checkbox" name="check" value="check2">
-  <label for="check2">Checkbox No. 2</label>
-  <br>
-  <input id="check3" type="checkbox" name="check" value="check3">
-  <label for="check3">Checkbox No. 3</label>
-</div>
+    <!--Checkbox Input-->
+    <h3>Simple Checkbox</h3>
+    <div class="checkbox">
+      <fieldset class="fieldset">
+        <legend class="legend">Как вы узнали о нас?</legend>
+        <div>
+          <input type="checkbox" id="instagram" name="source" value="instagram">
+          <label for="instagram">Instagram</label>
+        </div>
+        <div>
+          <input type="checkbox" id="facebook" name="source" value="facebook">
+          <label for="facebook">Facebook</label>
+        </div>
+        <div>
+          <input type="checkbox" id="search-engine" name="source" value="search-engine">
+          <label for="search-engine">Поисковая система</label>
+        </div>
+        <div>
+          <input type="checkbox" id="word-of-mouth" name="source" value="word-of-mouth">
+          <label for="word-of-mouth">Сарафанный маркетинг</label>
+        </div>
+        <div>
+          <input type="checkbox" id="press" name="source" value="press">
+          <label for="press">Пресса</label>
+        </div>
+        <div>
+          <input type="checkbox" id="event" name="source" value="event">
+          <label for="event">ТВ</label>
+        </div>
+        <div>
+          <input type="checkbox" id="billboard" name="source" value="billboard">
+          <label for="billboard">Billboard</label>
+        </div>
+        <div><br><br>
+          <button type="submit" class="btn">Отправить форму</button>
+        </div>
+      </fieldset>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <p class="demo">
+        Ещё больше примеров CSS Checkbox Styles смотри на сайте: 
+        <a class="external" href="https://freebiesupply.com/blog/css-checkbox-styles/" 
+        title="CSS Checkbox Styles From CodePen" target="_blank">CSS Checkbox Styles Examples</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
+
+<!--Example-->
+<!--<input id="check1" type="checkbox" name="check" value="check1">
+      <label for="check1">Checkbox № 1</label>
+      <br>
+      <input id="check2" type="checkbox" name="check" value="check2">
+      <label for="check2">Checkbox № 2</label>
+      <br>
+      <input id="check3" type="checkbox" name="check" value="check3">
+      <label for="check3">Checkbox № 3</label>-->
