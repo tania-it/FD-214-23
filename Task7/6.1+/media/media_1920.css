@@ -23,7 +23,6 @@
         width: 60%;
         height: 330px;
         margin-top: 50px;
-        border: 1px solid red;
 
     }
     #header {
@@ -31,7 +30,6 @@
         float: left;
         text-align: center;
         padding: 20px;
-        border: 1px solid blue;
     }
 
     .h1 {
@@ -60,7 +58,6 @@
         width: 47%;
         margin-top: 20px;
         padding-left: 5px;
-        border: 1px solid blueviolet;
     }
 
     div.right_block {
@@ -69,7 +66,6 @@
         text-align: justify;
         padding-left: 10px;
         margin: 0;
-        border: 1px solid red;
 
     }
 
