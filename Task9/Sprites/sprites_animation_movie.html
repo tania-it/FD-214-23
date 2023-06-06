@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <title>sprites_animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+        }
+
+        div.sprite-wrapper {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+
+        }
+
+        h2.h2 {
+            border: 4px double rgba(255, 255, 255, 0.25);
+            border-width: 4px 0;
+            padding: 1em 0em;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 40em;
+            margin: 0 0 0 -20em;
+
+        }
+
+        @font-face {
+            font-family: 'LC-Chalk';
+            font-variant: small-caps;
+            src: url(../Sprites/fonts/LC-Chalk.ttf);
+        }
+
+        @keyframes play {
+            100% {
+                background-position: -2000px;
+            }
+        }
+
+        @keyframes step {
+            100% {
+                left: 100%;
+            }
+        }
+
+        #girl {
+            width: 280px;
+            height: 400px;
+            background: url(img/moviegirl_blackfon.png) 0px 0px;
+            animation: play 0.8s steps(8) infinite, step 10s linear infinite;
+            position: absolute;
+            left: 0;
+            top: 400px;
+        }
+
+        span {
+            text-transform: uppercase;
+            font: 700 3em/1 "LC-Chalk";
+            color: rgb(250, 250, 4);
+            padding: .25em 0 .325em;
+            display: block;
+            text-shadow: 0 0 80px rgba(255, 255, 255, 0.9);
+            animation: text-top 2s infinite both;
+        }
+        @keyframes text-top {
+            0% {
+                transform: translateY(-45px);
+                animation-timing-function: ease-in;
+                opacity: 1;
+            }
+
+            24% {
+                opacity: 1;
+            }
+
+            40% {
+                transform: translateY(-24px);
+                animation-timing-function: ease-in;
+            }
+
+            65% {
+                transform: translateY(-12px);
+                animation-timing-function: ease-in;
+            }
+
+            82% {
+                transform: translateY(-6px);
+                animation-timing-function: ease-in;
+            }
+
+            93% {
+                transform: translateY(-4px);
+                animation-timing-function: ease-in;
+            }
+
+            25%,
+            55%,
+            75%,
+            87% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="h2"><span>Анимация спрайта</span></h2>
+    <div class="sprite-wrapper">
+        <div id="girl"></div>
+    </div>
+</body>
+
+</html>

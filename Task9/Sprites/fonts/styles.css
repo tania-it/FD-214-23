@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'LC-Chalk';
+  src: url(./LC-Chalk.eot);
+  src: url(./LC-Chalk.eot?#iefix) format('embedded-opentype'),
+       url(./LC-Chalk.otf) format('otf'),
+       url(./LC-Chalk.svg#LC-Chalk) format('svg'),
+       url(./LC-Chalk.ttf) format('truetype'),
+       url(./LC-Chalk.woff) format('woff'),
+       url(./LC-Chalk.woff2) format('woff2');
+}

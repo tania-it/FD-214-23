@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <title>sprites_animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div.wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        h2.h2 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding-left: 40px;
+            font-family: 'LC-Chalk';
+            font-size: 30px;
+            font-variant: small-caps;
+            src: url('../Sprites/LC_Chalk/LC-Chalk.ttf');
+
+        }
+
+        @font-face {
+            font-family: 'LC-Chalk';
+            font-variant: small-caps;
+            src: url(../Sprites/fonts/LC-Chalk.ttf);
+        }
+
+        @keyframes MyAnimation_girl {
+            from {
+                background: url('img/moviegirl_small_2.png') 0 0;
+            }
+
+            to {
+                background: url('img/moviegirl_small_2.png') -835px 0;
+            }
+        }
+
+        #girl {
+            width: 117px;
+            height: 172px;
+            animation: MyAnimation_girl 1s steps(7) infinite;
+            margin-left: 50px;
+        }
+        
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="h2">Анимация спрайта</h2>
+        <div id="girl"></div>
+
+    </div>
+</body>
+
+</html>
+
+<!--style="width: 80%;
+    position: absolute;
+    top: 5px;
+    left: 270px;
+    margin: 5px 0px;"-->
