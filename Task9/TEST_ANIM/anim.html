@@ -17,35 +17,48 @@
         }
 
         div.anim-wrapper {
-            display: grid;
-            width: 100%;
-            height: 95vh;
+            width: 60%;
+            height: 70vh;
             position: relative;
-            border: 5px solid darkslategrey;
+            border: 3px solid darkslategrey;
             padding: 8px 15px;
             overflow: hidden;
+            margin: 0 auto;
         }
 
         #circle {
-            width: 200px;
-            height: 200px;
-            background: green;
-            border-radius: 100px;
+            width: 300px;
+            height: 300px;
+            background: greenyellow;
+            border-radius: 300px;
             position: absolute;
-            left: 150px;
+            left: 50px;
             top: 100px;
+
+        }
+
+        #circle:hover {
+            animation-name: Circle-to-square;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
         }
 
         div.parallelogram {
             width: 30%;
-            height: 110px;
+            height: 150px;
             position: absolute;
-            left: 750px;
-            top: 200px;
-            transform: skew(10deg) rotate(10deg) translateY(-40px);
+            left: 600px;
+            top: 100px;
+            transform: skew(20deg) rotate(20deg) translateY(-40px);
             border: 2px solid blue;
-            padding: 4px;
-            margin-top: 20px;
+            margin-top: 50px;
+        }
+
+        div.parallelogram:hover {
+            animation-name: Parallelogram-with-border;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         }
 
         #infinity:before,
@@ -65,6 +78,7 @@
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
+
         #infinity:after {
             left: auto;
             right: 0;
@@ -76,31 +90,115 @@
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-       #infinity {
+
+        #infinity {
             width: 212px;
             height: 100px;
             position: absolute;
-            left: 450px;
-            top: 500px;
-            animation: Animation_infinity;       
-        } 
-       
-        #infinity:hover {
-            position: absolute;
-            left: 450px;
-            top: 500px;
-            animation: Animation_infinity 1s infinite;
+            left: 400px;
+            top: 400px;
+            /*animation-name: Animation_infinity;
             animation-duration: 5s;
-    }
+            animation-iteration-count: infinite;  */
+        }
+
+        #infinity:hover:after {
+            animation-name: Animation_infinity;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #infinity:hover:before {
+            animation-name: Animation_infinity;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes Circle-to-square {
+            from {
+                width: 300px;
+                height: 300px;
+                background: greenyellow;
+                border-radius: 300px;
+                position: absolute;
+                left: 50px;
+                top: 100px;
+            }
+
+            to {
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+                border-radius: 3px;
+                position: absolute;
+                left: 400px;
+                top: 50px;
+            }
+        }
+
+        @keyframes Parallelogram-with-border {
+            from {
+                width: 30%;
+                height: 150px;
+                position: absolute;
+                left: 600px;
+                top: 100px;
+                transform: skew(20deg) rotate(20deg) translateY(-40px);
+                border: 2px solid blue;
+                margin-top: 50px;
+            }
+
+            to {
+                width: 30%;
+                height: 150px;
+                position: absolute;
+                left: 600px;
+                top: 100px;
+                transform: skew(-20deg) rotate(-20deg) translateY(0);
+                border: 25px solid blue;
+                margin-top: 50px;
+            }
+        }
 
         @keyframes Animation_infinity {
-        from {
-            border-color: red;
+            from {
+                border-color: red;
+            }
+
+            50% {
+                border-color: yellow;
+            }
+
+            to {
+                border-color: darkgreen;
+            }
         }
-        to {
-            border-color: blue;
+
+        /*animated shapes inside the main container  animated shapes inside the main container  animated shapes inside the main container*/
+        div.anim-wrapper:hover>.parallelogram {
+            animation: Parallelogram-with-border 3s infinite alternate-reverse ease-in 1s;
+            cursor: pointer;
         }
+
+        div.anim-wrapper:hover>#circle {
+            animation: Circle-to-square 2s infinite alternate ease-out 1s;
+            cursor: pointer;
         }
+
+        #infinity:before {
+            animation: Animation_infinity 3s infinite;
+            cursor: pointer;
+        }
+
+        #infinity:after {
+            animation: Animation_infinity 3s infinite;
+            cursor: pointer;
+        }
+
+        /* div.anim-wrapper:hover> #infinity{
+            animation: Animation_infinity 3s infinite;
+            cursor: pointer;
+        }*/
     </style>
 </head>
 
@@ -108,16 +206,12 @@
     <div class="anim-wrapper">
 
         <div id="circle"></div>
+
         <div class="parallelogram"></div>
+
         <div id="infinity"></div>
 
     </div>
 </body>
 
 </html>
-
-<!--style="width: 80%;
-    position: absolute;
-    top: 5px;
-    left: 270px;
-    margin: 5px 0px;"-->
