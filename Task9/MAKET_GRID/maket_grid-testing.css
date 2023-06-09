@@ -15,13 +15,11 @@
         "header header header"
         "nav article article"
         "footer footer footer";
-    grid-template-rows: 60px 1fr 60px;
     grid-template-columns: 20% 1fr;
-    grid-gap: 10px;
+    grid-template-rows: repeat(60px 1fr 60px);
+    /*grid-gap: 10px;*/
     width: 100%;
     height: auto;
-    margin: 0;
-    border: 3px solid darkslategrey;
 }
 
 div.box {
@@ -31,16 +29,14 @@ div.box {
     background-color: lightgreen;
     border: 2px solid green;
 }
-
-header,footer, article, nav, div {
+/*header,footer, article, nav, div {
     padding: 10px;
     background: #ffff;
-    /* border: 1px solid black; */
-}
+    border: 1px solid black;
+}*/
 #pageHeader {
     grid-area: header;
     text-align: center;
-/*  border: 1px solid magenta; */
     padding: 20px;
     background-color: lightblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,13 +45,13 @@ header,footer, article, nav, div {
     color: blue;
     margin-top: auto;
 }
-/* navigation section */
+
+/**** navigation section *****/
 #mainNav {
     grid-area: nav;
     background: khaki;
 }
 #mainNav h3 {
-
     text-align: center;
     padding: 5px 5px 0px 10px;
     color: black;
@@ -64,9 +60,9 @@ header,footer, article, nav, div {
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
-}
+    }
 #mainNav ul {
-    padding-left: 15px;
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +78,11 @@ header,footer, article, nav, div {
 /* content section */
 #mainArticle {
     grid-area: article;
+    background-image: url(images/ball_small.png);
+    background-repeat: repeat-y;
+    background-position: top right;
 }
+
 #mainArticle h2 {
     text-align: center;
     color: black;
