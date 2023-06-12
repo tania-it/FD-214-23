@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anketa_if</title>
+</head>
+<script type="application/javascript">
+    let firstName = prompt('What is your first name?');
+    let middleName = prompt('What is your middle name?');
+    let lastName = prompt('What is your last name?');
+    let age = prompt('How old are you?');
+    let isMale = confirm('Are you male?');
+    
+    let sex = null;
+    if (isMale === true) {
+        sex = 'male';
+    } else {
+        sex = 'female';
+    }
+
+    let retirementStatus = null;
+    if ((isMale && age >= 63) || (!isMale && age >= 58)) {
+        retirementStatus = 'yes';
+    } else {
+        retirementStatus = 'no';
+    }
+
+    let output = 'Your full name: ' + firstName + ' ' + middleName + ' ' + lastName
+    + '\n' + 'Your age in years: ' + age
+    + '\n' + 'Your age in days: ' + (age * 365)
+    + '\n' + 'In 5 years you would be ' + (parseInt(age) + 5) + ' years old'
+    + '\n' + 'Your sex is: ' + sex
+    + '\n' + 'Your are retired: ' + retirementStatus;
+    
+    alert(output);
+</script>
+<body>
+    <div class="wrapper">
+        <main>Inquiry request</main>
+    </div>
+</body>
+</html>
