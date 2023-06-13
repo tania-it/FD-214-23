@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myanketa_if</title>
+</head>
+<script type="application/javascript">
+    let surname = prompt('Введите вашу фамилию :');
+    let name = prompt('Введите ваше имя :');
+    let middlename = prompt('Введите ваше отчество :');
+    let age = prompt('Введите ваш возраст :');
+    let male = confirm('Ваш пол мужской?');
+    let message = 'Ваше ФИО : ' + surname + ' ' + name + ' ' + middlename + '\n';
+    message += 'Ваш возраст в годах : ' + age + '\n';
+    message += 'Ваш возраст в днях : ' + (age * 365) + '\n';
+    message += 'Через 5 лет вам будет : ' + (parseInt(age) + 5) + '\n';
+    let sex = null;
+    if (male == true) {
+        sex = 'мужской';
+    } else {
+        sex = 'женский';
+    }
+    message += 'Ваш пол : ' + sex + '\n';
+    let status = null;
+    
+    if (male == true && age >= 63) {
+       status = 'да';
+    } else if (male == false && age >= 58) {
+        status = 'да'; 
+    } else {
+        status = 'нет';
+    }
+
+/*
+    if (male == true) {
+        if (age >= 63) {
+            status = 'да';
+        } else {
+            status = 'нет';
+        }
+    } else {
+        if (age >= 58) {
+            status = 'да';
+        }  else {
+            status = 'нет';
+        }
+    }*/
+    message += 'Вы на пенсии : ' + status + '\n';
+    alert(message);
+
+</script>
+
+<body>
+
+</body>
+
+</html>
