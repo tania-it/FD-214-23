@@ -209,7 +209,7 @@
 
             div.banner-rightside {
                 display: flex;
-                background-image: url(images/tatyana_2.png);
+                background-image: url(images/AVB.jpg);
                 background-size: cover;
                 background-color: gray;
                 width: 40%;
@@ -265,34 +265,38 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-                height: 200px;
+                height: 250px;
                 border: 1px solid red;
             }
 
             div.career_description p {
-                /*  height: 200px;
-            border: 1px solid red; */
                 color: #2a3549;
                 font-size: 20px;
                 font-family: 'RistrettoPro', Arial, sans-serif;
                 line-height: 1.5;
                 font-weight: 400;
                 letter-spacing: 0.5px;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
             }
-
-            div.career_description p::before {
-                content: "💜";
-                margin-right: 0.5em;
+            div.career_description p:first-child { margin: 0 0.5em; }
+            div.career_description p img {
+                background-image: url(images/atom-mini.png);
                 background-position: center center;
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-color: transparent;
                 border-style: solid;
-            }
-
+                margin: 0 0.3em;
+            } 
+        /*    div.career_description p::before {
+                content: url(images/atom-mini.png);
+                margin: 0 0.3em;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-color: transparent;
+                border-style: solid;
+            } 
+        */
             div.buttons {
                 display: flex;
                 flex-direction: row;
@@ -352,7 +356,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
-                height: 250px;
+                height: 200px;
                 border: 1px solid red;
             }
 
@@ -392,6 +396,9 @@
                 display: grid;
                 grid-template-rows: auto auto auto;
                 grid-template-columns: auto auto;
+                justify-content: space-evenly;
+                align-content: space-evenly;
+                justify-items: stretch;
                 gap: 10px;
                 margin: 30px auto;
                 grid-gap: 10px;
@@ -406,7 +413,7 @@
                 border-style: solid;
                 margin: 0 auto;
             }
-           div.why_me > p.why_me {
+           div.why_me p.why_me {
             text-align: center;
             padding: 20px 0;
             font-size: 48px;
@@ -424,19 +431,21 @@
             grid-column-end: 3;
             }
             div.why_me > p.item {
-            display: inline-block;
             color: #f6f6f6;
-            font-size: 30px;
+            font-size: 24px;
             font-family: 'RistrettoPro',Arial,sans-serif;
-            line-height: 1.20;
+            line-height: 1.5;
             font-weight: 400;
             letter-spacing: 0.5px;
             background-position: center center;
             border-color: transparent;
             border-style: solid;
+            margin: 0 50px;
            }
-
-
+           p.item img {width:30px;
+                       height: 30px;
+                       margin-right: 20px;}    
+        
            
 
         </style>
@@ -495,10 +504,10 @@
 
                     <div class="career_description">
                         <p>Я Александра Шадрина, преподаватель по физике высшей категории
-                            и проводник к высоким баллам на экзамене.
-                        </p><br>
-                        <p>Готовлю к ЦТ на высокий балл для поступления в топовые вузы</p>
-                        <p>Сама сдаю ЦТ каждый год на 100 баллов</p>
+                            и проводник к высоким баллам на экзамене.</p>
+                        <p><img src="images/atom-mini.png">Готовлю к ЦТ на высокий балл для поступления в топовые вузы;</p>
+                        <p><img src="images/atom-mini.png">Сама сдаю ЦТ каждый год на 100 баллов;</p>
+                        <p><img src="images/atom-mini.png">Решаю школьные олимпиадные задачи;</p>
                     </div>
                     <div class="buttons">
                         <a href="#" class="get-ct-results">Посмотреть результаты ЦТ</a>
@@ -517,12 +526,55 @@
                 </div>
             </div>
             <div class="why_me">
-                <p class="why_me"> Почему ученики выбирают меня </p>
-                <p class="item">Вся информация доступна и понятна </p>
-                <p class="item">Разбор каждого задания и обратная связь</p>
-                <p class="item">Подарки в виде шпаргалок и конспектов по видео урокам</p>
-                <p class="item">Во время обучения у вас пропадет волнение и страх сдавать экзамен</p>        
+                <p class="why_me">Почему ученики выбирают меня </p>
+                <p class="item"><img src="images/galochka.png">Вся информация доступна, наглядна и понятна</p>
+                <p class="item"><img src="images/galochka.png">Разбор каждого задания и обратная связь</p>
+                <p class="item"><img src="images/galochka.png">Подарки в виде шпаргалок и конспектов по видео урокам</p>
+                <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать экзамен</p>        
             </div>
+     <!-- Service Start -->
+     <div class="container-large">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Home Projects</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->        
 </body>
-
 </html>
