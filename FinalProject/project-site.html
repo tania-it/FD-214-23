@@ -9,10 +9,20 @@
     <linkhref="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
         <!-- http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900 -->
         <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
-        <title>My_Project_maket</title>
+    <!--<link rel="stylesheet" href="AboutStart.css">-->    
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+        <script src="js/myscript.js"></script>
+<title>My_Project_maket</title>
         <style>
             * {
                 margin: 0;
@@ -277,7 +287,12 @@
                 font-weight: 400;
                 letter-spacing: 0.5px;
             }
-            div.career_description p:first-child { margin: 0 0.5em; }
+
+            div.career_description p:first-child {
+                margin: 0 0.5em;
+                text-align: justify;
+            }
+
             div.career_description p img {
                 background-image: url(images/atom-mini.png);
                 background-position: center center;
@@ -286,8 +301,9 @@
                 border-color: transparent;
                 border-style: solid;
                 margin: 0 0.3em;
-            } 
-        /*    div.career_description p::before {
+            }
+
+            /*    div.career_description p::before {
                 content: url(images/atom-mini.png);
                 margin: 0 0.3em;
                 background-position: center center;
@@ -413,41 +429,207 @@
                 border-style: solid;
                 margin: 0 auto;
             }
-           div.why_me p.why_me {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 48px;
-            color: #f6f6f6;
-            font-family: url('/FinalProject/fonts/Mint\ Type\ -\ RistrettoPro-Regular.otf');
-            line-height: 1.20;
-            font-weight: 700;
-            text-transform: uppercase;
-            background-position: center center;
-            border-color: transparent;
-            border-style: solid;
-            }
-            p.why_me {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            }
-            div.why_me > p.item {
-            color: #f6f6f6;
-            font-size: 24px;
-            font-family: 'RistrettoPro',Arial,sans-serif;
-            line-height: 1.5;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            background-position: center center;
-            border-color: transparent;
-            border-style: solid;
-            margin: 0 50px;
-           }
-           p.item img {width:30px;
-                       height: 30px;
-                       margin-right: 20px;}    
-        
-           
 
+            div.why_me p.why_me {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 48px;
+                color: #f6f6f6;
+                font-family: url('/FinalProject/fonts/Mint\ Type\ -\ RistrettoPro-Regular.otf');
+                line-height: 1.20;
+                font-weight: 700;
+                text-transform: uppercase;
+                background-position: center center;
+                border-color: transparent;
+                border-style: solid;
+            }
+
+            p.why_me {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            div.why_me>p.item {
+                color: #f6f6f6;
+                font-size: 24px;
+                font-family: 'RistrettoPro', Arial, sans-serif;
+                line-height: 1.5;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                background-position: center center;
+                border-color: transparent;
+                border-style: solid;
+                margin: 0 50px;
+            }
+
+            p.item img {
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+
+            /*слайдер карточки курса слайдер карточки курса слайдер карточки курса*/
+
+            .slider {
+                max-width: 1000px;
+                width: 90%;
+                margin: 15px auto;
+                background: #fff;
+                border-radius: 5px;
+                padding: 15px 0;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            }
+
+            .slick-slider button {
+                position: absolute;
+                top: 50%;
+                background: #fff;
+                border: none;
+                outline: none;
+                z-index: 100;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                cursor: pointer;
+                transform: translate(0%, -70%);
+                border-radius: 36px;
+                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.07);
+            }
+
+            .slick-slider .slick-prev {
+                left: -30px;
+            }
+
+            .slick-slider .slick-prev::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f104";
+                font-size: 30px;
+                color: #bf0606;
+                left: 8px;
+                position: relative;
+                z-index: 10;
+            }
+
+            .slick-slider .slick-next {
+                right: -30px;
+            }
+
+            .slick-slider .slick-next::after {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f105";
+                font-size: 30px;
+                color: #bf0606;
+                right: 15px;
+                position: relative;
+                z-index: 10;
+            }
+
+            .slick-slide {
+                color: #333;
+                padding: 40px 0;
+                font-size: 1.25em;
+                font-family: "Verdana";
+                text-align: center;
+                pointer-events: none;
+            }
+
+            .slick-slide .desc {
+                opacity: 0;
+            }
+
+            .slick-slide .desc>* {
+                transition: all 900ms ease;
+            }
+
+            .slick-slide .desc h2 {
+                position: relative;
+                left: 50px;
+                line-height: 1;
+            }
+
+            .slick-slide .desc h2 span {
+                color: #0b7474;
+            }
+
+            .slick-slide .desc p {
+                position: relative;
+                top: 50px;
+                opacity: 0;
+            }
+
+            .slick-slide img {
+                width: 100%;
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                color: black;
+            }
+
+            .slick-dots {
+                text-align: center;
+            }
+
+            .slick-dots li {
+                display: inline-block;
+                padding: 1px;
+                background: #ccc;
+                margin: 10px 5px;
+                width: 40px;
+                height: 4px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            .slick-dots li.slick-active {
+                background: #bf0606;
+            }
+
+            .slick-dots button {
+                display: none;
+            }
+
+            .slick-slide {
+                opacity: 0.2;
+                transition: all 300ms ease;
+            }
+
+            .slick-current {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+            .slick-current .desc {
+                opacity: 1;
+            }
+
+            .slick-current .desc h2 {
+                left: 0;
+            }
+
+            .slick-current .desc p {
+                top: 0;
+                opacity: 1;
+            }
+
+            .btn {
+                border-radius: 30px;
+                padding: 10px 20px;
+                border: 2px solid rgb(29, 1, 94, 0.8);
+                text-decoration: none;
+                color: #0e9695;
+                font-size: .6em;
+                text-transform: uppercase;
+                display: block;
+                margin: 30px auto 0;
+                max-width: 130px;
+                width: 100%;
+                font-weight: bold;
+                pointer-events: initial;
+                line-height: 1.5em;
+            }
         </style>
 </head>
 
@@ -504,8 +686,9 @@
 
                     <div class="career_description">
                         <p>Я Александра Шадрина, преподаватель по физике высшей категории
-                            и проводник к высоким баллам на экзамене.</p>
-                        <p><img src="images/atom-mini.png">Готовлю к ЦТ на высокий балл для поступления в топовые вузы;</p>
+                            и проводник к высоким баллам на централизованном экзамене.</p>
+                        <p><img src="images/atom-mini.png">Готовлю к ЦТ на высокий балл для поступления в топовые вузы;
+                        </p>
                         <p><img src="images/atom-mini.png">Сама сдаю ЦТ каждый год на 100 баллов;</p>
                         <p><img src="images/atom-mini.png">Решаю школьные олимпиадные задачи;</p>
                     </div>
@@ -530,51 +713,48 @@
                 <p class="item"><img src="images/galochka.png">Вся информация доступна, наглядна и понятна</p>
                 <p class="item"><img src="images/galochka.png">Разбор каждого задания и обратная связь</p>
                 <p class="item"><img src="images/galochka.png">Подарки в виде шпаргалок и конспектов по видео урокам</p>
-                <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать экзамен</p>        
+                <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать
+                    экзамен</p>
             </div>
-     <!-- Service Start -->
-     <div class="container-large">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+            <section class="slider">
+                <div>
+                    <img src="https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg">
+                    <div class="desc">
+                        <h2><span>годовой курс</span><br>подготовки к ЦТ</h2>
+                        <p>Длительность: 30 недель</p>
+                        <a href="#" class="btn">добавить в корзину</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+
+                <div>
+                    <img src="https://zastavok.net/main/love/1317938018.jpg">
+                    <div class="desc">
+                        <h2><span>годовой курс</span><br>подготовки к ЦЭ</h2>
+                        <p>Длительность: 32 недели</p>
+                        <a href="#" class="btn">добавить в корзину</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+
+                <div>
+                    <img src="https://bipbap.ru/wp-content/uploads/2017/08/LEpwl8j7fQ.jpg">
+                    <div class="desc">
+                        <h2><span>школьный курс</span><br>7-9 класс</h2>
+                        <p>Длительность: 34 недели </p>
+                        <a href="#" class="btn">добавить в корзину</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+
+                <div>
+                    <img src="images/physics.jpeg">
+                    <div class="desc">
+                        <h2><span>школьный курс</span><br>10-11 класс</h2>
+                        <p>Длительность: 34 недели</p>
+                        <a href="#" class="btn">добавить в корзину</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->        
+            </section>
+    <script src="js/myscript.js"></script>        
+           
 </body>
+
 </html>
