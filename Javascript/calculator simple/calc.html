@@ -24,7 +24,7 @@
 <body>
    <div id="result"></div> 
 
-    <input type="button" value="1" onclick="getNumber(1)"  >
+    <input type="button" value="1" onclick="getNumber(1)">
     <input type="button" value="2" onclick="getNumber(2)">
     <input type="button" value="3" onclick="getNumber(3)"><br>
     <input type="button" value="4" onclick="getNumber(4)">
@@ -35,37 +35,49 @@
     <input type="button" value="9" onclick="getNumber(9)"><br>
     <input type="button" value="0" onclick="getNumber(0)">
 
-    <input type="button" value="+" onclick="getNumber('+')">
-    <input type="button" value="-" onclick="getNumber('-')"><br>
-    <input type="button" value="*" onclick="getNumber('*')">
-    <input type="button" value="/" onclick="getNumber('/')">
-    <input type="button" value="=">
+    <input type="button" value="+" onclick="getOperation('+')">
+    <input type="button" value="-" onclick="getOperatoin('-')"><br>
+    <input type="button" value="*" onclick="getOperation('*')">
+    <input type="button" value="/" onclick="getOperation('/')">
+    <input type="button" value="=" onclick="getResult('=')">
 
     <Script>
        
-       var x = null, y = null, operVariable = "";
-       function getNumber (num) {
-           if (x==null) {
-
+       var x = null, y = null;
+       var oper;
+       function getNumber (number) {
+           if (x===null) {
+                x=number;
+                console.log (x);
+           }
+           else {
+               y=number;
+               console.log (y);
            }
 
         } 
 
-
-        function getOperation (oper){
-           operVariable = oper
+        function getOperation (sign){
+           oper = sign;
+           console.log (oper);
         }
 
-
-
-
-
-
+        function getResult () {
+            console.log ('=');
+        switch (oper) {
+            case "+" : console.log (x+y); break;
+            case "-" : console.log (x-y); break;
+            case "*" : console.log (x*y); break;
+            case "/" : console.log (x/y); break;
+        }
+    }
 
     </Script>
 </body>
 
 </html>
+
+
 
 <!--switch (oper) {
     case "+" : return x+y;
