@@ -1,655 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <linkhref="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
-        <!-- http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900 -->
     <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
             integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
             crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 
-    <!--<link rel="stylesheet" href="normalize.css">-->
-    <link rel="stylesheet" href="reset.css">
-    <!--<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="AboutStart.css">-->    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="AboutStart.css">-->
+    <link rel="stylesheet" href="css/slider.css">   
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
     <script src="js/myscript.js"></script>
     <title>My_Project_maket</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-             img {
-                max-inline-size: 100%;
-                block-size: auto;
-                object-fit: contain;
-            }
-            div.wrapper {
-                width: 100%;
-                height: 100vh;
-                overflow: auto;
-                border: 5px solid lightslategrey;
-                padding-bottom: 20px;
-            }
-
-            /*div.container {
-                background-color: #f6f6f6;
-                ;
-                width: 100%;
-                height: auto;
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: translateZ(0);
-                border: 1px solid blue;
-            }*/
-
-            header {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-                z-index: 2000;
-            }
-
-            nav.header {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
-                height: 150px;
-                z-index: 1000;
-                /*position: fixed;*/
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
-                transition: background-color .3s linear;
-                background-color: rgba(246, 246, 246, 1);
-                padding-left: 10px;
-                padding-top: 10px;
-                border: 1px solid red;
-            }
-
-            div.name {
-                width: 300px;
-                height: auto;
-            }
-
-            div.menu_top {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                width: 600px;
-                border: 1px solid violet;
-            }
-
-            ul.menu-items {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                width: 600px;
-            }
-
-            ul.menu-items li {
-                /*font-family: 'Roboto';*/
-                /*font-style: normal;
-                font-weight: 500;
-                font-size: 24px;*/
-                line-height: 16px;
-                color: #FFFFFF;
-            }
-
-            ul.menu-items li a {
-                color: #313131;
-                line-height: 57px;
-                transition: box-shadow 0.4s, color 0.4s;
-                /*position: relative;*/
-                text-decoration: none;
-                font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: 500;
-                /*font-size: 24px;*/
-                font-size: 1em;
-            }
-
-            div.connect {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                width: 200px;
-                border: 1px solid green;
-            }
-
-            div.phone {
-                /*width: 240px;
-                height: 75px;*/
-                background: #e7b7b752;
-                border: 1px solid darkblue;
-                border-radius: 10px;
-                padding: 16px;
-                font-family: 'Evolventa';
-                font-style: normal;
-                font-weight: 700;
-                /*font-size: 24px;*/
-                font-size: 1em;
-                line-height: 155%;
-                text-align: center;
-                letter-spacing: 0.02em;
-                color: #000000;
-            }
-
-            div.phone a {
-                color: #2a3549;
-                border: 1px solid #0e9695;
-                border-radius: 15px;
-                font-family: RistrettoPro;
-                font-weight: 400;
-                text-transform: uppercase;
-                text-decoration: none;
-            }
-
-            div.banner {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                height: 90vh;
-                border: 2px solid red;
-            }
-
-            /* div.banner-leftside {height: 50%;
-                                margin-top: 300px;
-                                display: flex;
-                                position: fixed;
-                                left: 293px;
-                                right: 1146px;
-                                border: 1px solid black;
-                                top: -22px;                   
-        }  */
-            div.banner-leftside {
-                background-image: url(images/banner.jpg);
-                line-height: 24px;
-                width: 60%;
-                height: auto;
-                position: relative;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            p.name {
-                position: absolute;
-                left: 200px;
-                top: 200px;
-                color: rgb(29, 1, 94);
-                font-size: 24px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.20;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-            }
-
-            p.caption {
-                position: absolute;
-                left: 200px;
-                top: 300px;
-                color: rgb(29, 1, 94, 0.8);
-                font-size: 50px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.5;
-                font-weight: 700;
-                /*background-position: center center;*/
-                border-color: transparent;
-                border-style: solid;
-
-            }
-
-            a.detailed {
-                position: absolute;
-                left: 200px;
-                top: 600px;
-                color: #f6f6f6;
-                font-size: 18px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.20;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                border-width: 1px;
-                border-radius: 20px;
-                background-color: #0e9695;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-                transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-            }
-
-            div.banner-rightside {
-                display: flex;
-                background-image: url(images/AVB.jpg);
-                background-size: cover;
-                background-color: gray;
-                width: 40%;
-                height: auto;
-                background-repeat: no-repeat;
-                /*margin-top: 147px;*/
-                overflow: hidden;
-            }
-
-            div.teacher {
-                display: flex;
-                flex-direction: row;
-                height: 700px;
-                border: 1px solid red;
-                margin-top: 100px;
-                justify-content: center;
-                margin-bottom: 100px;
-            }
-
-            div.left-item-teacher {
-                flex-basis: 30%;
-                background-image: url(images/profile.jpg);
-                background-repeat: no-repeat;
-            }
-
-            div.right-item-teacher {
-                flex-basis: 40%;
-                background-color: white;
-                padding-left: 30px;
-            }
-
-            div.headline {
-                border: 1px solid black;
-                height: 100px;
-            }
-
-            div.headline p {
-                /*    border: 1px solid darkgreen; */
-                color: #2a3549;
-                font-size: 48px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.20;
-                font-weight: 700;
-                text-transform: uppercase;
-                text-align: center;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-                padding-top: 20px;
-            }
-
-            div.career_description {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                height: 250px;
-                border: 1px solid red;
-            }
-
-            div.career_description p {
-                color: #2a3549;
-                font-size: 20px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.5;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-            }
-
-            div.career_description p:first-child {
-                margin: 0 0.5em;
-                text-align: justify;
-            }
-
-            div.career_description p img {
-                background-image: url(images/atom-mini.png);
-                background-position: center center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-color: transparent;
-                border-style: solid;
-                margin: 0 0.3em;
-            }
-
-            /*    div.career_description p::before {
-                content: url(images/atom-mini.png);
-                margin: 0 0.3em;
-                background-position: center center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-color: transparent;
-                border-style: solid;
-            } 
-        */
-            div.buttons {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                height: 150px;
-                border: 1px solid red;
-
-            }
-
-            a.get-ct-results {
-                background-color: #20B2AA;
-                box-shadow: 0 5px 0 #20B2AA;
-                color: white;
-                padding: 1em 1em;
-                position: relative;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 400;
-                border-radius: 30px;
-            }
-
-            a.get-ct-results:hover {
-                background-color: #40E0D0;
-                cursor: pointer;
-            }
-
-            a.get-ct-results:active {
-                box-shadow: none;
-                top: 5px;
-            }
-
-            a.get-teachers-details {
-                background-color: #20B2AA;
-                box-shadow: 0 5px 0 #20B2AA;
-                color: white;
-                padding: 1em 1em;
-                position: relative;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 400;
-                border-radius: 30px;
-            }
-
-            a.get-teachers-details:hover {
-                background-color: #40E0D0;
-                cursor: pointer;
-            }
-
-            a.get-teachers-details:active {
-                box-shadow: none;
-                top: 5px;
-            }
-
-            div.achievements {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                height: 200px;
-                border: 1px solid red;
-            }
-
-            p.experience {
-                height: auto;
-                color: #0e9695;
-                font-size: 70px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.20;
-                font-weight: 400;
-                /*  background-position: center center;  */
-                border-color: transparent;
-                border-style: solid;
-                vertical-align: middle;
-                width: 40%;
-                -webkit-text-size-adjust: 100%;
-                border: 1px solid black;
-            }
-
-            p.rating {
-                height: auto;
-                color: #0e9695;
-                font-size: 70px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.20;
-                font-weight: 400;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-                vertical-align: middle;
-                width: 50%;
-                -webkit-text-size-adjust: 100%;
-                border: 1px solid black;
-            }
-
-            div.why_me {
-                display: grid;
-                grid-template-rows: auto auto auto;
-                grid-template-columns: auto auto;
-                justify-content: space-evenly;
-                align-content: space-evenly;
-                justify-items: stretch;
-                gap: 10px;
-                margin: 30px auto;
-                grid-gap: 10px;
-                height: 60vh;
-                vertical-align: middle;
-                width: 70%;
-                -webkit-text-size-adjust: 100%;
-                border-radius: 15px;
-                background-color: #0e9695;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-                margin: 0 auto;
-            }
-
-            div.why_me p.why_me {
-                text-align: center;
-                padding: 20px 0;
-                font-size: 48px;
-                color: #f6f6f6;
-                font-family: url('/FinalProject/fonts/Mint\ Type\ -\ RistrettoPro-Regular.otf');
-                line-height: 1.20;
-                font-weight: 700;
-                text-transform: uppercase;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-            }
-
-            p.why_me {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            div.why_me>p.item {
-                color: #f6f6f6;
-                font-size: 24px;
-                font-family: 'RistrettoPro', Arial, sans-serif;
-                line-height: 1.5;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                background-position: center center;
-                border-color: transparent;
-                border-style: solid;
-                margin: 0 50px;
-            }
-
-            p.item img {
-                width: 30px;
-                height: 30px;
-                margin-right: 20px;
-            }
-
-            /*слайдер карточки курса слайдер карточки курса слайдер карточки курса*/
-
-            .slider {
-                max-width: 1000px;
-                width: 90%;
-                margin: 15px auto;
-                background: #fff;
-                border-radius: 5px;
-                padding: 15px 0;
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-            }
-
-            .slick-slider button {
-                position: absolute;
-                top: 50%;
-                background: #fff;
-                border: none;
-                outline: none;
-                z-index: 100;
-                width: 50px;
-                height: 50px;
-                color: #fff;
-                cursor: pointer;
-                transform: translate(0%, -70%);
-                border-radius: 36px;
-                box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.07);
-            }
-
-            .slick-slider .slick-prev {
-                left: -30px;
-            }
-
-            .slick-slider .slick-prev::before {
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                content: "\f104";
-                font-size: 30px;
-                color: #bf0606;
-                left: 8px;
-                position: relative;
-                z-index: 10;
-            }
-
-            .slick-slider .slick-next {
-                right: -30px;
-            }
-
-            .slick-slider .slick-next::after {
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                content: "\f105";
-                font-size: 30px;
-                color: #bf0606;
-                right: 15px;
-                position: relative;
-                z-index: 10;
-            }
-
-            .slick-slide {
-                color: #333;
-                padding: 40px 0;
-                font-size: 1.25em;
-                font-family: "Verdana";
-                text-align: center;
-                pointer-events: none;
-            }
-
-            .slick-slide .desc {
-                opacity: 0;
-            }
-
-            .slick-slide .desc>* {
-                transition: all 900ms ease;
-            }
-
-            .slick-slide .desc h2 {
-                position: relative;
-                left: 50px;
-                line-height: 1;
-            }
-
-            .slick-slide .desc h2 span {
-                color: #0b7474;
-            }
-
-            .slick-slide .desc p {
-                position: relative;
-                top: 50px;
-                opacity: 0;
-            }
-
-            .slick-slide img {
-                width: 100%;
-            }
-
-            .slick-prev:before,
-            .slick-next:before {
-                color: black;
-            }
-
-            .slick-dots {
-                text-align: center;
-            }
-
-            .slick-dots li {
-                display: inline-block;
-                padding: 1px;
-                background: #ccc;
-                margin: 10px 5px;
-                width: 40px;
-                height: 4px;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-
-            .slick-dots li.slick-active {
-                background: #bf0606;
-            }
-
-            .slick-dots button {
-                display: none;
-            }
-
-            .slick-slide {
-                opacity: 0.2;
-                transition: all 300ms ease;
-            }
-
-            .slick-current {
-                opacity: 1;
-                transform: scale(1.1);
-            }
-
-            .slick-current .desc {
-                opacity: 1;
-            }
-
-            .slick-current .desc h2 {
-                left: 0;
-            }
-
-            .slick-current .desc p {
-                top: 0;
-                opacity: 1;
-            }
-
-            .btn {
-                border-radius: 30px;
-                padding: 10px 20px;
-                border: 2px solid rgb(29, 1, 94, 0.8);
-                text-decoration: none;
-                color: #0e9695;
-                font-size: .6em;
-                text-transform: uppercase;
-                display: block;
-                margin: 30px auto 0;
-                max-width: 130px;
-                width: 100%;
-                font-weight: bold;
-                pointer-events: initial;
-                line-height: 1.5em;
-            }
-        </style>
 </head>
 
 <body>
@@ -658,24 +30,26 @@
             <header>
                 <nav class="header">
                 <div class="name">
-                    <img src="images/name_logo.png" alt="Company">
+                    <a href="project-site.html">
+                        <img src="images/name_logo.png" width="250" height="auto" alt="Company">
+                      </a>
                 </div>
                 <div class="menu_top">
                     <ul class="menu-items">
                         <li><a href="#">Ученикам</a></li>
                         <li><a href="#">О преподавателе</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="testimonials.html">Отзывы</a></li>
                         <li><a href="#">Вопросы</a></li>
                     </ul>
                 </div>
                 <div class="connect">
-                    <svg class="t-sociallinks__svg" width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                    <svg class="sociallinks" width="30px" height="30px" viewBox="0 0 100 100" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
                             fill="#0e9695"></path>
                     </svg>
-                    <svg class="t-sociallinks__svg" width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                    <svg class="sociallinks" width="30px" height="30px" viewBox="0 0 100 100" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z"
@@ -737,12 +111,25 @@
                 <p class="item"><img src="images/galochka.png">Вся информация доступна, наглядна и понятна</p>
                 <p class="item"><img src="images/galochka.png">Разбор каждого задания и обратная связь</p>
                 <p class="item"><img src="images/galochka.png">Подарки в виде шпаргалок и конспектов по видео урокам</p>
-                <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать
-                    экзамен</p>
+                <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать экзамен</p>
             </div>
 
-            <div>
-
+            <div id="what-you-get">
+                <p>ЧТО ВЫ ПОЛУЧИТЕ ПОСЛЕ ОБУЧЕНИЯ</p>
+                <div id="what-you-get-container">
+                    <div class="what-you-get-card">
+                        <p>ВЫСОКИЕ БАЛЛЫ</p>
+                    </div>
+                    <div class="what-you-get-card">
+                        <p>УВЕРЕННОСТЬ</p>
+                    </div>
+                    <div class="what-you-get-card">
+                        <p>МАТЕРИАЛЫ</p>
+                    </div>
+                    <div class="what-you-get-card">
+                        <p>ЗНАНИЯ</p>
+                    </div>
+                </div>
             </div>
 
             <section class="slider">
@@ -782,7 +169,28 @@
                     </div>
                 </div>
             </section>
-    <script src="js/myscript.js"></script>        
+        <footer>
+            <div id="footer-area">
+                <div id="footer-left">
+                    <div class="name">
+                        <a href="project-site.html">
+                          <img src="images/name_logo.png" width="250" height="auto" alt="Company">
+                        </a>
+                    </div>
+                    <p>© 2023 Александра Шадрина.</p>
+                    <p>Все права защищены</p>
+                    <p>Создание сайта</p>
+                </div>
+                <div id="footer-central">
+                    <p>Документы</p>
+                    <p>bbbbb</p>
+                </div>
+                <div id="footer-right">
+                    <p>Контакты</p>
+                    <p>dddd</p>
+                </div>
+            </div>
+        </footer>       
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
-function createSlick() {  
-
-    $(".slider").not('.slick-initialized').slick({
+$(document.body).ready(function () {
+  let createSlickSlider = function () {
+    $('.slider').not('.slick-initialized').slick({
       centerMode: true,
       autoplay: true,
       dots: true,  
@@ -19,6 +19,7 @@ function createSlick() {
     });
   }
 
-  createSlick();
+  createSlickSlider();
   
-  $(window).on( 'resize', createSlick);
+  $(window).on( 'resize', createSlickSlider);
+});

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Countries</title>
+        <script type="text/javascript">
+            let countries = {};
+            let addCountryInfo = function () {
+                let countryName = prompt('Please enter country name:');
+                let capitalCity = prompt('Please enter its capital city:');
+                countries[countryName] = capitalCity;
+                console.log(countries);
+            };
+            let getCountryInfo = function () {
+                let countryName = prompt('Please enter country name:');
+                if (countryName in countries) {
+                    alert(countries[countryName] + ' is capital of ' + countryName);
+                } else {
+                    alert('Oops! No country "' + countryName + '" found in list');
+                }
+            };
+            let listCountries = function () {
+                for (let item in countries) {
+                    console.log(item + ' ' + countries[item]);
+                }
+            }
+            let deleteCountryInfo = function () {
+                let countryName = prompt('Please enter country name:');
+                if (countryName in countries) {
+                    delete countries[countryName];
+                } else {
+                    alert('Oops! No country "' + countryName + '" found in list');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <button onclick="addCountryInfo()">ввод информации о стране</button>
+            <button onclick="getCountryInfo()">получение информации о стране</button>
+            <button onclick="listCountries()">перечень всех стран</button>
+            <button onclick="deleteCountryInfo()">удаление информации о стране</button>
+        </main>
+    </body>
+</html>
