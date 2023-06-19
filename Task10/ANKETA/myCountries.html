@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myCountries</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input {
+            width: 250px;
+            height: 25px;
+            margin: 30px 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <input type="button" value="Ввод информации о стране" onclick="AddCountryCity()">
+    <input type="button" value="Получение информации о стране" onclick="GetCountryCity()">
+    <input type="button" value="Перечень всех стран" onclick="ListCountriesCity()">
+    <input type="button" value="Удаление информации о стране" onclick="DeleteCountryCity()">
+
+    <script type="application/javascript">
+        /*  let countryName = prompt('Введите название страны :');
+            let capitalName = prompt('Введите название столицы страны :'); */
+        var countrysH = {};
+        function AddCountryCity(countryName, capitalName) {
+
+            var countryName = prompt('Введите название страны :');
+            var capitalName = prompt('Введите название столицы:');
+            countrysH[countryName] = capitalName;
+            console.log(сountrysH);              
+        }
+
+        function GetCountryCity(countryName) {
+
+            var countryName = prompt('Пожалуйста, введите название страны :');
+            countrysH = {};
+            if (countryName in countrysH)
+                alert('страна: ' + countryName + ' столица: ' + countrysH[countryName]);
+            else
+                alert('нет информации о запрашиваемой стране !');
+        }
+        function ListCountriesCity() {
+            var countryName = "";
+            for (var countryName in countrysH)
+                console.log('страна: ' + countryName +  GetCountryCity(countryName) + ' столица: ' + countrysH[countryName]);
+           
+        }
+        function DeleteCountryCity(countryName) {
+            var countryName = prompt('Введите название страны, которую хотите удалить:')
+            delete countrysH[countryName];
+            console.log(countrysH);
+        }
+
+
+    </script>
 </body>
+
 </html>
+
+
+<!--addCountry('Германия','Берлин');
+addCountry('Венгрия','Будапешт');
+addCountry('Франция','Париж');
+addCountry('Италия','Рим');
+addCountry('Испания','Мадрид');
+addCountry('Греция','Афины');-->
