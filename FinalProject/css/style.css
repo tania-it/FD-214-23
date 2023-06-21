@@ -7,6 +7,7 @@
     max-inline-size: 100%;
     block-size: auto;
     object-fit: contain;
+    text-align: center;
 }
 div.wrapper {
     width: 100%;
@@ -468,19 +469,47 @@ p.item img {
 }
 #what-you-get > p {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 20px 0px;
+    text-align: center;
+    color: #2a3549;
+    font-size: 24px;
+    font-family: 'RistrettoPro', Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 #what-you-get-container {
     display: flex;
-    justify-content: space-between;
+    
+    justify-content: space-evenly
 }
 .what-you-get-card {
-    width: 25%;
-    height: 50px;
+    backdrop-filter: none;
+    width: 30%;
+    height: 45vh;
     border: 1px solid navy;
+    text-align: center;
+}
+.what-you-get-card img {
+    border-radius: 3000px;
+    background-color: #ebebeb;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    border-style: solid;
+    margin: 10px;
 }
 .what-you-get-card > p {
-    text-align: center;
+    color: #2a3549;
+    font-size: 20px;
+    font-family: 'RistrettoPro',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
 }
 #footer-area {
     width: 80%;
@@ -594,3 +623,38 @@ input[type=text], input[type=email], textarea{
     cursor: pointer;
     float: right;
   }
+
+  /************* questions*****************/
+  .question-answer-row {
+    border: 1px solid blueviolet;
+    width: 70%;
+  }
+
+  .question {
+    height: 3em;
+    border: 1px solid red;
+    line-height: 3em;
+  }
+
+  .answer {
+    display: none;
+   /* transform: scale(0);
+    transition: .6s ease opacity,.6s ease transform;*/
+    opacity: 0;
+    transition: opacity 1s; 
+  }
+
+  .fa-solid {
+    float: right;
+    height: 3em;
+    line-height: 3em;
+  }
+
+  .fa-solid:hover {
+    cursor: pointer;
+  }
+
+  #question-form {
+    /*border: 1px solid navy;*/
+    width: 50%;
+}

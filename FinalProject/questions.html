@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FAQ</title>
+    <script type="application/javascript">
+      /*$(document.body).ready(function () {
+        $('.icon-action').on('click', function (e) {
+          let $elem = $(e.target);
+          let $answer = $elem.parent().parent().find('.answer');
+          if ($elem.hasClass('expand-down')) {
+            $answer.show();
+            $elem.text('expand_circle_up')
+            .addClass('expand-up')
+            .removeClass('expand-down');
+          } else if ($elem.hasClass('expand-up')) {
+            $answer.hide();
+            $elem.text('expand_circle_down')
+            .addClass('expand-down')
+            .removeClass('expand-up');
+          }
+        });
+        $('.icon-action').on('toggle', function (e) {
+          alert('toggle');
+        });
+      });*/
+
+      window.addEventListener('load', function () {
+        document.querySelectorAll('.fa-solid').forEach(function (item) {
+            item.addEventListener('click', function () {
+                console.log(this);
+                let parentDiv = this.parentElement.parentElement;
+                const answer = parentDiv.querySelector('.answer');
+                if (this.classList.contains('fa-chevron-down')) {
+                    answer.style.display = 'block';
+                    this.classList.remove('fa-chevron-down');
+                    this.classList.add('fa-angle-up');
+                    window.setTimeout(function () { 
+                        answer.style.opacity = 1;
+                        answer.style.transform = 'scale(1)';
+                    }, 300);
+                } else if (this.classList.contains('fa-angle-up')) {
+                    answer.style.display = 'none';
+                    this.classList.remove('fa-angle-up');
+                    this.classList.add('fa-chevron-down');
+                    window.setTimeout(function(){
+                        
+                        answer.style.opacity = 0;
+                        answer.style.transform = 'scale(0)';
+                      },300);
+                }
+            });
+        });
+
+        const questionForm = document.getElementById('question-form');
+        questionForm.addEventListener('submit', function (e) {
+            alert('form submit');
+            e.preventDefault();
+        });
+      });
+      
+      function findAncestor (el, cls) {
+        while ((el = el.parentNode) && el.className.indexOf(cls) < 0);
+        return el;
+    }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Navigation</header>
+      <main>
+        <h1>ЧАСТЫЕ ВОПРОСЫ</h1>
+        <section id="questions-area">
+            <div class="question-answer-row">
+                <p class="question">Как давно вы преподаете?
+                  <i class="fa-solid fa-chevron-down"></i>
+                </p>
+                <p class="answer">Я работаю в школе с 2009 года и за это время накопила множество наград, достижений и опыта!</p>
+            </div>
+            <div class="question-answer-row">
+                <p class="question">Как вы понимаете, что задание точно будет на ЕГЭ? 
+                    <i class="fa-solid fa-chevron-down"></i>
+                </p>
+                <p class="answer">Я не могу показать вам ТОЧНЫЕ задания, которые вам могут встретиться, но я готовлю по самым свежим и новым заданиям экзамена, так как сдаю его сама каждый год и вижу все изменения собственными глазами!</p>
+            </div>
+            <div class="question-answer-row">
+                <p class="question">Могут попасться задания такие же, какие вы нам дадите? 
+                    <i class="fa-solid fa-chevron-down"></i>
+                </p>
+                <p class="answer">
+                    ДА, с уверенностью могу сказать, что вероятность совпадению заданий есть, но на это не нужно рассчитывать, тут как повезет!
+                </p>
+            </div>
+            <div class="question-answer-row">
+                <p class="question">Не знаю по каким сборникам готовиться
+                    <i class="fa-solid fa-chevron-down"></i>
+                </p>
+                <p class="answer">
+                    Все необходимые сборники я рекомендую на самих курсах, а также у себя в профиле Инстаграм! У вас будут необходимые рабочие тетради, бланки, конспекты и т.д.
+                </p> 
+            </div>
+            <div class="question-answer-row">
+                <p class="question">Страшно сдавать экзамен, боюсь, что не получится
+                    <i class="fa-solid fa-chevron-down"></i>
+                </p>
+                <p class="answer">
+                    Не нужно так думать, пока не начнете подготовку СО МНОЙ! Выполняя все мои задания, запоминаю информацию, которую Вам выдаю Я, вы не будете волноваться, когда вам выдадут долгожданный КИМ!
+                </p> 
+            </div>
+        </section>
+
+          <div id="question-form-area">
+            <h1>Задать вопрос</h1>
+            <form name="question-form" action="process-question.php" method="POST" id="question-form">
+                <div class="form-row">
+                    <div class="form-col-25">
+                        <label for="fname">Fisrt Name</label>
+                    </div>
+                    <div class="form-col-75">
+                        <input type="text" name="firstname" value="" required="required" id="fname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-25">
+                      <label for="lname">Last Name</label>
+                    </div>
+                    <div class="form-col-75">
+                      <input type="text" name="lastname" value="" required="required" id="lname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-25">
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="form-col-75">
+                      <input type="email" name="email" value="" required="required" id="email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-25">
+                      <label for="subject">Question</label>
+                    </div>
+                    <div class="form-col-75">
+                      <textarea id="question" name="question" cols="20" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+          </div>
+      </main>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
