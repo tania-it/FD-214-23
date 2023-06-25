@@ -1,0 +1,105 @@
+@media screen and (max-width: 600px) {
+    div.banner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* position: relative; */
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    div.banner-leftside {
+        /*background-image: url(../../images/banner.jpg);*/
+        width: 100%;
+        height: 480px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 5px solid green;
+    }
+
+    .floating {
+        position: absolute;
+        /*left: 200px;
+        top: 100px;*/
+        left: 10%;
+        top: 10%;
+    }
+
+    p.caption {
+        /*position: absolute;
+        left: 200px;
+        top: 280px;*/
+        color: rgb(29, 1, 94, 0.8);
+        /*font-size: 50px;*/
+        font-size: 2em;
+        font-family: 'RistrettoPro', Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 700;
+        /*background-position: center center;*/
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    div.banner-rightside {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        background-image: url(../../images/AVB.jpg);
+        background-color: #2a3549;
+        background-size: 90%;
+        background-repeat: no-repeat;
+        /*background-position: center center;*/
+        border-radius: 0px;
+        overflow: hidden;
+    }
+
+    div.teacher {
+        width: 100%;
+        flex-basis: 100%
+    }
+
+    /*.left-item-teacher {
+        display: none;
+        flex-basis: 0%;
+    }
+
+    .right-item-teacher {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        background-color: white;
+        padding-left: 30px;
+    }*/
+
+    div.right-item-teacher {
+        width: 100%;
+    }
+
+    div.buttons {
+        flex-direction: column;
+        flex-basis: 100%;
+        padding-left: 15px;
+        align-items: flex-start;
+    }
+
+    div.achievements {
+        flex-direction: column;
+        flex-basis: 100%;
+        padding-left: 15px;
+    }
+
+    div.why_me {
+        width: 100%;
+        display: block;
+        /*grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);*/
+    }
+
+    #what-you-get {
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 1200px) {
+    #what-you-get-container {
+        flex-wrap: wrap;
+    }
+
+    .what-you-get-card {
+        backdrop-filter: none;
+        width: 50%;
+    }
+}

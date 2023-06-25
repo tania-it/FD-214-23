@@ -19,8 +19,11 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="AboutStart.css">-->
+    
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/media/small-pc.css">
+    <link rel="stylesheet" href="css/media/tablet.css">
+    <link rel="stylesheet" href="css/media/mobile.css?123">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
@@ -68,12 +71,14 @@
 
         <div class="banner">
             <div class="banner-leftside">
-                <p class="name">Анжелика Майорова</p>
-                <p class="caption">РЕПЕТИТОР ПО ФИЗИКЕ, <br>
-                    КОТОРЫЙ ГОТОВИТ К ЦТ <br> НА
-                    <span style="color: rgb(255, 255, 255);  text-shadow: 2px 2px 8px darkblue;">80+ БАЛЛОВ</span>
-                </p>
-                <a class="detailed" href="/#kursy">Подробнее о курсах</a>
+                <div class="floating">
+                    <p class="name">Анжелика Майорова</p>
+                    <p class="caption">РЕПЕТИТОР ПО ФИЗИКЕ, <br>
+                        КОТОРЫЙ ГОТОВИТ К ЦТ  НА 
+                        <span style="color: rgb(255, 255, 255);  text-shadow: 2px 2px 8px darkblue;">80+ БАЛЛОВ</span>
+                    </p>
+                    <a class="detailed button" href="/#kursy">Подробнее о курсах</a>
+                </div>
             </div>
             <div class="banner-rightside"> </div>
         </div>
@@ -85,25 +90,24 @@
                     <p>о преподавателе</p>
                 </div>
 
-                <div class="career_description">
-                    <p>Я Анжелика Майорова, преподаватель по физике высшей категории
-                        и проводник к высоким баллам на централизованном экзамене.</p>
-                    <p><img src="images/atom-mini.png">Готовлю к ЦТ на высокий балл для поступления в топовые вузы;
-                    </p>
-                    <p><img src="images/atom-mini.png">Сама сдаю ЦТ каждый год на 100 баллов;</p>
-                    <p><img src="images/atom-mini.png">Помогаю решить олимпиадные задачи;</p>
+                <div class="career-description">
+                    <p>Я Анжелика Майорова, преподаватель по физике высшей категории и проводник к высоким баллам на централизованном экзамене.</p>
+                    <p class="prepend-image">Готовлю к ЦТ на высокий балл для поступления в топовые вузы;</p>
+                    <p class="prepend-image">Сама сдаю ЦТ каждый год на 100 баллов;</p>
+                    <p class="prepend-image">Помогаю решить олимпиадные задачи;</p>
+                    
                 </div>
                 <div class="buttons">
-                    <a href="#" class="get-ct-results">Посмотреть результаты ЦТ</a>
-                    <a href="#" class="get-teachers-details">Подробнее о преподавателе</a>
+                    <a href="#" class="get-ct-results button">Посмотреть результаты ЦТ</a>
+                    <a href="#" class="get-teachers-details button">Подробнее о преподавателе</a>
                 </div>
                 <div class="achievements">
-                    <div class="experience">
-                        <p class="experience">10+</p><br>
+                    <div id="experience">
+                        <p class="experience">10+</p>
                         <p>лет опыта педагогической работы по специальности</p>
                     </div>
-                    <div class="rating">
-                        <p class="rating">80+</p><br>
+                    <div id="rating">
+                        <p class="rating">80+</p>
                         <p>баллов набирают мои ученики на ЦТ</p>
                     </div>
                 </div>
@@ -111,12 +115,11 @@
         </div>
 
         <div class="why_me">
-            <p class="why_me">Почему ученики выбирают меня </p>
+            <p class="why-me-header">Почему ученики выбирают меня </p>
             <p class="item"><img src="images/galochka.png">Вся информация доступна, наглядна и понятна</p>
             <p class="item"><img src="images/galochka.png">Разбор каждого задания и обратная связь</p>
             <p class="item"><img src="images/galochka.png">Подарки в виде шпаргалок и конспектов по видео урокам</p>
-            <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать
-                экзамен</p>
+            <p class="item"><img src="images/galochka.png">Во время обучения у вас пропадет волнение и страх сдавать экзамен</p>
         </div>
 
         <div id="what-you-get">
@@ -124,22 +127,22 @@
             <div id="what-you-get-container">
                 <div class="what-you-get-card">
                     <p>ЗНАНИЯ</p>
-                    <img src="./images/what-you-get-card - KNOWLEDGE.png">
+                    <img src="./images/what-you-get-card - KNOWLEDGE.png" alt="">
                     <p>Вы обретёте качественные знания по физике, которые не забудете через несколько дней</p>
                 </div>
                 <div class="what-you-get-card">
                     <p>ВЫСОКИЕ БАЛЛЫ</p>
-                    <img src="./images/what-you-get-card - HIGH SCORE.png">
+                    <img src="./images/what-you-get_high-score.png" alt="">
                     <p>Мои ученики получают на ЦТ баллы, к которым стремятся</p>
                 </div>
                 <div class="what-you-get-card">
                     <p>МАТЕРИАЛЫ</p>
-                    <img src="./images/what-you-get-card - MATERIALS.png">
+                    <img src="./images/what-you-get-card - MATERIALS.png" alt="">
                     <p>Отдаю дополнительные материалы, которые останутся у вас навсегда</p>
                 </div>
                 <div class="what-you-get-card">
                     <p>УВЕРЕННОСТЬ</p>
-                    <img src="./images/what-you-get-card - CONFIDENCE.png">
+                    <img src="./images/what-you-get-card - CONFIDENCE.png" alt="">
                     <p>Будете уверены в своих знаниях и силах на экзамене</p>
                 </div>
             </div>
@@ -187,7 +190,7 @@
                 <div id="footer-left">
                     <div class="name">
                         <a href="index.html">
-                            <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company">
+                            <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
                         </a>
                     </div>
                     <p>© 2023 Анжелика Майорова.</p>
@@ -204,11 +207,11 @@
                 </div>
                 <div id="footer-right">
                         <p>Контакты</p>
-                    <div class="footer-right">    
-                        <p>tel:+79131950790</p>
-                        <p>mailto:ashadrina17@gmail.com</p>
-                        <p>vvv </p>
-                    </div>
+                    
+                        <a href="">tel:+79131950790</a>
+                        <a>user@gmail.com</a>
+                        <p></p>
+                    
                 </div>
             </div>
     </footer>
