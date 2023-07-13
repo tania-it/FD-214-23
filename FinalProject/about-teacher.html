@@ -4,21 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>About teacher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media/tablet.css">
+    <link rel="stylesheet" href="css/media/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>О преподавателе</title>
   </head>
   <body>
     <div class="wrapper">
-        <header>
-            Navigation
-        </header>
-        <main>
+      <header>
+        <div class="header">
+            <a href="index.html" class="logo">
+                <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
+            </a>
+        
+            <input class="side-menu" type="checkbox" id="side-menu">
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="for-students.html">Ученикам</a></li>
+                    <li><a href="about-teacher.html">О преподавателе</a></li>
+                    <li><a href="testimonials.html">Отзывы</a></li>
+                    <li><a href="questions.html">Вопросы</a></li>
+                </ul>
+                <div class="messengers">
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-telegram fa-2xl" style="color: #00605f;"></i>
+                    </a>
+                    <a href="#" target="_blank" style="margin-left: 15px">
+                        <i class="fa-brands fa-whatsapp fa-2xl" style="color: #00605f;"></i>
+                    </a>    
+                </div>
+                <div class="contact-phone">
+                  <a href="tel:+375291464427" target="" class="button nav-button">+375 (29) 146-44-27</a>
+                </div>
+            </nav>
+        </div>
+      </header>
+
+      <main>
             content
-        </main>
-        <footer>
-            Footer
-        </footer>
+      </main>
+
+      <footer>
+        <div id="footer-area">
+            <div id="footer-left">
+                <div class="name">
+                    <a href="index.html">
+                        <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
+                    </a>
+                </div>
+                <div class="copywright">
+                    <p>© 2023 Анжелика Майорова.</p>
+                    <p>Все права защищены</p>
+                    <p>Создание сайта</p>
+                </div>
+            </div>
+            <div id="footer-central">
+                <p>Документы</p>
+                <div class="footer-central">
+                    <p>Политика обработки персональных данных</p>
+                    <p>Договор оферта</p>
+                    <p>Реквизиты</p>
+                </div>
+            </div>
+            <div id="footer-right">
+                <p>Контакты</p>
+                <a href="tel:+375291464427" target="_blank" class="footer-right-item">+375 (29) 146-44-27</a>
+                <a href="mailto:user@gmail.com" target="_blank" class="footer-right-item">user@gmail.com</a>
+                <div class="footer-messengers">
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-telegram fa-2xl" style="color: #00605f;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp fa-2xl" style="color: #00605f;"></i>
+                    </a>    
+                </div>
+            </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

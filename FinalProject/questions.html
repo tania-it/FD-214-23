@@ -4,216 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media/tablet.css">
+    <link rel="stylesheet" href="css/media/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
     <title>FAQ</title>
-    <style>
-      .wrapper {
-        @media (max-width: 768px) {
-          width: 100%;
-        }
-        @media (max-width: 769px) {
-          width: 90%;
-        }
-        margin: 0 auto;
-        border: 1px solid red;
-      }
-      /* Theming */
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
-      :root{
-          --white: #f9f9f9;
-          --black: #36383F;
-          --gray: #85888C;
-      } /* variables*/
-
-      /* Reset */
-      *{
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-      body {
-          background-color: var(--white);
-          font-family: "Poppins", sans-serif;
-      }
-      a {
-          text-decoration: none;
-      }
-      ul {
-          list-style: none;
-      }
-
-      /* Header */
-      .header {
-        display: block;
-          background-color: var(--white);
-          box-shadow: 1px 1px 5px 0px var(--gray);
-          position: sticky;
-          top: 0;
-          width: 100%;
-      }
-
-      /* Logo */
-      .logo {
-          display: inline-block;
-          color: var(--white);
-          font-size: 60px;
-          margin-left: 10px;
-      }
-
-      /* Nav menu */
-      .nav {
-          width: 100%;
-          height: 70%;
-          /*position: relative;*/
-          background-color: var(--white);
-          overflow: hidden;
-          border: 1px solid green;
-      }
-      .menu {
-        display: flex;
-        flex-direction: column;
-        /*justify-content: center;*/
-      }
-      .menu a {
-          display: block;
-          padding: 2.2em;
-          color: var(--black);
-      }
-      .menu a:hover {
-          background-color: var(--gray);
-      }
-      .nav{
-          max-height: 0;
-          transition: max-height .5s ease-out;
-      }
-
-      /* Menu Icon */
-      .hamb {
-          cursor: pointer;
-          float: right;
-          padding: 40px 20px;
-      }
-      
-      /* Style label tag */
-      .hamb-line {
-          background: var(--black);
-          display: block;
-          height: 2px;
-          position: relative;
-          width: 24px;
-
-      } /* Style span tag */
-
-      .hamb-line::before,
-      .hamb-line::after{
-          background: var(--black);
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          transition: all .2s ease-out;
-          width: 100%;
-      }
-      .hamb-line::before{
-          top: 5px;
-      }
-      .hamb-line::after{
-          top: -5px;
-      }
-
-      .side-menu {
-          display: none;
-      } /* Hide checkbox */
-
-      /* Toggle menu icon */
-      .side-menu:checked ~ nav{
-          max-height: 50%;
-      }
-      .side-menu:checked ~ .hamb .hamb-line {
-          background: transparent;
-      }
-      .side-menu:checked ~ .hamb .hamb-line::before {
-          transform: rotate(-45deg);
-          top: 0;
-      }
-      .side-menu:checked ~ .hamb .hamb-line::after {
-          transform: rotate(45deg);
-          top: 0;
-      }
-
-      /* Responsiveness */
-      @media (min-width: 900px) {
-        .header {
-          display: flex;
-          width: 80%;
-          margin: 0 auto;
-          border:  1px solid red;
-        }
-          .nav {
-            display: flex;
-            justify-content: center;
-            max-height: none;
-            height: 100px;
-            top: 0;
-            background-color: transparent;
-          }
-          .menu {
-            display: flex;
-            flex-direction: row;
-          }
-
-          .menu a:hover {
-              background-color: transparent;
-              color: var(--gray);
-          }
-
-          .hamb {
-              display: none;
-          }
-      }
-
-      /*@media all and (min-width: 1350px) {
-        .header {
-          width: 90%;
-          margin: 0 auto;
-          border:  1px solid navy;
-        }
-        .menu a {
-          padding-left: 1em;
-          padding-right: 1em;
-        }
-      }*/
-    </style>
     <script type="text/javascript">
-      /*$(document.body).ready(function () {
-        $('.icon-action').on('click', function (e) {
-          let $elem = $(e.target);
-          let $answer = $elem.parent().parent().find('.answer');
-          if ($elem.hasClass('expand-down')) {
-            $answer.show();
-            $elem.text('expand_circle_up')
-            .addClass('expand-up')
-            .removeClass('expand-down');
-          } else if ($elem.hasClass('expand-up')) {
-            $answer.hide();
-            $elem.text('expand_circle_down')
-            .addClass('expand-down')
-            .removeClass('expand-up');
-          }
-        });
-        $('.icon-action').on('toggle', function (e) {
-          alert('toggle');
-        });
-      });*/
-
       window.addEventListener('load', function () {
         document.querySelectorAll('.fa-solid').forEach(function (item) {
             item.addEventListener('click', function () {
@@ -236,7 +34,7 @@
                         
                         answer.style.opacity = 0;
                         answer.style.transform = 'scale(0)';
-                      },300);
+                      }, 300);
                 }
             });
         });
@@ -254,62 +52,62 @@
     }
     </script>
   </head>
+
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header>
+        <div class="header">
+            <a href="index.html" class="logo">
+                <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
+            </a>
         
-        <!--<div class="name logo">-->
-          <a href="index.html" class="name logo">
-            <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
-          </a>
-        <!--</div>-->
+            <input class="side-menu" type="checkbox" id="side-menu">
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="for-students.html">Ученикам</a></li>
-                <li><a href="about-teacher.html">О преподавателе</a></li>
-                <li><a href="testimonials.html">Отзывы</a></li>
-                <li><a href="questions.html">Вопросы</a></li>
-            </ul>
-            <div class="messengers">
-              <a href="#">
-                <i class="fa-brands fa-telegram fa-xl" style="color: #00605f;"></i>
-              </a>
-              <a href="#" style="margin-left: 15px">
-                <i class="fa-brands fa-whatsapp fa-xl" style="color: #00605f;"></i>
-              </a>    
-            </div>
-            <div class="contact-phone">
-              <a href="tel:+79131950790" target="" class="button">+7 (913) 195-07-90</a>
-            </div>
-        </nav>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="for-students.html">Ученикам</a></li>
+                    <li><a href="about-teacher.html">О преподавателе</a></li>
+                    <li><a href="testimonials.html">Отзывы</a></li>
+                    <li><a href="questions.html">Вопросы</a></li>
+                </ul>
+                <div class="messengers">
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-telegram fa-2xl" style="color: #00605f;"></i>
+                    </a>
+                    <a href="#" target="_blank" style="margin-left: 15px">
+                        <i class="fa-brands fa-whatsapp fa-2xl" style="color: #00605f;"></i>
+                    </a>    
+                </div>
+                <div class="contact-phone">
+                  <a href="tel:+375291464427" target="" class="button nav-button">+375 (29) 146-44-27</a>
+                </div>
+            </nav>
+        </div>
     </header>
-      <main>
-        <h1>ЧАСТЫЕ ВОПРОСЫ</h1>
-        <section id="questions-area">
-            <div class="question-answer-row">
-                <p class="question">Как давно вы преподаете?
-                  <i class="fa-solid fa-chevron-down"></i>
-                </p>
-                <p class="answer">Я работаю в образовании более 35 лет и за это время накопила множество наград, достижений и опыта!</p>
-            </div>
-            <div class="question-answer-row">
+    <main>
+      <h1>ЧАСТЫЕ ВОПРОСЫ</h1>
+      <section id="questions-area">
+        <div class="question-answer-row">
+          <p class="question">Как давно вы преподаете?
+            <i class="fa-solid fa-chevron-down"></i>
+          </p>
+          <p class="answer">Я работаю в образовании более 35 лет и за это время накопила множество наград, достижений и опыта!</p>
+        </div>
+        <div class="question-answer-row">
                 <p class="question">Как вы понимаете, что задание точно будет на ЕГЭ? 
                     <i class="fa-solid fa-chevron-down"></i>
                 </p>
                 <p class="answer">Я не могу показать вам ТОЧНЫЕ задания, которые вам могут встретиться, но я готовлю по самым свежим и новым заданиям экзамена, так как сдаю его сама каждый год и вижу все изменения собственными глазами!</p>
-            </div>
-            <div class="question-answer-row">
+        </div>
+        <div class="question-answer-row">
                 <p class="question">Могут попасться задания такие же, какие вы нам дадите? 
                     <i class="fa-solid fa-chevron-down"></i>
                 </p>
                 <p class="answer">
                     ДА, с уверенностью могу сказать, что вероятность совпадению заданий есть, но на это не нужно рассчитывать, тут как повезет!
                 </p>
-            </div>
+        </div>
             <div class="question-answer-row">
                 <p class="question">Не знаю по каким сборникам готовиться
                     <i class="fa-solid fa-chevron-down"></i>
@@ -325,80 +123,88 @@
                 <p class="answer">
                     Не нужно так думать, пока не начнете подготовку СО МНОЙ! Выполняя все мои задания, запоминаю информацию, которую Вам выдаю Я, вы не будете волноваться, когда вам выдадут задание централизованного тестирования!
                 </p> 
-            </div>
-        </section>
+        </div>
+      </section>
 
-          <div id="question-form-area">
-            <h1>Задать вопрос</h1>
+      <div id="question-form-area">
+        <h1>Задать вопрос</h1>
             <form name="question-form" action="process-question.php" method="POST" id="question-form">
                 <div class="form-row">
                     <div class="form-col-25">
-                        <label for="fname">Fisrt Name</label>
+                        <label for="fname">Имя</label>
                     </div>
                     <div class="form-col-75">
-                        <input type="text" name="firstname" value="" required="required" id="fname">
+                        <input type="text" name="firstname" required="required" id="fname">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-col-25">
-                      <label for="lname">Last Name</label>
+                      <label for="lname">Фамилия</label>
                     </div>
                     <div class="form-col-75">
-                      <input type="text" name="lastname" value="" required="required" id="lname">
+                      <input type="text" name="lastname" required="required" id="lname">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-col-25">
-                      <label for="email">Email</label>
+                      <label for="email">Эл. почта</label>
                     </div>
                     <div class="form-col-75">
-                      <input type="email" name="email" value="" required="required" id="email">
+                      <input type="email" name="email" required="required" id="email">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-col-25">
-                      <label for="subject">Question</label>
+                      <label for="subject">Вопрос</label>
                     </div>
                     <div class="form-col-75">
                       <textarea id="question" name="question" cols="20" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-row">
-                    <button type="submit">Submit</button>
+                    <button type="submit">Отправить</button>
                 </div>
             </form>
-          </div>
+        </div>
       </main>
+
       <footer>
         <div id="footer-area">
-                <div id="footer-left">
-                    <div class="name">
-                        <a href="index.html">
-                            <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company">
-                        </a>
-                    </div>
+            <div id="footer-left">
+                <div class="name">
+                    <a href="index.html">
+                        <img src="images/Angélique-logo.png" width="250" height="auto" alt="Company" style="max-width: 170px; width: 170px; min-width: 170px; height: auto; display: block;">
+                    </a>
+                </div>
+                <div class="copywright">
                     <p>© 2023 Анжелика Майорова.</p>
                     <p>Все права защищены</p>
                     <p>Создание сайта</p>
                 </div>
-                <div id="footer-central">
-                    <p>Документы</p>
-                    <div class="footer-central">
-                        <p>Политика обработки персональных данных</p>
-                        <p>Договор оферта</p>
-                        <p>Реквизиты</p>
-                    </div>
+            </div>
+            <div id="footer-central">
+                <p>Документы</p>
+                <div class="footer-central">
+                    <p>Политика обработки персональных данных</p>
+                    <p>Договор оферта</p>
+                    <p>Реквизиты</p>
                 </div>
-                <div id="footer-right">
-                        <p>Контакты</p>
-                    <div class="footer-right">    
-                        <p>tel:+79131950790</p>
-                        <p>mailto:ashadrina17@gmail.com</p>
-                        <p>vvv </p>
-                    </div>
+            </div>
+            <div id="footer-right">
+                <p>Контакты</p>
+                <a href="tel:+375291464427" target="_blank" class="footer-right-item">+375 (29) 146-44-27</a>
+                <a href="mailto:user@gmail.com" target="_blank" class="footer-right-item">user@gmail.com</a>
+                <div class="footer-messengers">
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-telegram fa-2xl" style="color: #00605f;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp fa-2xl" style="color: #00605f;"></i>
+                    </a>    
                 </div>
-            </div>  
-      </footer>
-    </div>
-  </body>
+            </div>
+        </div>
+    </footer>
+  </div>
+</body>
 </html>

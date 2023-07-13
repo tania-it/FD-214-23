@@ -1,8 +1,39 @@
-/*@media screen and (min-width: 1000px) {
-    .header {
-        display: none;
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100%;
     }
-}*/
+
+    #what-you-get-container {
+        flex-wrap: wrap;
+    }
+
+    .what-you-get-card {
+        backdrop-filter: none;
+        width: 50%;
+    }
+
+    #footer-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #footer-left {
+        flex: 1;
+        width: 50%;
+    }
+
+    #footer-central {
+        width: 50%;
+    }
+    
+    #footer-right {
+        width: 50%;
+    }
+}
+
 
 @media screen and (max-width: 800px) {
     div.banner {
@@ -11,16 +42,13 @@
         position: relative;
         width: 100%;
         height: auto;
-        border: 5px solid black;
     }
     
     div.banner-leftside {
-        /*background-image: url(../../images/banner.jpg);*/
         width: 100%;
-        height: 1000px;
+        height: 450px;
         background-repeat: no-repeat;
         background-size: cover;
-        border: 5px solid green;
     }
 
     .floating {
@@ -30,10 +58,7 @@
     }
     
     p.name {
-        /*position: absolute;
-        left: 3em;
-        top: 80px;*/
-        color: rgb(29, 1, 94);
+        color: rgb(255, 255, 255);
         font-size: 24px;
         font-family: 'RistrettoPro', Arial, sans-serif;
         line-height: 30px;
@@ -47,31 +72,22 @@
     }
     
     p.caption {
-        /*position: absolute;
-        left: 70px;
-        top: 180px;*/
-        color: rgb(29, 1, 94, 0.8);
-        /*font-size: 50px;*/
+        color: rgb(255, 255, 255);
         font-size: 2.5em;
         font-family: 'RistrettoPro', Arial, sans-serif;
         line-height: 1.5;
         font-weight: 700;
-        /*background-position: center center;*/
         border-color: transparent;
         border-style: solid;
         margin-bottom: 20px;
     }
     
     a.detailed {
-        /*position: absolute;
-        left: 70px;
-        top: 400px;*/
         height: 50px;
         line-height: 45px;
         color: #f6f6f6;
         font-size: 18px;
         font-family: 'RistrettoPro', Arial, sans-serif;
-        /*line-height: 1.20;*/
         font-weight: 400;
         letter-spacing: 0.5px;
         border-width: 1px;
@@ -82,19 +98,17 @@
         border-style: solid;
         /*transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;*/
     }
-    
+
     div.banner-rightside {
-        display: flex;
-        position: absolute;
-        top: 360px;
-        left: 300px;
-        width: 300px;
-        height: 300px;
+        display: block;
+        position: static;
+        width: 100%;
         background-image: url(../../images/AVB.jpg);
-        /*background-size: 300px auto;*/
+        background-color: #2a3549;
+        background-size: 97%;
         background-repeat: no-repeat;
         background-position: center center;
-        border-radius: 20px;
+        border-radius: 0px;
         overflow: hidden;
     }
 
@@ -105,7 +119,6 @@
 
     div.left-item-teacher {
         display: none;
-        /*flex-basis: 0%;*/
     }
 
     div.right-item-teacher {
@@ -119,8 +132,6 @@
     div.why_me {
         width: 90%;
         display: block;
-        /*grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);*/
     }
 
     div.why_me>p.item {
@@ -130,4 +141,16 @@
     #what-you-get {
         width: 90%;
     }
+
+    /*#footer-area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #footer-left, #footer-central, #footer-right {
+        width: 100%;
+        padding: 0.5em;
+    }*/
 }
